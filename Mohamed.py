@@ -1524,11 +1524,11 @@
 # Email Pattern => [A-z0-9\n]+@[A-z0-9]+\.(com|net|org|info)
 # Regular Expression Return None If There's Match
 
-import re
-my_string = "This Is My String"
-regualr = re.search("My", my_string)
-print(regualr.start())
-print(regualr.end())
+# import re
+# my_string = "This Is My String"
+# regualr = re.search("My", my_string)
+# print(regualr.start())
+# print(regualr.end())
 
 # my_search = re.search(r"[A-Z]{2}", "MMohamedSSalama")
 # print(my_search)
@@ -2154,7 +2154,10 @@ print(regualr.end())
 #     print("Encode Error")
 
 
-# Git Commands
+################################ Hangman Game ##################################
+
+
+#################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
 # git status                                            => Show You What Happens In Your Working Directory
 # git add                                               => To Add The Files From Working Directory To The Staging Area
