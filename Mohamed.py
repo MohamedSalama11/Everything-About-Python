@@ -2173,6 +2173,15 @@
 # ssh -T git@github.com                                 => To Test The SSH Key
 # git init                                              => To Create Repositery From Existing Project
 # git push -u origin master                             => To Push The Changes From The Local Repo To The Remote Repo
+# git config --global alias.st status                   => To Create An Alias To The git status Command
+# git config --global alias.st                          => To Show You The Command Alias
+# git branch Branch Name                                => To Create New Branch
+# git checkout Branch Name                              => To Go To The Branch You Want
+# git branch -d Branch Name                             => To Delete Specified Branch
+# git branch -D Branch Name                             => To Force Delete The Branch Even If There's Changes In The Branch
+# git checkout -b Branch Name                           => To Create A New Branch And Go To It
+# git branch -m New Branch Name                         => To Rename An Existing Branch
+# git merge Branch Name                                 => To Merge The Branch With The Main Branch
 #
 #
 #
