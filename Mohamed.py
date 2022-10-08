@@ -2155,33 +2155,20 @@
 
 
 ################################ Hangman Game ##################################
+import random
 
+word_list = ["ardvark", "baboon", "camel"]
+chosen_word = random.choice(word_list)
+# print(chosen_word)
 
+guess = input("Guess A Letter: ").strip().lower()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for letter in chosen_word:
+    if letter == guess:
+        print("Right")
+    else:
+        print("Wrong")
+    # print(letter)
 #################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
 # git status                                            => Show You What Happens In Your Working Directory
