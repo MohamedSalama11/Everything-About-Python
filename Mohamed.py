@@ -1522,9 +1522,15 @@
 # split(pattern, string, maxsplit) => Return A List Of Elements Splitted On Each Match
 # sub(pattern, Replace, string, replaceCount) => Replace Matches With What You Want
 # Email Pattern => [A-z0-9\n]+@[A-z0-9]+\.(com|net|org|info)
-# import re
-# my_search = re.search(r"[A-Z]{2}", "MMohamedSSalama")
+# Regular Expression Return None If There's Match
 
+import re
+my_string = "This Is My String"
+regualr = re.search("My", my_string)
+print(regualr.start())
+print(regualr.end())
+
+# my_search = re.search(r"[A-Z]{2}", "MMohamedSSalama")
 # print(my_search)
 # print(my_search.span())
 # print(my_search.string)
