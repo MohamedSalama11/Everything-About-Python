@@ -2155,25 +2155,91 @@
 
 
 ################################ Hangman Game ##################################
+# Generate A Random Word
 import random
+
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 
 word_list = ["ardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
 display = []
-guess = input("Guess A Letter: ").strip().lower()
+word_length = len(chosen_word)
 
-
-for _ in range(len(chosen_word)):
+# Filling The Display List With _
+for _ in range(word_length):
     display += "_"
     # display.append("_")
-print(display)
 
-for letter in chosen_word:
-    if letter == guess:
-        print("right")
+# Check If The Guess Equal To Every Letter In The Choosen Word
+while True:
+    guess = input("Guess A Letter: ").strip().lower()
 
+    for position in range(word_length):
+        letter = chosen_word[position]
+        if letter == guess:
+            display[position] = letter
+    print(display)
+
+    if "_" not in display:
+        break
 
 #################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
