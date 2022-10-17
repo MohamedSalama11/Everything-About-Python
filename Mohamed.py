@@ -1591,6 +1591,60 @@
 # print(f"Top Level Domain: {search.group(4)}")
 # print(f"Port: {search.group(5)}")
 # print(f"Query String: {search.group(6)}")
+
+
+##################### Generators #####################
+# 1- Generator is  a function with "yield" kewword instead of "return"
+# 2- It support iteration and retrun generatro iteartor by calling "yield"
+# 3- Generator functions can have one or more "yield"
+# 4- By using next() it resume from where it called "yield" not from begining (Feature)
+# 5- When called, its not start automatically, it's give you the control
+
+# def my_generator():
+#     yield 1
+#     yield 2
+#     yield 3
+#     yield 4
+
+
+# my_generator()
+# print(my_generator())
+# print(type(my_generator))
+
+# my_gen = my_generator()
+
+# print(next(my_gen))
+# print("Hello")
+# print(next(my_gen))
+# print(next(my_gen))
+# print(next(my_gen))
+
+# for number in my_generator():
+#     print(number)
+
+
+######################### Decorators #########################
+# 1- Sometimes called Meta Programming
+# 2- Everything in python is object even functions
+# 3- Decorator take a function and add some functionality and return it
+# 4- Decorator wrap other function and enhance their behaviour
+# 5- Decorator is higher order function (function accept function as parameter)
+
+# def my_decorator(func):  # Decorator
+#     def nested_func():  # Any Name It's Just From Decoration
+#         print("Before")  # Message From Decorator
+#         func()  # Execute Function
+#         print("After")  # Message From Decorator
+#     return nested_func  # Return All Data
+
+
+# @my_decorator
+# def say_hello():
+#     print("Hello From Say Hello Function")
+
+
+# say_hello()
+
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
