@@ -1594,22 +1594,24 @@
 
 
 ##################### Generators #####################
-# 1- Generator is  a function with "yield" kewword instead of "return"
-# 2- It support iteration and retrun generatro iteartor by calling "yield"
+# 1- Generator is  a function with "yield" keyword instead of "return"
+# 2- It support iteration and retrun generator itearator by calling "yield"
 # 3- Generator functions can have one or more "yield"
 # 4- By using next() it resume from where it called "yield" not from begining (Feature)
 # 5- When called, its not start automatically, it's give you the control
 
 # def my_generator():
-#     yield 1
+#     yield "Salama"
 #     yield 2
 #     yield 3
 #     yield 4
-
+#     print("Mohamed")
+#     yield 5
 
 # my_generator()
 # print(my_generator())
 # print(type(my_generator))
+
 
 # my_gen = my_generator()
 
@@ -1619,7 +1621,7 @@
 # print(next(my_gen))
 # print(next(my_gen))
 
-# for number in my_generator():
+# for number in my_gen:
 #     print(number)
 
 
@@ -1629,9 +1631,10 @@
 # 3- Decorator take a function and add some functionality and return it
 # 4- Decorator wrap other function and enhance their behaviour
 # 5- Decorator is higher order function (function accept function as parameter)
+# 6- You Can Add More Than One Decorator To The Same Function
 
 # def my_decorator(func):  # Decorator
-#     def nested_func():  # Any Name It's Just From Decoration
+#     def nested_func():  # Any Name It's Just For Decoration
 #         print("Before")  # Message From Decorator
 #         func()  # Execute Function
 #         print("After")  # Message From Decorator
@@ -1645,6 +1648,90 @@
 
 # say_hello()
 
+
+# My Example
+# def my_decorator(any_func):
+#     def nested_func():
+#         print("Before")
+#         any_func("Mohamed")
+#         print("After")
+#     return nested_func
+
+
+# @my_decorator
+# def say_hello(name):
+#     print(f"Hello {name}")
+
+
+# say_hello()
+
+# after_decoration = my_decorator(say_hello)
+# after_decoration()
+
+# Another Example
+# def my_dec(func):
+#     def nested_func(*numbers):
+#         for number in numbers:
+#             if number < 0:
+#                 print("Beware One Of The Numbers Is Less Than Zero")
+#         func(*numbers)
+#     return nested_func
+
+
+# @my_dec
+# def calculate(num1, num2, num3):
+#     print(num1 + num2 + num3)
+
+
+# calculate(-1, 2, 3)
+
+
+# Speed Test
+# from time import time
+
+
+# def speed_test(func):
+#     def wrapper():
+#         start = time()
+#         func()
+#         end = time()
+#         print(f"Function Running Time Is {end - start}")
+#     return wrapper
+
+
+# @speed_test
+# def test():
+#     for number in range(1, 2000):
+#         print(number)
+
+
+# test()
+
+
+################ Loop On Many Iterators With zip() ###############
+# zip() Return A Zip Object Contains All Objects
+# zip() Length Is The Length Of Lowest Object
+
+# list1 = [1, 2, 3, 4, 5]
+# list2 = ["A", "B", "C"]  # Control The Zip Object ( The Lowest One )
+# tuple1 = ("Man", "Woman", "Girl", "Boy")
+# dict1 = {
+#     "Name": "Mohamed",
+#     "age": 22,
+#     "Country": "Egypt"
+# }
+
+# for item1, item2, item3, item4 in zip(list1, list2, tuple1, dict1):
+#     print("List 1 Item =>", item1)
+#     print("List 2 Item =>", item2)
+#     print("Tuple 1 Item =>", item3)
+#     print("Dict 1 key =>", item4, "Value =>", dict1[item4])
+
+
+# ultimatel_list = zip(list1, list2)
+# print(ultimatel_list)
+# for item in ultimatel_list:
+#     print(item)
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
