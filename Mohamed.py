@@ -1732,6 +1732,26 @@
 # print(ultimatel_list)
 # for item in ultimatel_list:
 #     print(item)
+
+
+############# Manipulating Images With Pillow ###############
+# from PIL import Image
+
+# # Open The Image
+# my_img = Image.open(r"D:\Mohamed Salama\backgrounds for desktop\1.jpg")
+# # Display The Image
+# # my_img.show()
+# # My Cropped Image
+# # (Left, Upper, Right, Lower)
+# my_box = (300, 300, 800, 800)
+# my_new_image = my_img.crop(my_box)
+# # Show The New Image
+# my_new_image.show()
+
+# # Black And White Image
+# img_converted = my_img.convert("L")
+# img_converted.show()
+
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
@@ -2301,6 +2321,7 @@
 # git add                                               => To Add The Files From Working Directory To The Staging Area
 # git add *                                             => To Add All The Files From Working Directory To The Staging Area
 # git add *.extension                                   => To Add All The Files With The Same Extension
+# git rm fillname                                       => To Remove The File From Staging Area
 # git restore --staged filename filename...             => To Restore The Files From The Staging Area To The Working Directory
 # git commit -m "Here The Message You Want To Write"    => To Add The Files From Staging Area To The Local Repo
 # git branch                                            => Show You All The Branches In The Local Repo
@@ -2329,11 +2350,12 @@
 # git checkout -b Branch Name                           => To Create A New Branch And Go To It
 # git branch -m New Branch Name                         => To Rename An Existing Branch
 # git merge Branch Name                                 => To Merge The Branch With The Main Branch
-#
-#
-#
-#
-#
-#
-#
-#
+# git stash                                             => To Put The Files In A Stash Until You Done With It (بتركنهم على جمب لعند ما تخلص التعديلات وبعدين ترجعم من الستاش وترفعهم)
+# git stash pop                                         => To Restore The Files From The Stash ( Stash Box Also Deleted )
+# git stash apply                                       => To restore The Files From The Stash But The Stash Box Not Deleted
+# git stash list                                        => To Show You All Stashes
+# git stash save "The Message You Want"                 => To Put A File In Stash Box With Message
+# git stash pop/apply stash@{Id Number}                 => To Restore Any Specified File From The Stash
+# git stash drop                                        => To Remove Stash Box With Files Inside It
+# git stash show                                        => To Show You What Happened In The Stash
+# git stash clear                                       => Remove All The Stashes
