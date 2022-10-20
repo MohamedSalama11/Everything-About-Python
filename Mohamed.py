@@ -1625,6 +1625,18 @@
 #     print(number)
 
 
+# Another Example
+# def my_generator(num):
+#     for i in range(num):
+#         yield i
+
+
+# my_gen = my_generator(10)
+# print(next(my_gen))
+# print(next(my_gen))
+# next(my_gen)
+# print(next(my_gen))
+
 ######################### Decorators #########################
 # 1- Sometimes called Meta Programming
 # 2- Everything in python is object even functions
@@ -2359,3 +2371,8 @@
 # git stash drop                                        => To Remove Stash Box With Files Inside It
 # git stash show                                        => To Show You What Happened In The Stash
 # git stash clear                                       => Remove All The Stashes
+# git clean -n                                          => To Show You The Files You Would Removed
+# git clean -f                                          => To Remove All The Files
+# git log                                               => Show You All The Commits In The Repo
+# git reset --hard hashCommit                           => To Remove The Last Commit And Put The Pointer To The Specific Commit Hash You Enter
+# git push origin main --force                          => To Force The Updates
