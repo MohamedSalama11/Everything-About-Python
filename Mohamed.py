@@ -2326,7 +2326,30 @@
 # except UnicodeEncodeError:
 #     print("Encode Error")
 
+# Area Painting Calculation
+# import math
+# test_h = int(input("Height of wall: "))
+# test_w = int(input("Width of wall: "))
+# coverage = 5
 
+# def paint_calc(height, width, cover):
+#     number_of_cans = (height * width) / cover
+#     print(f"You Will Need {math.ceil(number_of_cans)} Of Paint For This Partical Area")
+# paint_calc(height=test_h, width=test_w, cover=coverage)
+
+
+# Primer Number Checker
+# n = int(input("Check this number: "))
+
+
+# def prime_checker(number):
+#     if number % 2 == 0:
+#         print("This Is Prime Number")
+#     else:
+#         print("This Is Not Prime Number")
+
+
+# prime_checker(number=n)
 #################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
 # git status                                            => Show You What Happens In Your Working Directory
@@ -2376,3 +2399,18 @@
 # git log                                               => Show You All The Commits In The Repo
 # git reset --hard hashCommit                           => To Remove The Last Commit And Put The Pointer To The Specific Commit Hash You Enter
 # git push origin main --force                          => To Force The Updates
+# .gitignore                                            => To Ignore Files And Directories In The Working Project We Need First To Create .gitignore file
+# Note: Put The Files And Directories You Want To Ignore In The .gitignore File
+# Note: *.log => Means That It Will Ignore Any File Ending With The Extension .log
+# Note: !FileName  => Means That Not Ignoring This Specified File
+# git add -f filename                                   => Adding A File Even If It Was In The .gitignore file
+# git tag                                               => To Show You All The Tags
+# git tag tagName (v1.0)                                => To Name A Tag
+# git push origin tagname(v1.0)                         => To Push The Tag To The Github
+# git tag -a tagName -m "The Message You Want"          => To Create Unnotated Tag
+# git tag -l "Tags You Want"                            => To List All The Tags
+# git tag -d tagName                                    => To Remove A Tag Localy
+# git push origin --delete tagName                      => To Remvoe A Tag Remotely
+#
+#
+#
