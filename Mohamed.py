@@ -1993,7 +1993,7 @@
 # Treasure Island
 # print("Welcome To The Treasure Island \nYour Mission Is To Find The Treasure.")
 # choice1 = input(
-#     "You're At A Cross Road. Where Do You Want To Go? Type \"left\" or \"right\" ").strip().lower()
+#     "You're At A Cross Road. Where Do You Want To Go? Type \"left\" or \"right\":- ").strip().lower()
 # if choice1 == "left":
 #     choice2 = input(
 #         "You Came To Lake, There Is An Island there is an island in the center of the lake, Type \"wait\" for a boat, Type swim to \"swim\" to the island ").strip().lower()
