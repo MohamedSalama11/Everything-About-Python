@@ -1764,6 +1764,131 @@
 # img_converted = my_img.convert("L")
 # img_converted.show()
 
+
+################################################### OOP ( Object Oriented Programming ) ###################################################
+# Notes:-
+# 1- Python Support OOP
+# 2- OOP Is A Paradigm Or Coding Style
+# 3- Paradigm => Means structuring program so the methods(functions) and attributes(data) are bundled into objects
+# 4- Methods => Act as function that use the information of the object
+# 5- Python is Multi-Paradigm programming language (Procedural, OOP, Functional) Programming
+# 6- Procedural Programming => Structure of the app like Recipe, sets of steps to make the task ( Means The Way of Structurning Our Code Like The Code We Write )
+# 7- Functional Programming => Built on the concept of mathematical Functions
+# 8- We Use Camel Case Method For Creating Classes
+# 9- Instanciate from a class => Means create an object from a class
+# 10- Class is the blueprint or constructor of the object
+# 11- When creating object python look for the built in __init__ method
+# 12- __init__ method called every time you create an object from class
+# 13- __init__ method is initialize the data for the object
+# 14- Any method with two underscore in the start and the end called Dunder or Magic method
+# 15- Self refer to the current instance(object) created from the class and must be first parameter
+# 16- Self can be named anything
+# 17- In python you don't need to call new() keyword to create object
+# 18- Instance Attributes Defined Inside The Constructor
+# 19- Class Attributes Defined Outside The Constructor
+# 20- Class methods makred with @classmethod Decorator to flag it as class method
+# 21- Class methods take cls parameter not self to point to the calss not the instance
+# 22- Static methods takes no parameters
+# 23- Static methods makred with @staticmethod Decorator to flag it as static method
+# 24- Static methods Its Bound To The Class Not Instance
+# 25- Static methods Used when doing somethind doesn't have access to object or claass but related to class
+
+# Class Syntax
+# class Name:
+#     Constructor => Do Instantiation [create instance from a class]
+#     Each Instance is separate object
+#     def __init__(self, other_data):
+#         body of the function
+
+
+# class Member:
+#     def __init__(self):  # Constructor
+#         print("A New Member Has Been Added.")
+
+
+# member_one = Member()
+# print(dir(Member))
+
+
+class Member:
+    # Creating Class Attributes
+    not_allowed_names = ["Hell", "Shit", "Baloot"]
+    users_num = 0
+
+    # Creating Class Method
+    @classmethod
+    def show_users_count(cls):
+        print(f"We Have {cls.users_num} Users In Our System")
+
+    # Creating Static Method
+    @staticmethod
+    def say_hello():
+        print("Hello From Static Method")
+    # Creating Instance Attributes
+
+    def __init__(self, fName, mName, lName, gender):
+        self.firstname = fName
+        self.middlename = mName
+        self.lastname = lName
+        self.gender = gender
+        Member.users_num += 1
+    # Creating Instance Methods
+
+    def full_name(self):
+        if self.firstname in Member.not_allowed_names:
+            raise ValueError("Not Allowed Name.")
+        else:
+            return f"{self.firstname} {self.middlename} {self.lastname}"
+
+    def name_with_title(self):
+        if self.gender == "Male":
+            return f"Hello Mr {self.firstname}"
+        else:
+            return f"Hello Miss {self.firstname}"
+
+    def get_all_info(self):
+        return f"{self.name_with_title()}, Your Full Name Is {self.full_name()}, And Your Gender Is {self.gender}."
+
+    def delete_user(self):
+        Member.users_num -= 1
+        return f"User {self.full_name()} Is Deleted."
+
+
+# print(Member.users_num)
+
+# member_one = Member("Mohamed", "Ali", "Youssef", "Male")
+# member_two = Member("Salama", "Ahmed", "Ebrahim", "Male")
+# member_three = Member("Donia", "Ahmed", "Ebrahim", "Female")
+
+# print(Member.users_num)
+
+# print(member_three.delete_user())
+
+# print(Member.users_num)
+# print(dir(member_one)) # Printing The Content Of The Instance (Attributes, Methods)
+# print(dir(Member)) # Printing The Content Of The Instance (Methods)
+
+# To Call The Instance Attributes
+# print(member_one.firstname, member_one.middlename, member_one.lastname)
+# print(member_two.firstname, member_two.middlename, member_two.lastname)
+
+# To Call The Instance Methods
+# print(member_one.full_name())
+# print(Member.full_name(member_one)) # What Happens Behind The Scene
+# print(member_one.get_all_info())
+# print(member_two.full_name())
+# print(member_three.full_name())
+# print(member_one.name_with_title())
+# print(member_three.name_with_title())
+
+# To Call Class Attributes
+# print(Member.users_num)
+
+# To Call Class Methods
+# Member.show_users_count()
+
+# To Call Static Method
+# Member.say_hello()
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
