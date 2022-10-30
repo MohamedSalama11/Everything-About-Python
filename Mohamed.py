@@ -2411,6 +2411,3 @@
 # git tag -l "Tags You Want"                            => To List All The Tags
 # git tag -d tagName                                    => To Remove A Tag Localy
 # git push origin --delete tagName                      => To Remvoe A Tag Remotely
-#
-#
-#
