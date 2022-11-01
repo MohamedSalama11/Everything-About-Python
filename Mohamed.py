@@ -1791,67 +1791,73 @@
 # 22- Static methods takes no parameters
 # 23- Static methods makred with @staticmethod Decorator to flag it as static method
 # 24- Static methods Its Bound To The Class Not Instance
-# 25- Static methods Used when doing somethind doesn't have access to object or claass but related to class
+# 25- Static methods Used when doing something doesn't have access to object or class but related to class
+# 26- Everything in python is an object
+# 27- self.__class__ The class to hich a calss instance belongs
+# 28- __str__ Gives a human-readable output of the object
+# 29- __len__ Rturns the length of the container and it's called when we use the built-in-len() Function of the object
+
 
 # Class Syntax
-# class Name:
+# class Name_Of_The_Class:
 #     Constructor => Do Instantiation [create instance from a class]
 #     Each Instance is separate object
 #     def __init__(self, other_data):
 #         body of the function
 
 
-# class Member:
-#     def __init__(self):  # Constructor
+# class Member_list:
+#     def __init__(self):
 #         print("A New Member Has Been Added.")
 
+# member_one = Member_list()
+# member_two = Member_list()
 
-# member_one = Member()
-# print(dir(Member))
+# print(member_one)
+# print(dir(Member_list))
 
+# class Member:
+#     # Creating Class Attributes
+#     not_allowed_names = ["Hell", "Shit", "Baloot"]
+#     users_num = 0
 
-class Member:
-    # Creating Class Attributes
-    not_allowed_names = ["Hell", "Shit", "Baloot"]
-    users_num = 0
+#     # Creating Class Method
+#     @classmethod
+#     def show_users_count(cls):
+#         print(f"We Have {cls.users_num} Users In Our System")
 
-    # Creating Class Method
-    @classmethod
-    def show_users_count(cls):
-        print(f"We Have {cls.users_num} Users In Our System")
+#     # Creating Static Method
+#     @staticmethod
+#     def say_hello():
+#         print("Hello From Static Method")
+#     # Creating Instance Attributes
 
-    # Creating Static Method
-    @staticmethod
-    def say_hello():
-        print("Hello From Static Method")
-    # Creating Instance Attributes
+#     def __init__(self, fName, mName, lName, gender):
+#         self.firstname = fName
+#         self.middlename = mName
+#         self.lastname = lName
+#         self.gender = gender
+#         Member.users_num += 1
+#     # Creating Instance Methods
 
-    def __init__(self, fName, mName, lName, gender):
-        self.firstname = fName
-        self.middlename = mName
-        self.lastname = lName
-        self.gender = gender
-        Member.users_num += 1
-    # Creating Instance Methods
+#     def full_name(self):
+#         if self.firstname in Member.not_allowed_names:
+#             raise ValueError("Not Allowed Name.")
+#         else:
+#             return f"{self.firstname} {self.middlename} {self.lastname}"
 
-    def full_name(self):
-        if self.firstname in Member.not_allowed_names:
-            raise ValueError("Not Allowed Name.")
-        else:
-            return f"{self.firstname} {self.middlename} {self.lastname}"
+#     def name_with_title(self):
+#         if self.gender == "Male":
+#             return f"Hello Mr {self.firstname}"
+#         else:
+#             return f"Hello Miss {self.firstname}"
 
-    def name_with_title(self):
-        if self.gender == "Male":
-            return f"Hello Mr {self.firstname}"
-        else:
-            return f"Hello Miss {self.firstname}"
+#     def get_all_info(self):
+#         return f"{self.name_with_title()}, Your Full Name Is {self.full_name()}, And Your Gender Is {self.gender}."
 
-    def get_all_info(self):
-        return f"{self.name_with_title()}, Your Full Name Is {self.full_name()}, And Your Gender Is {self.gender}."
-
-    def delete_user(self):
-        Member.users_num -= 1
-        return f"User {self.full_name()} Is Deleted."
+#     def delete_user(self):
+#         Member.users_num -= 1
+#         return f"User {self.full_name()} Is Deleted."
 
 
 # print(Member.users_num)
@@ -1860,13 +1866,15 @@ class Member:
 # member_two = Member("Salama", "Ahmed", "Ebrahim", "Male")
 # member_three = Member("Donia", "Ahmed", "Ebrahim", "Female")
 
+
 # print(Member.users_num)
 
 # print(member_three.delete_user())
 
 # print(Member.users_num)
-# print(dir(member_one)) # Printing The Content Of The Instance (Attributes, Methods)
-# print(dir(Member)) # Printing The Content Of The Instance (Methods)
+# Printing The Content Of The Instance (Attributes, Methods)
+# print(dir(member_one))
+# print(dir(Member))  # Printing The Content Of The Instance (Methods)
 
 # To Call The Instance Attributes
 # print(member_one.firstname, member_one.middlename, member_one.lastname)
@@ -1874,12 +1882,11 @@ class Member:
 
 # To Call The Instance Methods
 # print(member_one.full_name())
-# print(Member.full_name(member_one)) # What Happens Behind The Scene
-# print(member_one.get_all_info())
-# print(member_two.full_name())
-# print(member_three.full_name())
+# print(Member.full_name(member_one))  # What Happens Behind The Scene
+
 # print(member_one.name_with_title())
 # print(member_three.name_with_title())
+# print(member_one.get_all_info())
 
 # To Call Class Attributes
 # print(Member.users_num)
@@ -1889,6 +1896,56 @@ class Member:
 
 # To Call Static Method
 # Member.say_hello()
+
+
+# Dunder Or Magic Methods
+# class Skill:
+#     def __init__(self):
+#         self.skills = ["Html", "Css", "Js"]
+
+#     def __str__(self):
+#         return f'This Is My Skills => {self.skills}'
+
+#     def __len__(self):
+#         return len(self.skills)
+
+
+# profile = Skill()
+# print(profile)
+# print(len(profile))
+# profile.skills.append("PHP")
+# profile.skills.append("Mysql")
+# print(len(profile))
+# print(profile.__class__)  # To Show You The Instance Belongs To Which Class
+
+# Means Creating An Instance From The Class (Constructor) Str
+# my_string = "Mohamed"
+
+# print(type(my_string))
+# print(my_string.__class__)
+# print(dir(str))
+
+# print(my_string.upper())
+# print(str.upper(my_string))
+
+# Inheritance
+class Food:  # Base Class
+    def __init__(self, name):
+        self.name = name
+        print(f"{self.name} Is Created From The Base Class")
+
+    def eat(self):
+        print("Eat Method From Base Class")
+
+
+class Apple(Food):  # Derive Class
+    def __init__(self):
+        print("Apple Is Created From Derived Class")
+
+
+food_one = Food("Pizza")
+# food_two = Apple()
+# food_two.eat()
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
