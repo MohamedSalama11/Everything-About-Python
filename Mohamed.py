@@ -1796,6 +1796,8 @@
 # 27- self.__class__ The class to hich a calss instance belongs
 # 28- __str__ Gives a human-readable output of the object
 # 29- __len__ Rturns the length of the container and it's called when we use the built-in-len() Function of the object
+# 30- To override a method in the parent class you need to write it with the same name in the child class
+# 31- mro() or method resoultion order => To Show You The Order Of The Classes In Your Object
 
 
 # Class Syntax
@@ -1929,23 +1931,104 @@
 # print(str.upper(my_string))
 
 # Inheritance
-class Food:  # Base Class
-    def __init__(self, name):
-        self.name = name
-        print(f"{self.name} Is Created From The Base Class")
+# class Food:  # Base Class
+#     def __init__(self, name, price):
+#         self.name = name
+#         self.price = price
+#         print(f"{self.name} Is Created From The Base Class")
 
-    def eat(self):
-        print("Eat Method From Base Class")
-
-
-class Apple(Food):  # Derive Class
-    def __init__(self):
-        print("Apple Is Created From Derived Class")
+#     def eat(self):
+#         print("Eat Method From Base Class")
 
 
-food_one = Food("Pizza")
-# food_two = Apple()
+# class Apple(Food):  # Derive Class
+#     def __init__(self, name, price, amount):
+#         # Food.__init__(self, name, price) # Created Instance From Base Class
+#         super().__init__(name, price)  # Do Not Need To Put Self
+#         self.amount = amount
+#         print(
+#             f"{self.name} Is Created From Derived Class And The Price Is {self.price} And Amount Is {self.amount}")
+
+#     def get_from_tree(self):
+#         print("Get From Tree From Derived Class")
+
+
+# # food_one = Food("Pizza")
+# food_two = Apple("Pizza", 150, 200)
 # food_two.eat()
+# food_two.get_from_tree()
+
+# Multiple Inheritance
+# class Base:
+#     print("Base")
+
+
+# class DerivedOne(Base):
+#     print("Derived One")
+
+
+# class DerivedTwo(DerivedOne):
+#     print("Derived Two")
+
+
+# object1 = DerivedTwo()
+
+
+# class BaseOne:
+#     def __init__(self):
+#         print("Message From Base One")
+
+#     def func_one(self):
+#         print("One")
+
+
+# class BaseTwo:
+#     def __init__(self):
+#         print("Message From Base Two")
+
+#     def func_two(self):
+#         print("Two")
+
+
+# class Derived(BaseOne, BaseTwo):
+#     pass
+
+
+# object1 = Derived()
+# print(Derived.mro())
+
+# print(object1.func_one)
+# print(object1.func_two)
+
+# object1.func_one()
+# object1.func_two()
+
+
+# Polymorphism (Many Forms)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
