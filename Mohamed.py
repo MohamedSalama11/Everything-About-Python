@@ -2005,23 +2005,24 @@
 
 
 # Polymorphism (Many Forms)
-# class A:
-#     def do_something(self):
-#         print("From Class A")
-#         raise NotImplementedError("Derived Class Must Implement This Method")
+class A:
+    def do_something(self):
+        print("From Class A")
+        raise NotImplementedError("Derived Class Must Implement This Method")
 
 
-# class B(A):
-#     def do_something(self):
-#         print("From Class A")
+class B(A):
+    def do_something(self):
+        print("From Class A")
 
 
-# class C(A):
-#     pass
+class C(A):
+    pass
 
 
-# my_object = B()
-# my_object.do_something()
+my_object = B()
+my_object.do_something()
+
 
 
 #################################################################### Exercises ####################################################################
