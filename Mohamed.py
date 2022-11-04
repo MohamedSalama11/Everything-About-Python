@@ -1798,7 +1798,22 @@
 # 29- __len__ Rturns the length of the container and it's called when we use the built-in-len() Function of the object
 # 30- To override a method in the parent class you need to write it with the same name in the child class
 # 31- mro() or method resoultion order => To Show You The Order Of The Classes In Your Object
-
+#### Encapsulation ####
+# - Restrict Access To The Data Stored in Attirbutes and Methods
+# Public
+# - Every Attribute and Method That We Used So Far Is Public
+# - Attributes and Methods Can Be Modified and Run From Everywhere
+# - Inside Our Outside The Class
+# Protected
+# - Attributes and Methods Can Be Accessed From Within The Class And Sub Classes (Derived Classes => Inheritance From The Base Class)
+# - Attributes and Methods Prefixed With One Underscore _
+# Private
+# - Attributes and Methods Can Be Accessed From Within The Class Or Object Only
+# - Attributes Cannot Be Modified From Outside The Class
+# - Attributes and Methods Prefixed With Two Underscores __
+# ---------------------------------------------------------
+# - Attributes = Variables = Properties
+# -------------------------------------
 
 # Class Syntax
 # class Name_Of_The_Class:
@@ -2005,24 +2020,108 @@
 
 
 # Polymorphism (Many Forms)
-class A:
-    def do_something(self):
-        print("From Class A")
-        raise NotImplementedError("Derived Class Must Implement This Method")
+# class A:
+#     def do_something(self):
+#         print("From Class A")
+#         raise NotImplementedError("Derived Class Must Implement This Method")
 
 
-class B(A):
-    def do_something(self):
-        print("From Class A")
+# class B(A):
+#     def do_something(self):
+#         print("From Class A")
 
 
-class C(A):
-    pass
+# class C(A):
+#     pass
 
 
-my_object = B()
-my_object.do_something()
+# my_object = B()
+# my_object.do_something()
 
+
+# Encapsulation
+# class Member:
+#     def __init__(self, name):
+#         self.name = name  # Public
+
+
+# one = Member("Mohamed")
+# print(one.name)
+# one.name = "Osama"
+# print(one.name)
+
+# class Member:
+#     def __init__(self, name):
+#         self._name = name  # Protected
+
+
+# one = Member("Mohamed")
+# # print(one._name)
+# one._name = "Osama"
+# print(one._name)
+
+
+# class Member:
+#     def __init__(self, name):
+#         self.__name = name  # Private
+
+#     def say_hello(self):
+#         return f"Hello {self.__name}"
+
+
+# one = Member("Mohamed")
+# print(one.__name)
+# print(one.say_hello())
+# print(one._Member__name) # Will Print The Name For Sorry Even If It Is A Private Attribute Because It's Like A Name Convention Not Built In Python
+
+# Getters And Setters
+# class Member:
+#     def __init__(self, name):
+#         self.__name = name
+
+#     def say_hello(self):
+#         return f"Hello {self.__name}"
+
+#     def get_name(self):  # Getter
+#         return self.__name
+
+#     def set_name(self, new_name):  # Setter
+#         self.__name = new_name
+
+
+# one = Member("Mohamed")
+
+# print(one.get_name())
+
+# one.set_name("Ebrahim")
+# print(one.get_name())
+
+
+# @Property Decorator
+# It Is Useful To Use The Method As A Property
+# class Member:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def say_hello(self):
+#         return f"Hello {self.name}"
+#     @property
+#     def age_in_days(self):
+#         return self.age * 365
+
+
+# one = Member("Mohamed", 22)
+# print(one.name)
+# print(one.age)
+# print(one.say_hello())
+# print(one.age_in_days)
+
+# ABC => Abstract Base Class
+# - Class Called Abstract Class If it Has One or More Abstract Methods
+# - abc module in Python Provides Infrastructure for Defining Custom Abstract Base Classes.
+# - By Adding @absttractmethod Decorator on The Methods
+# - ABCMeta Class Is a Metaclass Used For Defining Abstract Base Class
 
 
 #################################################################### Exercises ####################################################################
