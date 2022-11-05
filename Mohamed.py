@@ -1798,6 +1798,8 @@
 # 29- __len__ Rturns the length of the container and it's called when we use the built-in-len() Function of the object
 # 30- To override a method in the parent class you need to write it with the same name in the child class
 # 31- mro() or method resoultion order => To Show You The Order Of The Classes In Your Object
+# 32- When Function does not have return it returns None
+# 33- child class = sub class = derived class
 #### Encapsulation ####
 # - Restrict Access To The Data Stored in Attirbutes and Methods
 # Public
@@ -1968,10 +1970,15 @@
 #         print("Get From Tree From Derived Class")
 
 
-# # food_one = Food("Pizza")
+# food_one = Food("Pizza", 30)
 # food_two = Apple("Pizza", 150, 200)
 # food_two.eat()
 # food_two.get_from_tree()
+
+# Check If The Object Is An Instance From The Class => isinstance(subclass, class)
+# print(isinstance(food_one, Food))
+# print(isinstance(food_one, object)) # Any Functionality In Python Comes From The Main Class Of Python Which Is object
+
 
 # Multiple Inheritance
 # class Base:
@@ -2124,32 +2131,65 @@
 # - By Adding @absttractmethod Decorator on The Methods
 # - ABCMeta Class Is a Metaclass Used For Defining Abstract Base Class
 
-from abc import ABCMeta, abstractmethod
+# from abc import ABCMeta, abstractmethod
 
 
-class Programming(metaclass=ABCMeta):
-    @abstractmethod
-    def has_opp(self):
-        pass
-    
-    def has_name(self):
-        pass
+# class Programming(metaclass=ABCMeta):
+#     @abstractmethod
+#     def has_opp(self):
+#         pass
+
+#     def has_name(self):
+#         pass
 
 
-class Python(Programming):
-    def has_opp(self):
-        return "Yes"
+# class Python(Programming):
+#     def has_opp(self):
+#         return "Yes"
 
 
-class Pascal(Programming):
-    def has_opp(self):
-        return "No"
+# class Pascal(Programming):
+#     def has_opp(self):
+#         return "No"
 
 
-one = Python()
-two = Pascal()
+# one = Python()
+# two = Pascal()
 
-print(two.has_opp())
+# print(two.has_opp())
+
+
+###### Exercises ######
+class PlayerCharacter:
+    membership = True
+
+    def __init__(self, name, age):
+        if age >= 18:
+            self.name = name
+            self.age = age
+
+    def run(self):
+        print("Run")
+
+    @classmethod
+    def adding_things(cls, num1, num2):
+        return num1 + num2
+
+    @staticmethod
+    def adding_things2(num1, num2):
+        return num1 + num2
+
+
+player1 = PlayerCharacter("Mohamed", 22)
+player2 = PlayerCharacter("Cindy", 32)
+player1.attack = True
+
+# print(player1.name)
+# print(player2.name)
+# print(player1.attack)
+# print(player1.adding_things(2,4))
+# print(PlayerCharacter.adding_things(2,4))
+# print(player1.adding_things2(3,4))
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
