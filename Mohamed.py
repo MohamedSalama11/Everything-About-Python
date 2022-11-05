@@ -2160,6 +2160,9 @@
 
 
 ###### Exercises ######
+from turtle import *
+
+
 class PlayerCharacter:
     membership = True
 
@@ -2837,3 +2840,16 @@ player1.attack = True
 # git tag -l "Tags You Want"                            => To List All The Tags
 # git tag -d tagName                                    => To Remove A Tag Localy
 # git push origin --delete tagName                      => To Remvoe A Tag Remotely
+
+
+# Heart Shape
+color("red")
+begin_fill()
+pensize(10)
+left(50)
+forward(133)
+circle(50, 200)
+right(140)
+circle(50, 200)
+forward(133)
+end_fill()
