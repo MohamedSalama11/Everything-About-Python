@@ -2160,32 +2160,31 @@
 
 
 ###### Exercises ######
-from turtle import *
 
 
-class PlayerCharacter:
-    membership = True
+# class PlayerCharacter:
+#     membership = True
 
-    def __init__(self, name, age):
-        if age >= 18:
-            self.name = name
-            self.age = age
+#     def __init__(self, name, age):
+#         if age >= 18:
+#             self.name = name
+#             self.age = age
 
-    def run(self):
-        print("Run")
+#     def run(self):
+#         print("Run")
 
-    @classmethod
-    def adding_things(cls, num1, num2):
-        return num1 + num2
+#     @classmethod
+#     def adding_things(cls, num1, num2):
+#         return num1 + num2
 
-    @staticmethod
-    def adding_things2(num1, num2):
-        return num1 + num2
+#     @staticmethod
+#     def adding_things2(num1, num2):
+#         return num1 + num2
 
 
-player1 = PlayerCharacter("Mohamed", 22)
-player2 = PlayerCharacter("Cindy", 32)
-player1.attack = True
+# player1 = PlayerCharacter("Mohamed", 22)
+# player2 = PlayerCharacter("Cindy", 32)
+# player1.attack = True
 
 # print(player1.name)
 # print(player2.name)
@@ -2193,6 +2192,21 @@ player1.attack = True
 # print(player1.adding_things(2,4))
 # print(PlayerCharacter.adding_things(2,4))
 # print(player1.adding_things2(3,4))
+
+# Exercise Extending List
+# class SuperList(list):
+#     def __len__(self):
+#         return 1000
+
+
+# super_list1 = SuperList()
+# print(len(super_list1))
+# super_list1.append(5)
+# super_list1.append(6)
+# print(super_list1[0])
+# print(super_list1[1])
+# print(issubclass(SuperList, list))
+# print(issubclass(list, object))
 #################################################################### Exercises ####################################################################
 
 # Practical Email Slice Exercise
@@ -2779,6 +2793,8 @@ player1.attack = True
 
 
 # prime_checker(number=n)
+
+
 #################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
 # git status                                            => Show You What Happens In Your Working Directory
@@ -2843,13 +2859,44 @@ player1.attack = True
 
 
 # Heart Shape
-color("red")
-begin_fill()
-pensize(10)
-left(50)
-forward(133)
-circle(50, 200)
-right(140)
-circle(50, 200)
-forward(133)
-end_fill()
+# from turtle import *
+# color("red")
+# begin_fill()
+# pensize(10)
+# left(50)
+# forward(133)
+# circle(50, 200)
+# right(140)
+# circle(50, 200)
+# forward(133)
+# end_fill()
+
+
+# Circle Shape
+# import turtle
+# import colorsys
+# t = turtle.Turtle()
+# s = turtle.Screen()
+# s.bgcolor("red")
+# t.speed(0)
+# n = 36
+# h = 0
+# for i in range(460):
+#     c = colorsys.hsv_to_rgb(h, 1, 0.9)
+#     h += 1/n
+#     t.color(c)
+#     t.left(145)
+#     for j in range(5):
+#         t.forward(300)
+#         t.left(150)
+
+# Annoying My Friend ( Elqurashy )
+# import random
+# import pyautogui as pg
+# import time
+# # my_list = ("I Hacked Your Friend Computer :)")
+# time.sleep(8)
+# for i in range(100):
+#     # a = random.choice(animal)
+#     pg.write("Mansouuuuurrrrrrrrrrrrrrrrrrrrrrrr")
+#     pg.press("enter")
