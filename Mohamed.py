@@ -2867,7 +2867,6 @@ while True:
         "Type 'encode' to encrypt, type 'decode' to decrypt:\n".lower())
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
-
     shift = shift % 26
 
     def encrypt(plain_text, shift_amount):
@@ -2882,7 +2881,6 @@ while True:
                 cipher_text += letter
         print(f"The Encoded Text Is {cipher_text}.")
 
-
     def decrypt(plain_text, shift_amount):
         decrypt_text = ""
         for letter in plain_text:
@@ -2895,16 +2893,16 @@ while True:
                 decrypt_text += letter
         print(f"The Decoded Text Is {decrypt_text}.")
 
-
     if direction == "encode":
         encrypt(plain_text=text, shift_amount=shift)
     elif direction == "decode":
         decrypt(plain_text=text, shift_amount=shift)
-    check = input("Type 'Yes' If You Want To Go Again. Otherwise Type 'No'. \n").capitalize()
+    check = input(
+        "Type 'Yes' If You Want To Go Again. Otherwise Type 'No'. \n").capitalize()
     if check == "Yes":
         continue
     else:
-        print("Thank You!")
+        print("See You Next Time :)")
         break
 
 #################################################### Git Commands ####################################################
