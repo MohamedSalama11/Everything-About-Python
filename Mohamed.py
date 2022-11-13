@@ -2795,6 +2795,53 @@
 # prime_checker(number=n)
 
 
+########### Heart Shape ############
+# from turtle import *
+# color("red")
+# begin_fill()
+# pensize(10)
+# left(50)
+# forward(133)
+# circle(50, 200)
+# right(140)
+# circle(50, 200)
+# forward(133)
+# end_fill()
+
+
+########## Circle Shape ########
+# import turtle
+# import colorsys
+# t = turtle.Turtle()
+# s = turtle.Screen()
+# s.bgcolor("red")
+# t.speed(0)
+# n = 36
+# h = 0
+# for i in range(460):
+#     c = colorsys.hsv_to_rgb(h, 1, 0.9)
+#     h += 1/n
+#     t.color(c)
+#     t.left(145)
+#     for j in range(5):
+#         t.forward(300)
+#         t.left(150)
+
+############### Annoying My Friend ##############
+# import random
+# import pyautogui as pg
+# import time
+# # my_list = ("I Hacked Your Friend Computer :)")
+# time.sleep(8)
+# for i in range(1000):
+#     # a = random.choice(animal)
+#     pg.write("Elmoddeeeerrrrrrrrrrrrr")
+#     pg.press("enter")
+
+
+####### Caesar Cipher #######
+
+
 #################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
 # git status                                            => Show You What Happens In Your Working Directory
@@ -2856,47 +2903,3 @@
 # git tag -l "Tags You Want"                            => To List All The Tags
 # git tag -d tagName                                    => To Remove A Tag Localy
 # git push origin --delete tagName                      => To Remvoe A Tag Remotely
-
-
-# Heart Shape
-# from turtle import *
-# color("red")
-# begin_fill()
-# pensize(10)
-# left(50)
-# forward(133)
-# circle(50, 200)
-# right(140)
-# circle(50, 200)
-# forward(133)
-# end_fill()
-
-
-# Circle Shape
-# import turtle
-# import colorsys
-# t = turtle.Turtle()
-# s = turtle.Screen()
-# s.bgcolor("red")
-# t.speed(0)
-# n = 36
-# h = 0
-# for i in range(460):
-#     c = colorsys.hsv_to_rgb(h, 1, 0.9)
-#     h += 1/n
-#     t.color(c)
-#     t.left(145)
-#     for j in range(5):
-#         t.forward(300)
-#         t.left(150)
-
-# Annoying My Friend ( Elqurashy )
-# import random
-# import pyautogui as pg
-# import time
-# # my_list = ("I Hacked Your Friend Computer :)")
-# time.sleep(8)
-# for i in range(100):
-#     # a = random.choice(animal)
-#     pg.write("Mansouuuuurrrrrrrrrrrrrrrrrrrrrrrr")
-#     pg.press("enter")
