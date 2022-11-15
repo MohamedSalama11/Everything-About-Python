@@ -2839,23 +2839,23 @@
 #     pg.press("enter")
 
 
-####### Caesar Cipher #######
-logo = """           
- ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
-a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
-8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
-"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
- `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88   
-            88             88                                 
-           ""             88                                 
-                          88                                 
- ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
-a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
-8b         88 88       d8 88       88 8PP""""""" 88          
-"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
- `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
-              88                                             
-              88           
+####### Hidden Messages Program #######
+logo = """
+ ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,
+a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8
+8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88
+"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88
+ `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88
+            88             88
+           ""             88
+                          88
+ ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,
+a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
+8b         88 88       d8 88       88 8PP""""""" 88
+"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88
+ `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88
+              88
+              88
 """
 print(logo)
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
@@ -2905,6 +2905,60 @@ while True:
         print("See You Next Time :)")
         break
 
+
+####### Grading Program ########
+# student_scores = {
+#     "Harry": 81,
+#     "Ron": 78,
+#     "Hermione": 99,
+#     "Draco": 74,
+#     "Neville": 62,
+# }
+
+# student_grades = {}
+
+# for student in student_scores:
+#     score = student_scores[student]
+#     if score > 90:
+#         student_grades[student] = "Outstanding"
+#     elif score > 80:
+#         student_grades[student] = "Exceeds Expectations"
+#     elif score > 70:
+#         student_grades[student] = "Acceptable"
+#     else:
+#         student_grades[student] = "Failed"
+
+# print(student_grades)
+
+
+####### Dictionary In A List ########
+# travel_log = [
+#     {
+#         "country": "France",
+#         "visits": 12,
+#         "cities": ["Paris", "Lille", "Dijon"]
+#     },
+#     {
+#         "country": "Germany",
+#         "visits": 5,
+#         "cities": ["Berlin", "Hamburg", "Stuttgart"]
+#     },
+# ]
+
+# # print(travel_log[0]["country"])
+
+
+# def add_new_country(country, times, cities):
+#     new_country = {}
+#     new_country["country"] = country
+#     new_country["visits"] = times
+#     new_country["cities"] = cities
+#     travel_log.append(new_country)
+
+
+# add_new_country(country="Russia", times=2, cities=[
+#                 "Moscow", "Saint Petersburg"])
+# print(travel_log)
 #################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
 # git status                                            => Show You What Happens In Your Working Directory
