@@ -2840,71 +2840,71 @@
 
 
 ####### Caesar Cipher #######
-logo = """
- ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,
-a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8
-8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88
-"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88
- `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88
-            88             88
-           ""             88
-                          88
- ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,
-a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
-8b         88 88       d8 88       88 8PP""""""" 88
-"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88
- `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88
-              88
-              88
-"""
+# logo = """
+#  ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,
+# a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8
+# 8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88
+# "8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88
+#  `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88
+#             88             88
+#            ""             88
+#                           88
+#  ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,
+# a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
+# 8b         88 88       d8 88       88 8PP""""""" 88
+# "8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88
+#  `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88
+#               88
+#               88
+# """
 
-print(logo)
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# print(logo)
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+#             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+#             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-while True:
-    direction = input(
-        "Type 'encode' to encrypt, type 'decode' to decrypt:\n".lower())
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-    shift = shift % 26
+# while True:
+#     direction = input(
+#         "Type 'encode' to encrypt, type 'decode' to decrypt:\n".lower())
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+#     shift = shift % 26
 
-    def encrypt(plain_text, shift_amount):
-        cipher_text = ""
-        for letter in plain_text:
-            if letter in alphabet:
-                position = alphabet.index(letter)
-                new_position = position + shift_amount
-                new_letter = alphabet[new_position]
-                cipher_text += new_letter
-            else:
-                cipher_text += letter
-        print(f"The Encoded Text Is {cipher_text}.")
+#     def encrypt(plain_text, shift_amount):
+#         cipher_text = ""
+#         for letter in plain_text:
+#             if letter in alphabet:
+#                 position = alphabet.index(letter)
+#                 new_position = position + shift_amount
+#                 new_letter = alphabet[new_position]
+#                 cipher_text += new_letter
+#             else:
+#                 cipher_text += letter
+#         print(f"The Encoded Text Is {cipher_text}.")
 
-    def decrypt(plain_text, shift_amount):
-        decrypt_text = ""
-        for letter in plain_text:
-            if letter in alphabet:
-                position = alphabet.index(letter)
-                new_position = position - shift_amount
-                new_letter = alphabet[new_position]
-                decrypt_text += new_letter
-            else:
-                decrypt_text += letter
-        print(f"The Decoded Text Is {decrypt_text}.")
+#     def decrypt(plain_text, shift_amount):
+#         decrypt_text = ""
+#         for letter in plain_text:
+#             if letter in alphabet:
+#                 position = alphabet.index(letter)
+#                 new_position = position - shift_amount
+#                 new_letter = alphabet[new_position]
+#                 decrypt_text += new_letter
+#             else:
+#                 decrypt_text += letter
+#         print(f"The Decoded Text Is {decrypt_text}.")
 
-    if direction == "encode":
-        encrypt(plain_text=text, shift_amount=shift)
-    elif direction == "decode":
-        decrypt(plain_text=text, shift_amount=shift)
-    check = input(
-        "Type 'Yes' If You Want To Go Again. Otherwise Type 'No'. \n").capitalize()
-    if check == "Yes":
-        continue
-    else:
-        print("See You Next Time :)")
-        break
+#     if direction == "encode":
+#         encrypt(plain_text=text, shift_amount=shift)
+#     elif direction == "decode":
+#         decrypt(plain_text=text, shift_amount=shift)
+#     check = input(
+#         "Type 'Yes' If You Want To Go Again. Otherwise Type 'No'. \n").capitalize()
+#     if check == "Yes":
+#         continue
+#     else:
+#         print("See You Next Time :)")
+#         break
 
 
 ####### Grading Program ########
@@ -2960,6 +2960,91 @@ while True:
 # add_new_country(country="Russia", times=2, cities=[
 #                 "Moscow", "Saint Petersburg"])
 # print(travel_log)
+
+
+from turtle import *
+import turtle as tur
+
+tur.penup()
+tur.left(90)
+tur.fd(200)
+tur.pendown()
+tur.right(90)
+tur.fillcolor("red")
+tur.begin_fill()
+tur.circle(10, 180)
+tur.circle(25, 110)
+tur.left(50)
+tur.circle(60, 45)
+tur.circle(20, 170)
+tur.right(24)
+tur.fd(30)
+tur.left(10)
+tur.circle(30, 110)
+tur.fd(20)
+tur.left(40)
+tur.circle(90, 70)
+tur.circle(30, 150)
+tur.right(30)
+tur.fd(15)
+tur.circle(80, 90)
+tur.left(15)
+tur.fd(45)
+tur.right(165)
+tur.fd(20)
+tur.left(155)
+tur.circle(150, 80)
+tur.left(50)
+tur.circle(150, 90)
+tur.end_fill()
+
+tur.left(150)
+tur.circle(-90, 70)
+tur.left(20)
+tur.circle(75, 105)
+tur.setheading(60)
+tur.circle(80, 98)
+tur.circle(-90, 40)
+
+tur.left(180)
+tur.circle(90, 40)
+tur.circle(-80, 98)
+tur.setheading(-83)
+
+tur.fd(30)
+tur.left(90)
+tur.fd(25)
+tur.left(45)
+tur.fillcolor("green")
+tur.begin_fill()
+tur.circle(-80, 90)
+tur.right(90)
+tur.circle(-80, 90)
+tur.end_fill()
+tur.right(135)
+tur.fd(60)
+tur.left(180)
+tur.fd(85)
+tur.left(90)
+tur.fd(80)
+
+tur.right(90)
+tur.right(45)
+tur.fillcolor("green")
+tur.begin_fill()
+tur.circle(80, 90)
+tur.left(90)
+tur.circle(80, 90)
+tur.end_fill()
+tur.left(135)
+tur.fd(60)
+tur.left(180)
+tur.fd(60)
+tur.right(90)
+tur.circle(200, 60)
+tur.done()
+
+
 #################################################### Git Commands ####################################################
 # git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
 # git status                                            => Show You What Happens In Your Working Directory
