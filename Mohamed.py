@@ -1773,29 +1773,34 @@
 # 4- Methods => Act as function that use the information of the object
 # 5- Python is Multi-Paradigm programming language (Procedural, OOP, Functional) Programming
 # 6- Procedural Programming => Structure of the app like Recipe, sets of steps to make the task ( Means The Way of Structurning Our Code Like The Code We Write )
-# 7- Functional Programming => Built on the concept of mathematical Functions
-# 8- We Use Camel Case Method For Creating Classes
+# 7- Functional Programming => Built on the concept of Mathematical Functions
+# 8- We Use PascalCase ( UpperCamelCase ) Method For Creating Classes
 # 9- Instanciate from a class => Means create an object from a class
 # 10- Class is the blueprint or constructor of the object
 # 11- When creating object python look for the built in __init__ method
 # 12- __init__ method called every time you create an object from class
 # 13- __init__ method is initialize the data for the object
 # 14- Any method with two underscore in the start and the end called Dunder or Magic method
-# 15- Self refer to the current instance(object) created from the class and must be first parameter
+# 15- Self refer to the current instance(object) created from the class (blueprint, constructor) and must be first parameter
 # 16- Self can be named anything
 # 17- In python you don't need to call new() keyword to create object
 # 18- Instance Attributes Defined Inside The Constructor
-# 19- Class Attributes Defined Outside The Constructor
+# Instance Methods:-
+# -- Take Self Parameter Which Point To Instance Created From Class
+# -- Can have more than one parameter like any function
+# -- Can freely access attributes and methods on the same object
+# -- Can access the class itself
+# 19- Class Attributes Defined Outside The Constructor ( __init__ )
 # 20- Class methods makred with @classmethod Decorator to flag it as class method
-# 21- Class methods take cls parameter not self to point to the calss not the instance
+# 21- Class methods take cls parameter not self to point to the class not the instance
 # 22- Static methods takes no parameters
 # 23- Static methods makred with @staticmethod Decorator to flag it as static method
 # 24- Static methods Its Bound To The Class Not Instance
 # 25- Static methods Used when doing something doesn't have access to object or class but related to class
 # 26- Everything in python is an object
-# 27- self.__class__ The class to hich a calss instance belongs
+# 27- self.__class__ To Show You Which Class The Instance Belongs To
 # 28- __str__ Gives a human-readable output of the object
-# 29- __len__ Rturns the length of the container and it's called when we use the built-in-len() Function of the object
+# 29- __len__ Rturns the length of the container and it's called when we use the built-in len() Function of the object
 # 30- To override a method in the parent class you need to write it with the same name in the child class
 # 31- mro() or method resoultion order => To Show You The Order Of The Classes In Your Object
 # 32- When Function does not have return it returns None
@@ -1818,22 +1823,24 @@
 # -------------------------------------
 
 # Class Syntax
-# class Name_Of_The_Class:
+# class NameOfTheClass:
 #     Constructor => Do Instantiation [create instance from a class]
 #     Each Instance is separate object
 #     def __init__(self, other_data):
 #         body of the function
 
-
-# class Member_list:
+# class MemberList:
 #     def __init__(self):
 #         print("A New Member Has Been Added.")
 
-# member_one = Member_list()
-# member_two = Member_list()
+
+# member_one = MemberList()
+# member_two = MemberList()
 
 # print(member_one)
-# print(dir(Member_list))
+# print(dir(MemberList))  # To Print The Attributes And The Methods Of The Class
+# print(member_one.__class__)  # To See Which Class The Object Belongs To
+
 
 # class Member:
 #     # Creating Class Attributes
@@ -1856,6 +1863,7 @@
 #         self.middlename = mName
 #         self.lastname = lName
 #         self.gender = gender
+
 #         Member.users_num += 1
 #     # Creating Instance Methods
 
@@ -1879,18 +1887,18 @@
 #         return f"User {self.full_name()} Is Deleted."
 
 
-# print(Member.users_num)
+# # print(Member.users_num)
 
 # member_one = Member("Mohamed", "Ali", "Youssef", "Male")
 # member_two = Member("Salama", "Ahmed", "Ebrahim", "Male")
 # member_three = Member("Donia", "Ahmed", "Ebrahim", "Female")
-
 
 # print(Member.users_num)
 
 # print(member_three.delete_user())
 
 # print(Member.users_num)
+
 # Printing The Content Of The Instance (Attributes, Methods)
 # print(dir(member_one))
 # print(dir(Member))  # Printing The Content Of The Instance (Methods)
@@ -1902,7 +1910,6 @@
 # To Call The Instance Methods
 # print(member_one.full_name())
 # print(Member.full_name(member_one))  # What Happens Behind The Scene
-
 # print(member_one.name_with_title())
 # print(member_three.name_with_title())
 # print(member_one.get_all_info())
@@ -1931,13 +1938,15 @@
 
 # profile = Skill()
 # print(profile)
+# print(profile.__class__)
+
 # print(len(profile))
 # profile.skills.append("PHP")
 # profile.skills.append("Mysql")
 # print(len(profile))
-# print(profile.__class__)  # To Show You The Instance Belongs To Which Class
 
-# Means Creating An Instance From The Class (Constructor) Str
+
+# Means Creating An Instance From The Class Str
 # my_string = "Mohamed"
 
 # print(type(my_string))
@@ -1945,9 +1954,10 @@
 # print(dir(str))
 
 # print(my_string.upper())
-# print(str.upper(my_string))
+# print(str.upper(my_string)) # What Happens Behind The Scene
 
-# Inheritance
+
+###### Inheritance ######
 # class Food:  # Base Class
 #     def __init__(self, name, price):
 #         self.name = name
@@ -2258,6 +2268,10 @@
 # a = input("a : ")
 # b = input("b : ")
 
+# Solution 1
+# a, b = b, a
+
+# Solution 2
 # c = a
 # a = b
 # b = c
@@ -2961,6 +2975,8 @@
 #                 "Moscow", "Saint Petersburg"])
 # print(travel_log)
 
+
+######### Flower #########
 # import turtle
 
 # turtle.penup()
