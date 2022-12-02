@@ -3188,3 +3188,29 @@
 # git tag -l "Tags You Want"                            => To List All The Tags
 # git tag -d tagName                                    => To Remove A Tag Localy
 # git push origin --delete tagName                      => To Remvoe A Tag Remotely
+
+# Drawing Bill Gates
+
+import cv2
+# from sketchpy import canvas
+# pic = canvas.sketch_from_svg(
+#     r"D:\Programming\Python\Python Projects\7-removebg-preview.svg")
+# pic.draw()
+
+
+#### Version 2 ####
+from sketchpy import canvas
+from sklearn.preprocessing import scale
+pic = canvas.sketch_from_svg(
+    r"D:\Programming\Python\Python Projects\cristiano ronaldo.svg")
+pic.draw()
+
+########### Convert The Image Into Sketch ##########
+image = cv2.imread(
+    "cristi.jpg")
+grey_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+invert = cv2.bitwise_not(grey_img)
+blur = cv2.GaussianBlur(invert, (21, 21), 0)
+invertedblur = cv2.bitwise_not(blur)
+sketch = cv2.divide(grey_img, invertedblur, scale=256.0)
+cv2.imwrite("test2.png", sketch)
