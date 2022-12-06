@@ -3191,7 +3191,8 @@
 
 # Drawing Bill Gates
 
-import cv2
+# from sklearn.preprocessing import scale
+# import cv2
 # from sketchpy import canvas
 # pic = canvas.sketch_from_svg(
 #     r"D:\Programming\Python\Python Projects\7-removebg-preview.svg")
@@ -3199,18 +3200,16 @@ import cv2
 
 
 #### Version 2 ####
-from sketchpy import canvas
-from sklearn.preprocessing import scale
-pic = canvas.sketch_from_svg(
-    r"D:\Programming\Python\Python Projects\cristiano ronaldo.svg")
-pic.draw()
+# pic = canvas.sketch_from_svg(
+#     r"D:\Programming\Python\Python Projects\elzero.svg", scale=600)
+# pic.draw()
 
 ########### Convert The Image Into Sketch ##########
-image = cv2.imread(
-    "cristi.jpg")
-grey_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-invert = cv2.bitwise_not(grey_img)
-blur = cv2.GaussianBlur(invert, (21, 21), 0)
-invertedblur = cv2.bitwise_not(blur)
-sketch = cv2.divide(grey_img, invertedblur, scale=256.0)
-cv2.imwrite("test2.png", sketch)
+# image = cv2.imread(
+#     "cristi.jpg")
+# grey_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+# invert = cv2.bitwise_not(grey_img)
+# blur = cv2.GaussianBlur(invert, (21, 21), 0)
+# invertedblur = cv2.bitwise_not(blur)
+# sketch = cv2.divide(grey_img, invertedblur, scale=256.0)
+# cv2.imwrite("test2.png", sketch)
