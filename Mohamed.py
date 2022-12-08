@@ -1769,7 +1769,7 @@
 # Notes:-
 # 1- Python Support OOP
 # 2- OOP Is A Paradigm Or Coding Style
-# 3- Paradigm => Means structuring program so the methods(functions) and attributes(data) are bundled into objects
+# 3- Paradigm => Means structuring program so the methods( functions ) and attributes( data ) are bundled into objects
 # 4- Methods => Act as function that use the information of the object
 # 5- Python is Multi-Paradigm programming language (Procedural, OOP, Functional) Programming
 # 6- Procedural Programming => Structure of the app like Recipe, sets of steps to make the task ( Means The Way of Structurning Our Code Like The Code We Write )
@@ -1781,7 +1781,7 @@
 # 12- __init__ method called every time you create an object from class
 # 13- __init__ method is initialize the data for the object
 # 14- Any method with two underscore in the start and the end called Dunder or Magic method
-# 15- Self refer to the current instance(object) created from the class (blueprint, constructor) and must be first parameter
+# 15- Self refer to the current instance( object ) created from the class ( blueprint, constructor ) and must be first parameter
 # 16- Self can be named anything
 # 17- In python you don't need to call new() keyword to create object
 # 18- Instance Attributes Defined Inside The Constructor
@@ -1887,7 +1887,7 @@
 #         return f"User {self.full_name()} Is Deleted."
 
 
-# # print(Member.users_num)
+# print(Member.users_num)
 
 # member_one = Member("Mohamed", "Ali", "Youssef", "Male")
 # member_two = Member("Salama", "Ahmed", "Ebrahim", "Male")
@@ -1924,7 +1924,7 @@
 # Member.say_hello()
 
 
-# Dunder Or Magic Methods
+### Dunder Or Magic Methods ###
 # class Skill:
 #     def __init__(self):
 #         self.skills = ["Html", "Css", "Js"]
@@ -1937,12 +1937,15 @@
 
 
 # profile = Skill()
-# print(profile)
-# print(profile.__class__)
+# # print(profile)
+
 
 # print(len(profile))
+
+# print(profile.skills)
 # profile.skills.append("PHP")
 # profile.skills.append("Mysql")
+
 # print(len(profile))
 
 
@@ -1954,7 +1957,7 @@
 # print(dir(str))
 
 # print(my_string.upper())
-# print(str.upper(my_string)) # What Happens Behind The Scene
+# print(str.upper(my_string))  # What Happens Behind The Scene
 
 
 ###### Inheritance ######
@@ -3193,13 +3196,13 @@
 
 # from sklearn.preprocessing import scale
 # import cv2
-# from sketchpy import canvas
 # pic = canvas.sketch_from_svg(
 #     r"D:\Programming\Python\Python Projects\7-removebg-preview.svg")
 # pic.draw()
 
 
 #### Version 2 ####
+# from sketchpy import canvas
 # pic = canvas.sketch_from_svg(
 #     r"D:\Programming\Python\Python Projects\elzero.svg", scale=600)
 # pic.draw()
