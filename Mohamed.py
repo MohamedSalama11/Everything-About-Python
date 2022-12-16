@@ -1977,7 +1977,7 @@
 #         super().__init__(name, price)  # Do Not Need To Put Self
 #         self.amount = amount
 #         print(
-#             f"{self.name} Is Created From Derived Class And The Price Is {self.price} And Amount Is {self.amount}")
+#             f"{self.name}   Is Created From Derived Class And The Price Is {self.price} And Amount Is {self.amount}")
 
 #     def get_from_tree(self):
 #         print("Get From Tree From Derived Class")
@@ -1988,12 +1988,13 @@
 # food_two.eat()
 # food_two.get_from_tree()
 
-# Check If The Object Is An Instance From The Class => isinstance(subclass, class)
+# # Check If The Object Is An Instance From The Class => isinstance(subclass, class)
 # print(isinstance(food_one, Food))
-# print(isinstance(food_one, object)) # Any Functionality In Python Comes From The Main Class Of Python Which Is object
+# # Any Functionality In Python Comes From The Main Class Of Python Which Is object
+# print(isinstance(food_one, object))
 
 
-# Multiple Inheritance
+#### Multiple Inheritance ####
 # class Base:
 #     print("Base")
 
@@ -2234,24 +2235,19 @@
 
 # # Age Details Exercise
 # age = int(input("What's Your Age: "))
-
-# months = age * 12
+# death = int(input("Your Full Age: "))
+# life = death - age
+# months = life * 12
 # weeks = months * 4
-# days = age * 365
-# hours = days * 24
-# minutes = hours * 60
-# seconds = minutes * 60
+# days = life * 365
 
-# print("You Lived For: ")
+# print("You will Live For: ")
 # print(f"{months:,d} Months")
 # print(f"{weeks:,d} Weekss")
 # print(f"{days:,d} Days")
-# print(f"{hours:,d} Hours")
-# print(f"{minutes:,d} Minutes")
-# print(f"{seconds:,d} Seconds")
 
 
-# Band Name Generator
+# # Band Name Generator
 # print("#" * 100)
 # print(" Welcome To The Band Name Generator. ".center(60, "#"))
 # print("#" * 100)F
@@ -2324,38 +2320,18 @@
 # print(f"You Have {days} Days, {weeks} Weeks, {months} Months Left.")
 
 # Tip Calaculator
+# bill = float(input("What was the total bill? $:- "))
+# tip = int(input("How much tip would you like to give? 10, 12, or 15? :- "))
+# people = int(input("How many people to split the bill?:- "))
 
-# Print The Welcoming Message Of The Program
-# print("Welcome To The Tip Calculator.")
+# tip_as_percent = tip / 100
+# total_tip_amount = bill * tip_as_percent
+# total_bill = bill + total_tip_amount
+# bill_per_person = total_bill / people
+# # final_amount = round(bill_per_person, 2)
+# final_result = "{:.2f}".format(bill_per_person)
 
-# # Asking For The Bill
-# bill = float(input("What Was The Total Bill? $"))
-
-# # Asking For The Tip Percentage
-# tip = int(input(
-#     "What Percentage Tip Would You Like To Give To The Waiter? (10, 12 Or 15) "))
-# # Asking For Number Of People
-# people_num = int(input("How Many People To Split The Bill? "))
-
-# # Calulating The Percentage Tip
-# percentage = (tip / 100) * bill
-
-# Tip Caluculator Again
-# Asking For The Bill Amount
-# bill = int(input("Enter The Bill Amount: "))
-
-# # Calculate The Percentage Tip
-# tip = (20 / 100) * bill
-
-# # Printing The Output As Float
-# print(f"The Tip Is {tip}")
-
-
-# # Calculating What Every Person Should Pay
-# pay_for_person = (bill + percentage) / people_num
-# # final_result = round(pay_for_person, 2)
-# final_result = "{:.2f}".format(pay_for_person)
-# print(f"Each One Should Pay ${final_result}")
+# print(f"Each person should pay: ${final_result}")
 
 
 # Odd Or Even?
