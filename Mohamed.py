@@ -1887,7 +1887,7 @@
 #         return f"User {self.full_name()} Is Deleted."
 
 
-# print(Member.users_num)
+# # print(Member.users_num)
 
 # member_one = Member("Mohamed", "Ali", "Youssef", "Male")
 # member_two = Member("Salama", "Ahmed", "Ebrahim", "Male")
@@ -1937,7 +1937,7 @@
 
 
 # profile = Skill()
-# # print(profile)
+# print(profile)
 
 
 # print(len(profile))
@@ -1971,13 +1971,13 @@
 #         print("Eat Method From Base Class")
 
 
-# class Apple(Food):  # Derive Class
+# class Apple(Food):  # Derived Class
 #     def __init__(self, name, price, amount):
 #         # Food.__init__(self, name, price) # Created Instance From Base Class
 #         super().__init__(name, price)  # Do Not Need To Put Self
 #         self.amount = amount
 #         print(
-#             f"{self.name}   Is Created From Derived Class And The Price Is {self.price} And Amount Is {self.amount}")
+#             f"{self.name} Is Created From Derived Class And The Price Is {self.price} And Amount Is {self.amount}")
 
 #     def get_from_tree(self):
 #         print("Get From Tree From Derived Class")
@@ -1988,9 +1988,9 @@
 # food_two.eat()
 # food_two.get_from_tree()
 
-# # Check If The Object Is An Instance From The Class => isinstance(subclass, class)
-# print(isinstance(food_one, Food))
-# # Any Functionality In Python Comes From The Main Class Of Python Which Is object
+# Check If The Object Is An Instance From The Class => isinstance(subclass, class)
+# print(isinstance(food_two, Food))
+# Any Functionality In Python Comes From The Main Class Of Python Which Is object ( Everything in python is object )
 # print(isinstance(food_one, object))
 
 
@@ -2008,6 +2008,7 @@
 
 
 # object1 = DerivedTwo()
+# print(DerivedTwo.mro())
 
 
 # class BaseOne:
@@ -2040,7 +2041,7 @@
 # object1.func_two()
 
 
-# Polymorphism (Many Forms)
+# Polymorphism ( Many Forms )
 # class A:
 #     def do_something(self):
 #         print("From Class A")
@@ -2048,8 +2049,7 @@
 
 
 # class B(A):
-#     def do_something(self):
-#         print("From Class A")
+#     pass
 
 
 # class C(A):
@@ -2098,7 +2098,7 @@
 # Getters And Setters
 # class Member:
 #     def __init__(self, name):
-#         self.__name = name
+#         self.__name = name # Private Property
 
 #     def say_hello(self):
 #         return f"Hello {self.__name}"
@@ -2110,7 +2110,7 @@
 #         self.__name = new_name
 
 
-# one = Member("Mohamed")
+# one = Member("Mona")
 
 # print(one.get_name())
 
@@ -2118,8 +2118,7 @@
 # print(one.get_name())
 
 
-# @Property Decorator
-# It Is Useful To Use The Method As A Property
+# @property Decorator  => It Is Useful To Use The Method As A Property => بستخدم الديكوريتور ده لما احتاج احول اي ميسود فى الكلاس لخاصية بشرط ان الميسود متكونش بتعمل اي حاجة غير انها بترجع قية
 # class Member:
 #     def __init__(self, name, age):
 #         self.name = name
@@ -2127,6 +2126,7 @@
 
 #     def say_hello(self):
 #         return f"Hello {self.name}"
+
 #     @property
 #     def age_in_days(self):
 #         return self.age * 365
@@ -2150,7 +2150,7 @@
 
 # class Programming(metaclass=ABCMeta):
 #     @abstractmethod
-#     def has_opp(self):
+#     def has_oop(self):
 #         pass
 
 #     def has_name(self):
@@ -2158,24 +2158,22 @@
 
 
 # class Python(Programming):
-#     def has_opp(self):
+#     def has_oop(self):
 #         return "Yes"
 
 
 # class Pascal(Programming):
-#     def has_opp(self):
+#     def has_oop(self):
 #         return "No"
 
 
 # one = Python()
 # two = Pascal()
 
-# print(two.has_opp())
+# print(two.has_oop())
 
 
-###### Exercises ######
-
-
+################ Exercises ( OOP ) #################
 # class PlayerCharacter:
 #     membership = True
 
