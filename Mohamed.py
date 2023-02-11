@@ -2785,6 +2785,72 @@
 
 # prime_checker(number=n)
 
+########## Calculator App ##########
+# logo = """
+#  _____________________
+# |  _________________  |
+# | | Pythonista   0. | |  .----------------.  .----------------.  .----------------.  .----------------.
+# | |_________________| | | .--------------. || .--------------. || .--------------. || .--------------. |
+# |  ___ ___ ___   ___  | | |     ______   | || |      __      | || |   _____      | || |     ______   | |
+# | | 7 | 8 | 9 | | + | | | |   .' ___  |  | || |     /  \     | || |  |_   _|     | || |   .' ___  |  | |
+# | |___|___|___| |___| | | |  / .'   \_|  | || |    / /\ \    | || |    | |       | || |  / .'   \_|  | |
+# | | 4 | 5 | 6 | | - | | | |  | |         | || |   / ____ \   | || |    | |   _   | || |  | |         | |
+# | |___|___|___| |___| | | |  \ `.___.'\  | || | _/ /    \ \_ | || |   _| |__/ |  | || |  \ `.___.'\  | |
+# | | 1 | 2 | 3 | | x | | | |   `._____.'  | || ||____|  |____|| || |  |________|  | || |   `._____.'  | |
+# | |___|___|___| |___| | | |              | || |              | || |              | || |              | |
+# | | . | 0 | = | | / | | | '--------------' || '--------------' || '--------------' || '--------------' |
+# | |___|___|___| |___| |  '----------------'  '----------------'  '----------------'  '----------------'
+# |_____________________|
+# """
+
+
+# def add(n1, n2):
+#     return n1 + n2
+
+
+# def subtract(n1, n2):
+#     return n1 - n2
+
+
+# def multiply(n1, n2):
+#     return n1 * n2
+
+
+# def divide(n1, n2):
+#     return n1 / n2
+
+
+# operations = {
+#     "+": add,
+#     "-": subtract,
+#     "*": multiply,
+#     "/": divide
+# }
+
+
+# def calculator():
+#     print(logo)
+#     num1 = float(input("What's the first number?: "))
+#     for symbol in operations:
+#         print(symbol)
+#     should_continue = True
+
+#     while should_continue:
+#         operation_symbol = input("Pick an operation: ")
+#         num2 = float(input("What's the next number?: "))
+#         calculation_function = operations[operation_symbol]
+#         answer = calculation_function(num1, num2)
+#         print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+#         if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ") == 'y':
+#             num1 = answer
+#         else:
+#             should_continue = False
+#             calculator()
+
+
+# calculator()
+
 
 ########### Heart Shape ############
 # from turtle import *
@@ -3177,7 +3243,7 @@
 #### Drawing Elzero ####
 # from sketchpy import canvas
 # pic = canvas.sketch_from_svg(
-#     r"D:\Programming\Python\Python Projects\elzero.svg", scale=600)
+#     r"D:\Programming\Python\Python Projects\manar.svg")
 # pic.draw()
 
 # ########### Convert The Image Into Sketch ##########
@@ -3242,3 +3308,56 @@
 
 
 # app.run()
+
+####### Tkinter Youtube Downloader #######
+# from tkinter import *
+# import tkinter.messagebox
+# import pytube
+
+
+# def download():
+#     try:
+#         link = entry.get()
+#         yt = pytube.YouTube(link)
+#         videos = yt.streams.all()
+#         s = 1
+#         for v in videos:
+#             tkinter.messagebox.showinfo("Video Info", str(s)+" "+str(v))
+#             s += 1
+#         n = int(input("Enter the number of the video: "))
+#         vid = videos[n-1]
+
+#         vid.download(r"C:\Users\Moham\Downloads")
+#         tkinter.messagebox.showinfo(
+#             "Download Completed", "Downloaded Successfully")
+#     except Exception as e:
+#         tkinter.messagebox.showinfo("Error Occured", e)
+
+
+# root = Tk()
+# root.title("Youtube Downloader")
+# root.geometry("500x600")
+
+# # file = PhotoImage(file="youtube.png")
+# # headingIcon = Label(root, image=file)
+# # headingIcon.pack(side=TOP)
+
+# label = Label(root, text="Youtube Downloader", font="Verdana 15 bold")
+# label.pack(side=TOP)
+
+# entry = Entry(root, width=50, borderwidth=5)
+# entry.pack(side=TOP)
+
+# button = Button(root, text="Download", command=download)
+# button.pack(side=TOP)
+
+# root.mainloop()
+
+# remove image Background
+# from rembg import remove
+# from PIL import Image
+# input_path = "Mohamed.jpg"
+# output_path = "Mohamed"
+# input = Image.open(input_path)
+# output = remove(input)
+# output.save(output_path)
