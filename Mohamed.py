@@ -3286,7 +3286,7 @@
 
 
 # newEnemy()
-
+print("Mohamed")
 
 # def update():
 #     car.x -= held_keys['a']*5*time.dt
