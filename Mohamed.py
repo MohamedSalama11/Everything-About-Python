@@ -1,8 +1,24 @@
+# python is a dynamically typed language ( data can change during run time )
 # Mutable => Means That You Can Change It Just Like Lists
-# Immutable => Meanst That You Cannot Change It Just Like Strings
+# Immutable => Means That You Cannot Change It Just Like Strings
 # [] => Square Brackets
 # () => Parentheses
 # {} => Curly Braces
+# variable just refering to the location of the data in the computer memory
+# expression is part of a code that produces a value
+# statement is an entire line of code that performs some sort of action
+# Python is a grabage collection language uses the mark and sweep alghroithm in deleteing obejcts in the memory
+# ==   => checks for the equality in value
+# is   => checks for the equality in value and type
+
+
+
+# """
+# This is
+# not multipile line
+# comment
+# """   # This Is Not Comment It's A String
+
 
 # name = input("What's Your Name: ")
 # print("Hello " + name)
@@ -15,24 +31,19 @@
 # print(abs(-9.3))
 # print(bin(150))
 # print(int("0b10010110", 2))
-# help("keywords")
+# help("keywords")  # Reserved Words
 
 
-# name = "Mohamed"
-# age = 20
-# fullInfo = "Hello My Name Is " + name + " And My Age Is " + str(age)
-# print(fullInfo)
-
-# Augmented Assignment Operartor
+### Augmented Assignment Operartor ###
 # value = 10
 # value *= 10
 # print(value)
 
-# first_name = "Mohamed"
-# second_name = "Salama"
-
-# full_name = first_name + " " + second_name
-# print(full_name)
+# Opeartor Precedence  (الاولوية للعمليات الحسابية)
+# 1- ()
+# 2- **
+# 3- * /
+# 4- + -
 
 # type conversion
 # a = str(100)
@@ -89,6 +100,7 @@
 
 # Character Hex Value
 # print("\x4F\x73")
+
 # weather = "\tIt's sunny \"today\"\n\tHope you have a beautiful \"day\""
 # print(weather)
 
@@ -105,10 +117,9 @@
 ##################### Indexing In Python #####################
 # Slicing: [start:End:Step]  => Not Including The End
 # name = "Mohamed"
-# name[0:1] = "a"
+# print(name)
 # print(name[0:3])
 # print(name[0:len(name)])
-
 # name[0:1] = "a" Strings In Python Are immutabile (You Can't Change The Strings)
 
 # name = "Mohamed Salama"
@@ -123,12 +134,14 @@
 # print(relationship_Status)
 
 # birthday = int(input("What Year Were You Born? "))
-# age = 2022 - birthday
+# age = 2023 - birthday
 # print("Your Age Is : %.2f" % (age))
 
 # name = ["Mohamed", "Salama", "Ali"]
 # name = " ".join(name)
 # print(name)
+
+
 ### Hidden Password Challenge ###
 # username = input("What's Is Your Name: ")
 # password = input("Type Your Password Here: ")
@@ -148,11 +161,9 @@
 #     f"Real Part In {complex_number} Is {complex_number.real} And Imaginary Part Is {complex_number.imag}")
 
 
-# username = input("Waht's Is Your Username? ").capitalize()
-# email = input("Waht's Is Your Email? ")
-
-# username = username.strip()
-# email = email.strip()
+### Email Exercise ###
+# username = input("Waht's Is Your Username? ").capitalize().strip()
+# email = input("Waht's Is Your Email? ").strip()
 
 # user_only = email[:email.index("@")]
 # domain_only = email[email.index("@") + 1:]
@@ -162,14 +173,21 @@
 
 
 ################ Lists ################
+# [1] List items are enclosed in square brackets
+# [2] List are ordered, use index to access item
+# [3] List are Mutable => can be added, deleted, edited
+# [4] List items is not unique
+# [5] List can have different data types
+
 # names = ["Mohamed", "Ahmed", "Abeer"]
 # names.append("Rahma")
-# names.extend("Reham")
+# names.extend("Manar")
 # new = names.extend(["Hager", "Nada", "Nour"])
 # print(names)
 # print(new)
 
 # nums = [2, 1, 4, 7, 6, -6]
+# nums.sort()
 # nums.sort(reverse=False)
 # nums.sort(reverse=True)
 # print(nums)
@@ -193,7 +211,8 @@
 # print(two_diminsional_list[0][1])
 
 
-# print(list(range(101)))
+# print(list(range(11)))
+
 # sentence = " "
 # my_name = sentence.join(["Mohamed", "Ali", "Salama"])
 # print(my_name)
@@ -208,11 +227,51 @@
 # print(five)
 # print(*other)
 
-# my_list = [1, 2, 3, 4, 5, 6]
+# a, b, c, _ = [1, 2, 3, 4]
+# print(a)
+# print(b)
+# print(c)
+
+# my_list = ["m", "o", "a"]
 # print(*my_list)
 
+## Lists Comprehensions
+# It's a unique way in python for creating lists without looping or using append method
+# Syntax   => [param for param in iterable]
+
+# Old Way
+# my_list = []
+# for char in "Mohamed":
+#     my_list.append(char)
+# print(my_list)
+
+# New Way
+# my_list = [char for char in "Mohamed"]
+# print(my_list)
+# my_list2 = [num for num in range(1,101)]
+# print(my_list2)
+
+# my_list3 = [number ** 2 for number in range(1,100)]
+# print(my_list3)
+# printing only the even numbers from my_list3
+# my_list4 = [num ** 2 for num in range(1,100) if num % 2 == 0]
+# print(my_list4)
+
+#Exercise => Find Duplicates in the list
+# my_list = ["a", "b", "c", "b", "d", "m", "n", "n"]
+
+# duplicates = list(set([x for x in my_list if my_list.count(x) > 1]))
+# print(duplicates)
+
 ################ Tuples ################
-# Tuples Are Immutables => Means That You Cannot Add Or Remove Any Element In The Tuple
+# [1] Tuple items are enclosed in parentheses
+# [2] You can remove the parentheses if you want
+# [3] Tuple are ordered, to use index to access item
+# [4] Tuples Are Immutables => Means That You Can not Add Or Remove Any Element In The Tuple
+# [5] Tuples items is not unique
+# [6] Tuple can have different data types
+# [7] Operators used in strings and lists avaliavble in tuples
+
 # Tuples Syntax
 # names = ("Mohamed", "Ahmed", "Manar")
 # names2 = "Mohamed", "Manar", "Abeer"
@@ -234,7 +293,7 @@
 # print(y)
 # print(z)
 
-# a = ("A", "B", "C", "D", "E")
+# a = ("A", "B", "C", "D", "E", "F")
 # x, y, z, *others = a
 
 # print(x)
@@ -244,11 +303,18 @@
 
 
 ################ SETS ################
+# [1] Set items are enclosed in curly braces
+# [2] Set items are not ordered and not indexed
+# [3] Set indexing and slicing can not be done
+# [4] Set has only Immutable data types (Numbers, Strings, Tuples) List and dict are not
+# [5] Set items is unique
+
 # names = {"Mohamed", "Manar", "Donia"}
 # names.clear()
 # print(names)
 # names2 = {"Reem", "Mona"}
 # print(names.union(names2))
+# print(names | names2)
 # print(names)
 # names.add('Heba')
 # print(names)
@@ -278,13 +344,27 @@
 # print(set(my_list))
 
 
+# Set Comprehension
+# Same as list comprehension
+# my_set = {letter for letter in "Mohamed"}
+# print(my_set)
+# my_set2 = {num ** 2 for num in range(1,100) if num % 2 == 0}
+# print(my_set2)
+
 ############### Dictionarys ###############
+# [1] Dict items are enclosed in curly braces
+# [2] Dict items contains key : value
+# [3] Dict key need to be Immutable => (Number, string, tuple) List not allowed
+# [4] Dict value can have any data types
+# [5] Dict key need to be unique
+# [6] Dict is not ordered you can access the value by it's key
+
 # my_dict = {
 #     "name": "Mohamed",
 #     "age": 22,
 #     "country": "Egypt",
 # }
-# my_dict["sex"] = "Male"
+# my_dict["Gender"] = "Male"
 # print(my_dict.keys())
 # print(my_dict.values())
 # print(my_dict["name"])
@@ -315,10 +395,12 @@
 #     "name": "Mohamed"
 # }
 # print(user_info.get("name"))
+# print(user_info["name"])
+# print(user_info.keys())
 # print(user_info.values())
 # print(user_info.items())
 
-# user_info2 = dict(name="Mohamed", age=33)
+# user_info2 = dict(name="Mohamed", age=33, country="Egypt")
 # print(user_info2)
 
 
@@ -327,10 +409,34 @@
 #     "age": 22
 # }
 # print(my_dict[(1, 2)])
+# print(my_dict.get((1, 2)))
 
 
-################ If Statements ################
-# name = "Mohamed"
+# Dictionary Comprehension
+# simple_dict = {
+#     "a": 1,
+#     "b": 2
+# }
+# my_dict = {(key, value**2) for key,value in simple_dict.items()} # my_way => will return a dictionary contain two tuples {("a", 1), ("b", 4)}
+# my_dict2 = {k:v ** 2 for k,v in simple_dict.items() if v % 2 == 0} # standard_way
+# print(my_dict2)
+
+# my_dictionary = {num:num*2 for num in [1,2,3] if num % 2 == 0}
+# print(my_dictionary)
+################ Control Flow ################
+# boolean Values (False)
+# print(bool())
+# print(bool(0))
+# print(bool(""))
+# print(bool(''))
+# print(bool([]))
+# print(bool(()))
+# print(bool({}))
+# print(bool(False))
+# print(bool(None))
+
+
+# name = input("What's Your Name:- ").strip().capitalize()
 # country = input(f"What's Your Country {name}: ").strip().capitalize()
 # student = input(
 #     f"Hello {name}, Are You A Student? : (Y, N) ").strip().capitalize()
@@ -358,6 +464,8 @@
 #     print("You Are Able To Drive.")
 # else:
 #     print("Sorry You Can Not Drive The Car.")
+
+
 # is_magician = True
 # is_expert = True
 
@@ -367,6 +475,7 @@
 #     print("At Least You're Getting There")
 # elif not is_magician:
 #     print("You Need Some Magic Powers")
+
 
 # username = input("Waht's Is Your Name? ").strip()
 # country = input("What's Is Your Country? ").strip().capitalize()
@@ -380,12 +489,16 @@
 #     print(
 #         f"Hello {username} Because You Are From {country} The Course Price Is ${course_price}")
 
+
 # Ternary Condition
 # movie_rate = 18
-# age = 18
+# age = int(input("what's your age:- ").strip())
 
-# condition = "Enjoy The Movie" if age >= movie_rate else "The Movie Is Not Good For You."
+# condition = "movie is suitable for you" if age >= movie_rate else "movie is \"not\" suitable for you, you still a baby hahhahahahahahahha, go and do your homoworks :)"
 # print(condition)
+
+# print("movie is suitable for you" if age >= movie_rate else "movie is \"not\" suitable for you, you still a baby hahhahahahahahahha, go and do your homoworks :)")
+
 
 # age = int(input("Type Your Age: ").strip())
 # unit = input(
@@ -404,6 +517,7 @@
 # else:
 #     print("Please Fill The Age Input.")
 
+
 # country = input("What's Your Country? ").strip().capitalize()
 
 # countries_one = ["Egypt", "Bahrain", "Syria", "Libya"]
@@ -418,14 +532,14 @@
 #     print(f"Because You Are Foreign You Have ${countries_two_dis} Discount.")
 
 
-# Membership Practice
+### Membership Practice ###
 # List Contains Admins
 # admins = ["Ahmed", "Osama", "Sameh", "Manal", "Mohamed"]
 
 # # Login
 # name = input("Please Type Your Name: ").strip().capitalize()
 
-# Check If The Name In Admins
+# # Check If The Name In Admins
 # if name in admins:
 #     print(f"Welcome Back {name}.")
 
@@ -457,7 +571,7 @@
 
 
 ################ Loop ################
-# While Loop
+### While Loop ###
 
 # a = 0
 # while a < 10:
@@ -499,7 +613,7 @@
 
 # while password != correct_password:
 #     tries -= 1
-#     print(f"Wrong Password, {'Last' if tries == 0 else tries} left")
+#     print(f"Wrong Password, {'Last' if tries == 0 else tries} Chance Left")
 #     password = input("Type The Password: ")
 #     if tries == 0:
 #         print("You Used All The Tries")
@@ -512,12 +626,12 @@
 
 # numbers = [1, 2, 3, 4, 5, 6]
 
-# for number in numbers:
-#     # print(f"Number Is : {number}")
-#     if number % 2 == 0:
-#         print(f"{number} Is Even.")
+# for num in numbers:
+#     # print(f"Number Is : {num}")
+#     if num % 2 == 0:
+#         print(f"{num} Is Even.")
 #     else:
-#         print(f"{number} Is Odd.")
+#         print(f"{num} Is Odd.")
 
 
 # name = "Mohamed"
@@ -539,7 +653,7 @@
 
 # for skill in mySkills:
 #     # print(mySkills[skill])
-#     print(f"My Progress In Language {skill} Is: \n{mySkills[skill]}")
+#     print(f"My Progress In {skill} Language Is:- {mySkills[skill]}")
 
 
 # peoples = ["Osama", "Ahmed", "Sayed", "Ali"]
@@ -548,7 +662,7 @@
 # for name in peoples:
 #     print(f"My Name Is {name} And My Skills Is")
 #     for skill in skills:
-#         print(f"\t     {skill}")
+#         print(f"{skill}")
 
 
 # peoples = {
@@ -591,7 +705,7 @@
 
 # Pass
 # for number in numbers:
-#     if number == 100:
+#     if number == 13:
 #         pass
 #     print(number)
 
@@ -641,15 +755,16 @@
 # for item in personal_info.values():
 #     print(item)  # Will Print The Values
 
+
 # Loop Exercise
 # my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # counter = 0
 # for num in my_list:
 #     # print(num)
-#     # counter = counter + num
 #     counter += num
 # print(counter)
+
 
 # Range Exercises
 # for _ in range(1):
@@ -658,9 +773,15 @@
 # for _ in range(0, 10, 2):
 #     print(list(range(0, 10)))
 
+# To loop over numbers in the opposite direction
+# for num in range(10, -1, -1):
+#     print(num)
+
+
 # Enumerate Exercises
-# for index, letter in enumerate("Mohamed Salama"):
-#     print(str(index).zfill(2), letter)
+# for letter in enumerate("Mohamed Salama"):
+#     # print(str(index).zfill(2), letter)
+#     print(letter)
 
 # for index, num in enumerate(range(101)):
 #     print(index, num)
@@ -670,13 +791,24 @@
 
 
 ################ Functions ################
+# [1] A function is a reusable block of code can do a task
+# [2] A function run when you call it
+# [3] A function accept elements to deal with called [Parameters]
+# [4] A function can do the task without returning data
+# [5] A function can return data after job is finished
+# [6] A function create to prevent DRY (Don't Repeat Yourself)
+# [7] A function accept elements when you call it called Arguments
+# [8] There's a built-in functions and user defined functions
+# [9] A function is for all team and all apps
+
 # def => For Define
 
 # def hello_world():
 #     return "Hello World!"
 
 
-# hello_world()
+# print(hello_world())
+
 
 # name = input("Type Your Name: ").strip().capitalize()
 
@@ -686,7 +818,6 @@
 
 
 # say_hello(name)
-
 
 # def addition(a, b):
 #     if type(a) != int or type(b) != int:
@@ -705,6 +836,7 @@
 
 # full_name("Mohamed", "Ali", "Salama")
 
+
 # def say_hello(*names):
 #     for name in names:
 #         print(f"Hello {name}")
@@ -720,6 +852,7 @@
 
 
 # show_details("Mohamed", "Swimming", "Fighting", "Coding", "Touch Typing")
+
 
 # def info(name, age, country="Egy"):
 #     print(f"Hello {name} Your Age Is {age}, And Your Country Is {country}")
@@ -791,6 +924,12 @@
 
 # Lambda Function
 # Anonymous Function
+# [1] It has no name
+# [2] You can call it inline without defineing it
+# [3] You can use it to return data from another function
+# [4] Lambda used for simple functions and Def handle the large tasks
+# [5] Lambda is one single expression not block of code
+# [6] Lambda type is function
 
 # def say_hello(name, age): return f"Hello {name} Your Age Is {age}"
 
@@ -800,6 +939,18 @@
 
 # print(say_hello("Osama", "36"))
 # print(hello("Mohamed", "22"))
+
+## Exersice on labmda function
+# Square Each Item In A List
+# my_list = [5,4,3]
+# new_list = map(lambda num: num ** 2, my_list)
+# print(list(new_list))
+
+# # Sort Depending on the second element of the tuple
+# a = [(0,2), (4,3), (9,9), (10,-1)]
+# a.sort(key=lambda x: x[1])
+# print(a)
+
 
 # Recursion Function
 # def duplicates(word):
@@ -827,13 +978,10 @@
 
 
 # Function Check If The Number Even Or Odd (Clean Code)
-# def even_odd(num):
-#     if num % 2 == 0:
-#         return f"{num} Is Even."
-#     return f"{num} Is Odd"
+# def is_even(num):
+#     return num % 2 == 0
 
-
-# print(even_odd(13))
+# print(is_even(11))
 
 
 # Args & Kwargs
@@ -850,6 +998,17 @@
 # print(add(1, 2, 3, 4, 5, num1=5, num2=10))
 
 
+# Return The Highest Even Number
+# def highest_even_num(li):
+#     evens = []
+#     for num in li:
+#         if num % 2 == 0:
+#             evens.append(num)
+#     print(max(evens)) 
+
+# highest_even_num([1,2,3,4,10,12,24])
+
+
 ################ Walrus Operator (:=) ################
 # name = "Mohamed"
 # if (n := len(name)) > 5:
@@ -864,7 +1023,10 @@
 # while (length := len(name)) > 0:
 #     print(length)
 #     name = name[:-1]
-################ in not in Operator #################
+
+
+
+################ in && not in Operator #################
 # print(" " in "Mohamed")
 
 
@@ -888,30 +1050,31 @@
 # Note :- Use The Absoulte Path (Recommended)
 # Note := After Ending With Playing With The File It's Recommended To Close The File
 # PATHS
-# 1- absolute path => Begin From The Root To The Target File
-# 2- relative path => Related With The Current Position Of The File
+# 1- Absolute path => Begin From The Root To The Target File
+# 2- Relative path => Related With The Current Position Of The File
 
 ## Files Modes ##
-# "a" Append  Open File For Appending Values, Create File If Not Exists
-# "r" Read    [Default Value] Open File For Read and Give Error If File is Not Exists
-# "w" Write   Open File For Writing, Create File If Not Exists
-# "x" Create  Create File, Give Error If File Exists
+# "a" Append  => Open File For Appending Values, Create File If Not Exists
+# "r" Read    => [Default Value] Open File For Read and Give Error If File is Not Exists
+# "w" Write   => Open File For Writing, Create File If Not Exists
+# "x" Create  => Create File, Give Error If File Exists
 
 
 # Creating Files
 # try:
-#     new = open("D:\Programming\Python\Python Projects\File Created By Python.txt", "x")
-# except FileExistsError:
+#     new = open("D:\Programming\Python\Python Projects\File Created By Python2.txt", "x")
+# except FileExistsError as error:
 #     print("File Exists Already, Create File With New Name Plaese")
+#     raise error
 
 # import os
 # Printing The Current Working Directory
-# D:\Programming\Python\Python Projects     (Current Working Directory)
 # print(os.getcwd())
+# D:\Programming\Python\Python Projects     (Current Working Directory)
 
 # Printing The Absoulte Path Of The Current Working File
-# d:\Programming\Python\Python Projects\Mohamed.py
 # print(os.path.abspath(__file__))
+# d:\Programming\Python\Python Projects\Mohamed.py
 
 # Standard Way Of File I/O
 # with open("sad.txt", mode="a") as new_file:
@@ -927,6 +1090,7 @@
 # print(x.name)  # File Name
 # print(x.mode)  # File Mode
 # print(x.encoding)  # File Encoding
+
 
 # print(x.read())  # Reading The Whole File
 # print(x.read(7))  # Reading The Specified Bytes
@@ -958,19 +1122,23 @@
 
 # Slice A Piece Of Text In The File
 # my_file = open("D:\Programming\Python\Python Projects\Test2.txt", "a")
-# my_file.truncate(3)
+# my_file.truncate(1)
 
-# # Printing The Current Position Of The Cursor   (Note:- new line => 2 Characters)
+# Printing The Current Position Of The Cursor   (Note:- new line => 2 Characters)
 # print(my_file.tell())
 
 # Read From Specified Position
 # my_file = open("D:\Programming\Python\Python Projects\mohamed.txt", "r")
-# my_file.seek(6)
+# my_file.seek(11)
 # print(my_file.read())
 
 # Remove Specific File
 # import os
-# os.remove(r"D:\Programming\Python\Python Projects\nada.txt")
+# try:
+#     os.remove(r"D:\Programming\Python\Python Projects\nada.txt")
+# except FileNotFoundError as error:
+#     print("No Such File In The Directory")
+#     # raise(error)
 
 # Handling Erros In I/O File
 # try:
@@ -983,14 +1151,15 @@
 
 
 ##################### Built In Functions #####################
-# 1- all() # All Elements Is True
-# my_list = [1, 2, 3, "Mohamed", True, 0]
+# 1- all() # Retrun True If All Elements Is True Otherwise Return False
+# my_list = [1, 2, 3, "Mohamed", True, ""]
+# print(all(my_list))
 # if all(my_list):
 #     print(my_list)
 # else:
 #     print("There's At Least One Element False")
 
-# 2- any() # At Least One Element Is True
+# 2- any() # Retrun True If There's At Least One Element Is True Otherwise Return False
 # my_list = [False, [], 0]
 # if any(my_list):
 #     print(my_list)
@@ -1009,7 +1178,7 @@
 # print(id(first_name))
 # print(id(second_name))
 
-# 6- sum(iterable, start)
+# 6- sum(iterable, start)  => Sum all the elements in the iterable object and retrun the result
 # my_list = [1, 10, 20, 70]
 # print(sum(my_list))
 # print(sum(my_list, 10))
@@ -1030,7 +1199,7 @@
 # print("Mohamed", "Salama")
 # print("Mohamed", "Salama", sep="@")
 
-# end="" => By Default Start A New Line (\n)
+# end="" => By Default Starts A New Line (\n)
 # print("First Line")
 # print("Seocnd Line", end=" ")
 # print("Thrid Line")
@@ -1041,7 +1210,8 @@
 
 # 11- pow(base, exponent, modulus)
 # print(pow(2, 4))
-# print(pow(2, 4, 2))
+# print(2 ** 4)
+# print(pow(2, 4, 1))
 
 # 12- min(item, item, item or iterator)
 # print(min(1, 2, 3, 4, 5))
@@ -1055,7 +1225,7 @@
 # my_list = [1, 2, 3, -10]
 # print(max(my_list))
 
-# 14- slice(start, stop, step)  => Start Is Optinal , End Must Write
+# 14- slice(start, stop, step)  => Start Is Optinal , Stop Must Write
 # my_list = ["A", "B", "C", "D", "E", "F"]
 # print(my_list[slice(4)])
 # print(my_list[slice(1, 4)])
@@ -1068,7 +1238,7 @@
 
 # print("#" * 50)
 
-# my_skills = enumerate(["HTML", "CSS", "JS"])
+# my_skills = enumerate(["HTML", "CSS", "JS"], 3)
 # for index, skill in my_skills:
 #     print(index, skill)
 
@@ -1086,12 +1256,11 @@
 
 
 # 18- map(function, iterator)
-# [1] Map Take A Function + Iteratro
+# [1] Map Take A Function + Iterator
 # [2] Map Called Map Because It Map The Function On Every Element
 # [3] The Fucntion Can Be Pre-Defined Function Or Lambda Function
 
 # Use Map With Predefined Function
-
 # def format_text(text):
 #     return f"- {text.strip().capitalize()} -"
 
@@ -1103,6 +1272,13 @@
 
 # print("#" * 50)
 
+# Use Map With Lambda Function
+# my_texts = ["Mohamed", "Osama", "DONIa"]
+# for name in map(lambda name: f"- {name.strip().capitalize()} -", my_texts):
+#     print(name)
+
+
+# Exercise 1
 # def check_number(num):
 #     if num > 10:
 #         return num
@@ -1114,10 +1290,16 @@
 # for number in map(check_number, my_numbers):
 #     print(number)
 
-# Use Map With Lambda Function
-# my_texts = ["Mohamed", "Osama", "DONIa"]
-# for name in map(lambda name: f"- {name.strip().capitalize()} -", my_texts):
-#     print(name)
+
+# Exercise 2
+# def multiply_by2(item):
+#     return item * 2
+
+# my_list = [1,2,3]
+
+# print(list(map(multiply_by2, my_list)))
+# print(my_list)
+
 
 # 19- filter()
 # [1] Filter Take A Function + Iterator
@@ -1125,6 +1307,7 @@
 # [3] The Function Can Be Pre-Defined Or Lambda Function
 # [4] Filter Out All Elements For Which The Function Return True (Important)
 # [5] The Function Need To Return Boolean Value
+
 
 # def checkNumber(num):
 #     return num > 10   # Treat Like A Condition
@@ -1150,6 +1333,13 @@
 # for person in filter(check_names, names):
 #     print(person)
 
+# Exercise
+# def check_odd(num):
+#     return num % 2 != 0
+
+# my_list = [1,2,3]
+
+# print(list(filter(check_odd, my_list)))
 
 # 20- reduce()  => Higher Order Function
 # [1] Reduce Take Function + Iterator
@@ -1159,9 +1349,7 @@
 # [5] Then Run Function On Result And Fourth Element And So On
 # [6] Till One Element Is Left And This Is The Result Of The Reduce Function
 
-
 # from functools import reduce
-
 
 # def sum_numbers(num1, num2):
 #     return num1 + num2
@@ -1171,13 +1359,24 @@
 # result = reduce(sum_numbers, numbers)
 
 # print(result)
+# print(sum(numbers))
+
+# 21- zip()  => it is zip all the iterables objects you give to it
+# my_list = [1,2,3,4]
+# your_list = [10, 20, 30]
+# print(list(zip(my_list, your_list)))
+
 
 ################################ Modules ################################
-# [1] Module Is A File Contain A Set Of Functions
-# [2] You Can Import Module In Your App To Help You
-# [3] You Can Import Multiple Modules
-# [4] You Can Create Your Own Modules
-# [5] Modules Can Save Your Time
+
+# [1] Use Camel_Case for naming your modules
+# [2] Module Is A File Contain A Set Of Functions
+# [3] You Can Import Module In Your App To Help You
+# [4] You Can Import Multiple Modules
+# [5] You Can Create Your Own Modules
+# [6] Modules Can Save Your Time
+# [7] Everytime you create a module and run it the interpreter will create __pycache__ file
+# Note:- in programming if you have this sentence "process finished with exit code 0" this means there's no errors if it's 1 this means there's an error 
 
 # import random
 # print(random)
@@ -1186,11 +1385,9 @@
 
 # import sys
 # print(sys.argv)
+# print(sys.path)
+# sys.path.append(r"path")   => to add a new path to the paths of the system
 
-
-# print(__name__)  # Print Main If It's The Main File Where Models Imported
-# if __name__ == "__main__":
-#     print("Hello From The Main File")
 
 # Printing Random Float Number Between 0 and 1
 # print(f"Random Float Number {round(random.random(), 2)}")
@@ -1250,37 +1447,86 @@
 # print(list[1])
 
 # print(d == d2)
+
 # Install Extrenal Packages
 # [1] Package Is A Set Of Modules
 # [2] External Packages Downloaded From The Internet
 # [3] You Can Install Packages With Python Package Manager ( PIP )
-# [4] PIP Install The Package And Its Dependencies
+# [4] PIP Install The Package And It's Dependencies
 # [5] Moduls List "https://docs.python.org/3/py-modindex.html"
 # [6] Packages And Modules Direcotry "https://pypi.org/"
 # [7] PIP Manual "https://pip.pypa.io/en/estable/refrence/pip_install/"
 # [8] PIP => Python Index Package
 
 # Useful Commands For External Packages
-# pip --version  = pip -V                    => To Display The Version Of The pip Package
-# pip install --user pacakge name --upgrade  => To Upgrade The Version Of A Package
+# pip --version = pip -V                     => To Display The Version Of The pip Package
+# pip install --user pacakge name --upgrade  => To Upgrade The Version Of A Package  (pip install package_name --upgrade)
+# pip install pyfiglet=1.3.5                 => To Install A Package With A Specified Version
 # pip install --user pacakge name            => To Install External Package
 # pip install package name==version          => To Install External Package With A Specified Version
 # pip list                                   => To List All The Packages In The Computer
 # pip uninstall package name                 => To Uninstall A Package
 
-# import termcolor
-# import pyfiglet
+# import termcolor , pyfiglet
 
 # print(dir(pyfiglet))
-# print(pyfiglet.figlet_format("Mohamed Salama"))
+# print(pyfiglet.figlet_format("Abo Salama"))
 
 # print(dir(termcolor))
+# help(termcolor)
 # print(termcolor.colored(pyfiglet.figlet_format("Mohamed Salama"), "red"))
+# print(termcolor.colored(pyfiglet.figlet_format("Abo Salama"), "yellow"))
 
 
 # import pyjokes
 # joke = pyjokes.get_joke('en', 'neutral')
 # print(joke)
+
+
+# print(__name__)  # Print __main__ If It's The Main File Where Models Imported
+# if __name__ == "__main__":  # We Use This Condition To Make Sure That We Run A Module If This Is The Main File, Or The File Being Run
+#     print("Hello From The Main File")
+
+# Shuffle Uses
+# from random import shuffle
+# my_list = [1,2,3,5]
+# shuffle(my_list)
+# print(my_list)
+
+
+################## Date And Time ###################
+# import datetime
+# print(dir(datetime))
+# print(dir(datetime.datetime()))
+
+# Printing The Current Date And Time
+# print(datetime.datetime.now())
+
+# Print The Current Year, Month, Day, Second, Minute
+# print(datetime.datetime.now().year)
+# print(datetime.datetime.now().month)
+# print(datetime.datetime.now().day)
+
+# Print Start And End Of Date
+# print(datetime.datetime.min)
+# print(datetime.datetime.max)
+
+# Print The Current Time
+# print(datetime.datetime.now().time())
+
+# Print The Current Time Hour
+# print(datetime.datetime.now().time().hour)
+
+# Print Start And End Of Time
+# print(datetime.time.min)
+# print(datetime.time.max)
+
+# Print Specific Date
+# print(datetime.datetime(2000, 8, 7, 10, 45, 55))
+
+# birthday = datetime.datetime(2000, 8, 7)
+# dateNow = datetime.datetime.now()
+# print(f"My Brithday Is {birthday} And Date Now Is {dateNow}, So I Lived For {(dateNow - birthday).days}")
 
 
 ######## Itreable Vs iterator ########
@@ -1309,37 +1555,7 @@
 # print(next(my_iterator))
 
 
-################## Date And Time ###################
-# import datetime
-# print(dir(datetime))
-# print(dir(datetime.datetime))
 
-# Printing The Current Date And Time
-# print(datetime.datetime.now())
-
-# Print The Current Year
-# print(datetime.datetime.now().year)
-
-# Print Start And End Of Date
-# print(datetime.datetime.min)
-# print(datetime.datetime.max)
-
-# Print The Current Time
-# print(datetime.datetime.now().time())
-
-# Print The Current Time Hour
-# print(datetime.datetime.now().time().hour)
-
-# Print Start And End Of Time
-# print(datetime.time.min)
-# print(datetime.time.max)
-
-# Print Specific Date
-# print(datetime.datetime(2000, 8, 7, 10, 45, 55, 54544354))
-
-# birthday = datetime.datetime(2000, 8, 7)
-# dateNow = datetime.datetime.now()
-# print(f"My Brithday Is {birthday} And Date Now Is {dateNow}, So I Lived For {(dateNow - birthday).days}")
 
 
 ###################### Errors Handling ######################
@@ -1468,6 +1684,7 @@
 
 
 # print(add(1, 2))
+
 
 ########## Type Hinting ##########
 # def say_hello(name) -> str:
@@ -1637,6 +1854,7 @@
 # next(my_gen)
 # print(next(my_gen))
 
+
 ######################### Decorators #########################
 # 1- Sometimes called Meta Programming
 # 2- Everything in python is object even functions
@@ -1767,6 +1985,7 @@
 
 ################################################### OOP ( Object Oriented Programming ) ###################################################
 # Notes:-
+# Objects In Python Divides Into Two Parts 1-Scaler => Can't Be Subdivided 2-Non-scaler => can be subdivided  => يعني متقدرش تشتق منها objects
 # 1- Python Support OOP
 # 2- OOP Is A Paradigm Or Coding Style
 # 3- Paradigm => Means structuring program so the methods( functions ) and attributes( data ) are bundled into objects
@@ -2219,8 +2438,9 @@
 # print(super_list1[1])
 # print(issubclass(SuperList, list))
 # print(issubclass(list, object))
-#################################################################### Exercises ####################################################################
 
+
+#################################################################### Exercises ####################################################################
 # Practical Email Slice Exercise
 # name = input("What's Your Name: \n").strip().capitalize()
 # email = input("What's Your Email: \n").strip()
@@ -2231,7 +2451,7 @@
 # print(f"Your Username Is {username} And Your Domain Is {domain}")
 
 
-# # Age Details Exercise
+## Age Details Exercise ##
 # age = int(input("What's Your Age: "))
 # death = int(input("Your Full Age: "))
 # life = death - age
@@ -2245,7 +2465,7 @@
 # print(f"{days:,d} Days")
 
 
-# # Band Name Generator
+## Band Name Generator ##
 # print("#" * 100)
 # print(" Welcome To The Band Name Generator. ".center(60, "#"))
 # print("#" * 100)F
@@ -2268,6 +2488,9 @@
 # Solution 1
 # a, b = b, a
 
+# print(a)
+# print(b)
+
 # Solution 2
 # c = a
 # a = b
@@ -2275,6 +2498,31 @@
 
 # print(a)
 # print(b)
+
+
+# Calculate How Many months weeks days left in our lifes until 90 years
+# age = 90 - int(input("Type Your Age Here: ").strip())
+
+# months = age * 12
+# weeks = months * 4
+# days = age * 365
+
+# print(f"You Have {days} Days, {weeks} Weeks, {months} Months Left.")
+
+
+# Tip Calaculator
+# bill = float(input("What was the total bill? $:- "))
+# tip = int(input("How much tip would you like to give? 10, 12, or 15? :- "))
+# people = int(input("How many people to split the bill?:- "))
+
+# tip_as_percent = tip / 100
+# total_tip_amount = bill * tip_as_percent
+# total_bill = bill + total_tip_amount
+# bill_per_person = total_bill / people
+# # final_amount = round(bill_per_person, 2)
+# final_result = "{:.2f}".format(bill_per_person)
+
+# print(f"Each person should pay: ${final_result}")
 
 
 # Two Digit Numbers Add
@@ -2288,7 +2536,6 @@
 
 
 # BMI Exercise
-
 # height = float(input("Enter Your Height In Meters: "))
 # weight = int(input("Enter Your Weight In Kilograms: "))
 
@@ -2306,30 +2553,6 @@
 #     print(f"Your BMI Is {BMI}, You Are Clinically obese.")
 
 # print(int(BMI))
-
-# Calculate How Many months weeks days left in our lifes until 90 years
-
-# age = 90 - int(input("Type Your Age Here: ").strip())
-
-# months = age * 12
-# weeks = months * 4
-# days = age * 365
-
-# print(f"You Have {days} Days, {weeks} Weeks, {months} Months Left.")
-
-# Tip Calaculator
-# bill = float(input("What was the total bill? $:- "))
-# tip = int(input("How much tip would you like to give? 10, 12, or 15? :- "))
-# people = int(input("How many people to split the bill?:- "))
-
-# tip_as_percent = tip / 100
-# total_tip_amount = bill * tip_as_percent
-# total_bill = bill + total_tip_amount
-# bill_per_person = total_bill / people
-# # final_amount = round(bill_per_person, 2)
-# final_result = "{:.2f}".format(bill_per_person)
-
-# print(f"Each person should pay: ${final_result}")
 
 
 # Odd Or Even?
@@ -2560,14 +2783,14 @@
 #         print("It's a draw")
 
 # GUI Exercise
-# picture = [
-#     [0, 0, 0, 1, 0, 0, 0],
-#     [0, 0, 1, 1, 1, 0, 0],
-#     [0, 1, 1, 1, 1, 1, 0],
-#     [1, 1, 1, 1, 1, 1, 1],
-#     [0, 0, 0, 1, 0, 0, 0],
-#     [0, 0, 0, 1, 0, 0, 0]
-# ]
+picture = [
+    [0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1],
+    [0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0]
+]
 
 # empty = " "
 # star = "*"
@@ -2578,6 +2801,7 @@
 #         else:
 #             print(empty, end="")
 #     print()  # print("") == print("", end="\n")
+
 
 # Find Duplicates In A List
 # some_list = ["a", "b", "c", "b", "d", "m", "n", "n"]
@@ -2890,9 +3114,9 @@
 # import time
 # # my_list = ("I Hacked Your Friend Computer :)")
 # time.sleep(8)
-# for i in range(1000):
+# for i in range(100):
 #     # a = random.choice(animal)
-#     pg.write("Elmoddeeeerrrrrrrrrrrrr")
+#     pg.write("stop this all of you")
 #     pg.press("enter")
 
 
@@ -3101,7 +3325,7 @@
 # turtle.circle(200, 60)
 # turtle.done()
 
-###################### Messsi ######################
+###################### Messi ######################
 # from sketchpy import canvas
 # Turtle = canvas.sketch(x_offset=290, y_offset=320)
 
@@ -3170,68 +3394,6 @@
 
 # Turtle.draw_fn("end", retain=True, co=(230, 239, 234), mode=0)
 
-#################################################### Git Commands ####################################################
-# git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
-# git status                                            => Show You What Happens In Your Working Directory
-# git add                                               => To Add The Files From Working Directory To The Staging Area
-# git add *                                             => To Add All The Files From Working Directory To The Staging Area
-# git add *.extension                                   => To Add All The Files With The Same Extension
-# git rm fillname                                       => To Remove The File From Staging Area
-# git restore --staged filename filename...             => To Restore The Files From The Staging Area To The Working Directory
-# git commit -m "Here The Message You Want To Write"    => To Add The Files From Staging Area To The Local Repo
-# git branch                                            => Show You All The Branches In The Local Repo
-# git remote -v                                         => Show You The Remote Repo
-# git push origin main                                  => To Push The Changes From Local Repo To The Remote Repo
-# git pull origin                                       => To Pull The Changes From The Remote Repo To The Local Repo
-# git config -l                                         => To List All The Configuration Of Git
-# git help config                                       => To Open The Configuration Manual
-# git config --global user.email "The Github Email"     => To Show The Terminal My Email
-# git config --global user.name "Github Name"           => To Show The Terminal My Name
-# git config --global user.email                        => To Print The Email Name In The Config
-# git config --global user.name                         => To Print The Email Of The User In The Config Settings
-# git config -l --show-origin                           => To Show You Where The Configuration Comes From
-# git config --global --unset Config Name               => To Delete A Specified Configuration
-# git config --global --edit                            => To Change The Configuration With The Editor (VS)
-# ssh-keygen -t rsa -b 4090 -C "Here Your Gmail"        => To Create SSH Key
-# ssh -T git@github.com                                 => To Test The SSH Key
-# git init                                              => To Create Repositery From Existing Project
-# git push -u origin master                             => To Push The Changes From The Local Repo To The Remote Repo
-# git config --global alias.st status                   => To Create An Alias To The git status Command
-# git config --global alias.st                          => To Show You The Command Alias
-# git branch Branch Name                                => To Create New Branch
-# git checkout Branch Name                              => To Go To The Branch You Want
-# git branch -d Branch Name                             => To Delete Specified Branch
-# git branch -D Branch Name                             => To Force Delete The Branch Even If There's Changes In The Branch
-# git checkout -b Branch Name                           => To Create A New Branch And Go To It
-# git branch -m New Branch Name                         => To Rename An Existing Branch
-# git merge Branch Name                                 => To Merge The Branch With The Main Branch
-# git stash                                             => To Put The Files In A Stash Until You Done With It (بتركنهم على جمب لعند ما تخلص التعديلات وبعدين ترجعم من الستاش وترفعهم)
-# git stash pop                                         => To Restore The Files From The Stash ( Stash Box Also Deleted )
-# git stash apply                                       => To restore The Files From The Stash But The Stash Box Not Deleted
-# git stash list                                        => To Show You All Stashes
-# git stash save "The Message You Want"                 => To Put A File In Stash Box With Message
-# git stash pop/apply stash@{Id Number}                 => To Restore Any Specified File From The Stash
-# git stash drop                                        => To Remove Stash Box With Files Inside It
-# git stash show                                        => To Show You What Happened In The Stash
-# git stash clear                                       => Remove All The Stashes
-# git clean -n                                          => To Show You The Files You Would Removed
-# git clean -f                                          => To Remove All The Files
-# git log                                               => Show You All The Commits In The Repo
-# git reset --hard hashCommit                           => To Remove The Last Commit And Put The Pointer To The Specific Commit Hash You Enter
-# git push origin main --force                          => To Force The Updates
-# .gitignore                                            => To Ignore Files And Directories In The Working Project We Need First To Create .gitignore file
-# Note: Put The Files And Directories You Want To Ignore In The .gitignore File
-# Note: *.log => Means That It Will Ignore Any File Ending With The Extension .log
-# Note: !FileName  => Means That Not Ignoring This Specified File
-# git add -f filename                                   => Adding A File Even If It Was In The .gitignore file
-# git tag                                               => To Show You All The Tags
-# git tag tagName (v1.0)                                => To Name A Tag
-# git push origin tagname(v1.0)                         => To Push The Tag To The Github
-# git tag -a tagName -m "The Message You Want"          => To Create Unnotated Tag
-# git tag -l "Tags You Want"                            => To List All The Tags
-# git tag -d tagName                                    => To Remove A Tag Localy
-# git push origin --delete tagName                      => To Remvoe A Tag Remotely
-
 
 # Drawing Bill Gates
 # from sklearn.preprocessing import scale
@@ -3286,7 +3448,6 @@
 
 
 # newEnemy()
-print("Mohamed")
 
 # def update():
 #     car.x -= held_keys['a']*5*time.dt
@@ -3361,3 +3522,300 @@ print("Mohamed")
 # input = Image.open(input_path)
 # output = remove(input)
 # output.save(output_path)
+
+
+################################################################### Linux Operating System ###################################################################
+######### Linux File System ##########
+## Notes ##
+# 1- The Linux File System Follows A Tree-Like-Structure
+# 2- /               => Is The Very Top (Root) Of The File Tree (Every Folder Is Under It)
+# 3- /bin            => Stores Common Linux User Command Binaries like date, cal, cat Commands are in here
+# 4- /home           => where the home dicrectories for regular users are stored  (/home/mohamed)
+# 5- /root           => the home folder the root user or the super user
+# 6- /sbin           => contains adminstrative commands (binaries) for the root user
+# 7- /usr            => contains files that belongs to the user
+# 8- .              => refers to the current directory
+# 9- ..             => refers to the parent folder
+# 10- Absolute paths => start at the base (/) dreictory
+# 11- Relative paths => start from the current directroy
+# 12- In linux file extenstions don't matter, the system looks to the contents of the file rather than his name, system looks to the header of the file rather than it's extension
+# 13-
+
+
+## Navigating the file system ##
+# mohamed@VB:~$
+#   mohamed => the name of the user
+#   VB      => The virtual box
+#   ~       => in the bash shell that telda (~) represents the home folder for the current user
+
+# Commands
+# 1- pwd   => print working directory
+
+# 2- ls       => list the folders of the directory you are currently in == ls /home/mohamed == ls ~ == ls
+# 3- ls -F    => will classify the folders and files ( folders will represents in blue color , files will represents in white color )
+# 4- ls -l    => list the files in long format
+# 5- ls -h    => list the files in human readable format  == ls --human-readable
+# 6- ls -a    => list all the files including hidden ones
+# 7- ls -f    => list all entries in directory order
+# 8- ls -i    => print the index of each file and folder
+
+# 9- cd       => By Default Will Take You To The Home Folder  == cd ~ == cd /home/mohamed
+# 10- cd .    => refers to the crrent directroy
+# 11- cd ..   => will take you to the parent folder of the folder you are currently in
+# 12- file    => will till you the type of the file
+
+## WildCards ##
+# (*)         => Means Everything regardless of length
+# Note that wildcards is case sensitive
+# Examples
+# 1- ls D*    => Will list any directroy starts with capital D letter
+# 2- ls *     => will list every directroy and files
+# 3- ls *.txt => will list every file ends with .txt
+
+# (?)         => Means only one thing => it refers to only one character
+# (??) refers to two character
+# Examples
+# 1- ls ?.txt  => means list everyfile ends with .txt but has only one character before the ? wildcard
+# 2- ls ??.txt => means list everyfile ends with .txt but has only two characters before .txt
+
+# ([])         => Similar to the ? wild card but it refers to only specific one character, matches just one place but allows you to specify options
+# Examples
+# 1- ls file[1-9].txt  => will list every file ends with .txt but only the ones who have number from 1 to 9 (file1.txt, file2.txt, file3.txt, file4.txt, file5.txt, file6.txt, file7.txt, file8.txt, file9.txt)
+# 2- ls file[12].txt   => will list every file ends with .txt but only the ones who have number 1 or 2 (file1,.txt file2.txt)
+# 3- ls file[A-Z].txt  => will list every file ends with .txt but only the ones who have letter from A to Z
+# 4- ls file[1-9][A-Z][a-z].txt  => will list every file have this pattern (file11.txt, file1A.txt, file3c.txt)
+
+## Creating Files And Directories ##
+# note:- If you want to create a file or a folder with space between two words you should put the name between double quotes or single quotes "Mohamed Salama"
+# 1- touch    => Creates Empty file
+# 2- mkdir    => creates empty folder
+# 3- mkdir -p => creates the entire folder path   example (mkdir /FolderNotExist/folder)
+
+## Brace Expansion {} ##
+# Example
+# mkdir {jan,feb,mar,apr,jun,jul}{2010..2023}   => will create a bunch of folders with this pattern (jan2010,jan2011...jan2023, feb2010,feb2011...feb2023,....jul2010,jul2011..jul2023)
+# touch {jan,feb,mar,apr,jun,jul}{2010..2023}/file{1..100}.txt  => this means in every folder of this create a 100 file from 1 to 100
+# touch file{1,2,3} == touch file{1..3}         => will create these files (file1,file2,file3)
+
+
+## Deleting Files And Folders ##
+# rm  => delete files
+# rmdir => delete empty directories
+# rm -r => delete the folder and everything inside of it
+# rm -i => will ask you before deleting (More Save)
+
+## Copying Files And Directroies ##
+# Syntax
+# cp [the file you want to copy] ... [the destination]
+
+# cp -r => means copy the folder and everything inside it
+
+## Moving And Rename Files And Folders ##
+# rename the file/folder if it's exists
+# mv [old_name] [new_name]
+
+## Editing Files With Nano ##
+# Notes:-
+# 1- you can create files with nano command
+# 2- ^  => this symbol means CTRL on the keyboard
+# 3- M- => stands for modify and it's alt key on the keyboard
+# 4- Nano configuraton file located in /etc/nanorc
+# 5- ./ means the folder you are currently in
+
+## Finding Files/Folders ##
+## The Locate Command ##
+# the locate command searches a database for files and returns a list of results
+# to avoid errors use --existing and --follow options
+# best thing to do is just update the database (done automatically daily)
+# Note:- when you locate some files with the locate command it's first looking for them in the database in this path /var/lib/plocate
+# syntax
+#   locate options [files you want to find]
+
+# locate -i          => means locate without case sensitive
+# locate --limit 3   => locate only 3 files
+# locate -S          => To show you the database for the locate command
+# locate -e or --existing => this means check if the files are existing in the database or not before printing them
+# locate --follow    => to tell you if the symbolic links arrived in the right place
+# sudo updatedb      => to update the database to give you more accurate results
+
+## Find Command ##
+# it does not need a database so it's always up to date and you do not need to update database, and it is more powerful than the locate command
+# it is a bit slower than the locate command, locate is faster because it depends on a database
+# the default behaviour of find command is it searches for every file/folder in the current directory and everything below it including hidden ones
+# wc -l => will define the number of lines of the output
+
+# Examples
+# find /home/mohamed    => will list every single file and folder in mohamed and everything below it
+# find -maxdepth input  => specify the depth of the searching  (find . -maxdepth 3)
+# find -type            => specify the type f stands for file, d stands for directory  (find . -type f)
+# find -name            => to search by name (find . -iname "file.txt",  i option here means case insensitive)
+# find -size            => to search by the size (find / -size +100k -100k), (find / -size -10k -o size +5M)
+# find -exec            => you can use the -exec option to execute another command on each of the results and remember to end the command with \;  (sudo find / -type f -size +100k -size -300k -exec cp {} ~/Desktop/copyFile \;)
+# find -ok              => works the same as -exec but it is more save because it's ask you before doing anything
+
+## Viewing Files ##
+# cat   => it's stands for concatenate and it reads the content of the file
+# Example
+# cat file[1-5].txt > hello.txt == cat file{1..5}.txt > hello.txt    => will show the content of the five files and redirect it to hello.txt file
+
+# tac   => read the content of the file in reverse (it's the backwards of cat command)
+# rev   => read the content of the file in reverse but it's reverse each line horizontally
+# less  => read the content of the file but it's more easier (let you scroll through large content)
+# head  => it's useful command when you need to see just a piece of the content (by deafult will show you the first 10 lines)
+# head -n input => will show you the number of lines you specify
+# tail  => it works excatly like the head command but it's starts from the tail of the file
+
+## Soring Data ##
+# sort       => sort the data alphapitaclly from (a-z) (0-9)
+# sort -r    => sort the data from (z-a)
+# sort -n    => sort the numbres numercally (depends on the vlaue of the number)
+# sort -u    => will remove dupliates
+# sort -k    => this option can sort tabular data, sort by column (ls -l /etc | sort -k 5nhr)
+# Example
+# ls -lh /etc | head -n 20 | sort -k 6M  => will sort by column 6 and M here means sort by month
+
+## Search File Content ##
+# grep command will search what ever input you give it for lines that contain a particular piece text that you tell it to search for
+# Syntax
+# grep "what you are looking for" (the file)
+# Examples
+# grep -c "e" file.txt => will return the numbers of lines that contains the letter e
+# grep -v "e" file.txt => will reverse the search (will search for the lines that doesn't have the letter e)
+# grep -i "E" file.txt => -i means case insensitive
+# ls =F /etc | grep -v / | sort -r > files.txt  => will list every file in the etc folder with classfication then search only for the files does not contain the / symbol and then sort files reversely from z-a and then but the files in the files.txt file
+
+# File Archieving And Compression
+# Archiving files is basically two step process:- 1- create a tarball  2- compress tarball
+# we use tar command to create the tarball
+# tarballs are containers to store files in for compression
+# tar -cvf ourarchive.tar files => -c let the tar command know that we want to create a new archieve, -v tell the tar command to give us feedback (optional), -f let the tar command accept files
+# Examples
+# tar -cvf ourarchive.tar file[1-3].txt  => creat an archive for the file 1, file2, file3, ourarchive.tar is the archive name
+# tar -tf ourarchive.tar => to see what is in the archive without extracting the data inside it, -t means test label and it basically lets you check what's inside tha tar file
+# tar -xvf archive.tar   => to extract the files inside the archive, -x means execute the files
+
+## Compression ##
+# Compression happens using compression algorithms and there are two main compression alghorithms in use in the linux world (gzip, bzip2)
+# gzip alghorithm is faster but has less compression power
+# bzip2 has more compression power but does require more time
+# Examples
+# gzip archive.tar => compress archives with the gzip alghorithm
+# gunzip archive.tar.gz => un compress the archive
+
+# bzip2 archive.tar => to compress the archive with the bzip alghorithm
+# bunzip2 archive.tar.bz2 => to uncompress the archive
+
+# zip compression
+# zip archive_name file1 file2... => to compress the files to zip
+# unzip archive_name              => to unzip the archive
+
+# examples
+# tar -cvzf archive.tar.gz file1,file2...   => to compress the files in one step with gzip algorithm
+# tar -cvjf archive.tar.bz2 file1,file2...  => to compress the files in one step with bzip2 alghorithm
+
+# Note /dev/null => will delete any folder or file you redirect to it
+
+
+########### Bash Scripts ###########
+# best behaviour to create scripts is ( to run your scripts from anywhere in your system )
+# 1- create a folder called bin in your home directory (all in lower case)
+# 2- move all you scripts inside it
+# 3- add execute permission to your scripts ( chmod +x script.sh )
+# 4- add the /bin folder we created to the $PATH of the system which contians all the files that contains all the commands
+# 4- edit the .bashrc file in your home directory (nano .bashrc)
+# 5- in the end of the file write this command (PATH="$PATH:$HOME/bin")
+
+
+## To create bash scripts ##
+# 1- you need to create file ending with .sh
+# 2- open the file and put this shabam as the first line #!/bin/bash  => this line tells the shell this is a bash file
+
+## To create python scripts ##
+# 1- you need to create file ending with .py (extensions doesn't matter in linux)
+# 2- open the file and put this shabam as the first line #!/usr/bin/python3  => this line tells the shell this is a python file
+
+# Note:- /dev/null   =>  is a place in the system called the bit bucket which basically deletes whatever is sent to it.
+# Shortcut:- CTRL + k   => delete the line you are currently standing in
+
+## Commands ##
+# bash filename.sh   => to run the script
+# cat script.sh      => to see the content of the script
+
+
+##### Schedule Commands And Scripts Using cron #####
+# cron is a command line program that is used to schedule tasks
+# Each user has a cron tab which is basically is just a text file and each cron tab list which commands or scripts will be run automatically by that user and also list when they will be scheduled to be run
+# every user has a crontab, this can be edited using crontab -e
+# each crontab is broken up into rows, each row has 6 columns, first 5 columns is for scheduling information and the sixth column details which command or a script should be run at the schedule time
+# The columns are m(0 to 59),h(0 to 23),dom(1,29),mon(1 to 12 or JAN,FEB),dow(0 to 6 or sat,mon)   command or script
+
+# Commands
+# crontab -e     => to edit the crontab of the user (choose 1 for nano because it is the easiest way)
+# select-editor  => to change the editor later
+# Note:- there is another way to change the editor => in your home directory edit the hidden file which is .selected_editor and put the path for the new editor
+# * stands fon "Any"
+# */15 means run every 15 (minutes,day)
+# to schedule the scripts you need to write in the command section the following ( bash the path to your script )  => bash ~/bin/script.sh
+
+
+#################################################### Git Commands ####################################################
+# git clone                                             => To Clone (Copy) The Project From Remote Repo (GitHub) To Local Repo (PC)
+# git status                                            => Show You What Happens In Your Working Directory
+# git add                                               => To Add The Files From Working Directory To The Staging Area
+# git add *                                             => To Add All The Files From Working Directory To The Staging Area
+# git add *.extension                                   => To Add All The Files With The Same Extension
+# git rm fillname                                       => To Remove The File From Staging Area
+# git restore --staged filename filename...             => To Restore The Files From The Staging Area To The Working Directory
+# git commit -m "Here The Message You Want To Write"    => To Add The Files From Staging Area To The Local Repo
+# git branch                                            => Show You All The Branches In The Local Repo
+# git remote -v                                         => Show You The Remote Repo
+# git push origin main                                  => To Push The Changes From Local Repo To The Remote Repo
+# git pull origin                                       => To Pull The Changes From The Remote Repo To The Local Repo
+# git config -l                                         => To List All The Configuration Of Git
+# git help config                                       => To Open The Configuration Manual
+# git config --global user.email "The Github Email"     => To Show The Terminal My Email
+# git config --global user.name "Github Name"           => To Show The Terminal My Name
+# git config --global user.email                        => To Print The Email Name In The Config
+# git config --global user.name                         => To Print The Email Of The User In The Config Settings
+# git config -l --show-origin                           => To Show You Where The Configuration Comes From
+# git config --global --unset Config Name               => To Delete A Specified Configuration
+# git config --global --edit                            => To Change The Configuration With The Editor (VS)
+# ssh-keygen -t rsa -b 4090 -C "Here Your Gmail"        => To Create SSH Key
+# ssh -T git@github.com                                 => To Test The SSH Key
+# git init                                              => To Create Repositery From Existing Project
+# git push -u origin master                             => To Push The Changes From The Local Repo To The Remote Repo
+# git config --global alias.st status                   => To Create An Alias To The git status Command
+# git config --global alias.st                          => To Show You The Command Alias
+# git branch Branch Name                                => To Create New Branch
+# git checkout Branch Name                              => To Go To The Branch You Want
+# git branch -d Branch Name                             => To Delete Specified Branch
+# git branch -D Branch Name                             => To Force Delete The Branch Even If There's Changes In The Branch
+# git checkout -b Branch Name                           => To Create A New Branch And Go To It
+# git branch -m New Branch Name                         => To Rename An Existing Branch
+# git merge Branch Name                                 => To Merge The Branch With The Main Branch
+# git stash                                             => To Put The Files In A Stash Until You Done With It (بتركنهم على جمب لعند ما تخلص التعديلات وبعدين ترجعم من الستاش وترفعهم)
+# git stash pop                                         => To Restore The Files From The Stash ( Stash Box Also Deleted )
+# git stash apply                                       => To restore The Files From The Stash But The Stash Box Not Deleted
+# git stash list                                        => To Show You All Stashes
+# git stash save "The Message You Want"                 => To Put A File In Stash Box With Message
+# git stash pop/apply stash@{Id Number}                 => To Restore Any Specified File From The Stash
+# git stash drop                                        => To Remove Stash Box With Files Inside It
+# git stash show                                        => To Show You What Happened In The Stash
+# git stash clear                                       => Remove All The Stashes
+# git clean -n                                          => To Show You The Files You Would Removed
+# git clean -f                                          => To Remove All The Files
+# git log                                               => Show You All The Commits In The Repo
+# git reset --hard hashCommit                           => To Remove The Last Commit And Put The Pointer To The Specific Commit Hash You Enter
+# git push origin main --force                          => To Force The Updates
+# .gitignore                                            => To Ignore Files And Directories In The Working Project We Need First To Create .gitignore file
+# Note: Put The Files And Directories You Want To Ignore In The .gitignore File
+# Note: *.log => Means That It Will Ignore Any File Ending With The Extension .log
+# Note: !FileName  => Means That Not Ignoring This Specified File
+# git add -f filename                                   => Adding A File Even If It Was In The .gitignore file
+# git tag                                               => To Show You All The Tags
+# git tag tagName (v1.0)                                => To Name A Tag
+# git push origin tagname(v1.0)                         => To Push The Tag To The Github
+# git tag -a tagName -m "The Message You Want"          => To Create Unnotated Tag
+# git tag -l "Tags You Want"                            => To List All The Tags
+# git tag -d tagName                                    => To Remove A Tag Localy
+# git push origin --delete tagName                      => To Remvoe A Tag Remotely
