@@ -1390,6 +1390,7 @@
 
 
 # Printing Random Float Number Between 0 and 1
+# import random
 # print(f"Random Float Number {round(random.random(), 2)}")
 
 # Choose Random Element
@@ -1411,8 +1412,8 @@
 # Create My Own Module
 # import sys
 # import mohamedmodule as my_module
-# print(sys.path)
-# print(dir(mohamedmodule))
+# # print(sys.path)
+# # print(dir(mohamedmodule))
 
 # my_module.name("Mohamed")
 
@@ -1437,8 +1438,10 @@
 # d["b"] = 2
 
 # d2 = OrderedDict()
-# d2["a"] = 1
 # d2["b"] = 2
+# d2["a"] = 1
+
+# print(d == d2)
 
 
 # Array Package
@@ -1446,7 +1449,6 @@
 # list = array("i", [1, 2, 3, 4, 5, int("5")])
 # print(list[1])
 
-# print(d == d2)
 
 # Install Extrenal Packages
 # [1] Package Is A Set Of Modules
@@ -1460,12 +1462,12 @@
 
 # Useful Commands For External Packages
 # pip --version = pip -V                     => To Display The Version Of The pip Package
-# pip install --user pacakge name --upgrade  => To Upgrade The Version Of A Package  (pip install package_name --upgrade)
+# pip install --user pacakge_name --upgrade  => To Upgrade The Version Of A Package  (pip install package_name --upgrade)
 # pip install pyfiglet=1.3.5                 => To Install A Package With A Specified Version
-# pip install --user pacakge name            => To Install External Package
-# pip install package name==version          => To Install External Package With A Specified Version
+# pip install --user pacakge_name            => To Install External Package
+# pip install package_name==version          => To Install External Package With A Specified Version
 # pip list                                   => To List All The Packages In The Computer
-# pip uninstall package name                 => To Uninstall A Package
+# pip uninstall package_name                 => To Uninstall A Package
 
 # import termcolor , pyfiglet
 
@@ -1476,22 +1478,16 @@
 # help(termcolor)
 # print(termcolor.colored(pyfiglet.figlet_format("Mohamed Salama"), "red"))
 # print(termcolor.colored(pyfiglet.figlet_format("Abo Salama"), "yellow"))
-
+# print(termcolor.colored("Mohamed", "green"))
 
 # import pyjokes
 # joke = pyjokes.get_joke('en', 'neutral')
 # print(joke)
 
 
-# print(__name__)  # Print __main__ If It's The Main File Where Models Imported
+# print(__name__)  # Print __main__ If It's The Main File Where Modules Imported
 # if __name__ == "__main__":  # We Use This Condition To Make Sure That We Run A Module If This Is The Main File, Or The File Being Run
 #     print("Hello From The Main File")
-
-# Shuffle Uses
-# from random import shuffle
-# my_list = [1,2,3,5]
-# shuffle(my_list)
-# print(my_list)
 
 
 ################## Date And Time ###################
@@ -1540,10 +1536,12 @@
 # [3] For Loop Already Calls iter() Method On The Iteralbe Behind The Scene
 # [4] Gives "StopIteration" If There's No Next Element
 
+
 # name = "Mohamed"
 
 # for letter in iter(name):
 #     print(letter, end=" ")
+
 # my_iterator = iter(name)
 # print(next(my_iterator))
 # print(next(my_iterator))
@@ -1553,261 +1551,6 @@
 # print(next(my_iterator))
 # print(next(my_iterator))
 # print(next(my_iterator))
-
-
-
-
-
-###################### Errors Handling ######################
-# [1] Exceptions Is A runtime Error Reporting Mechanism
-# [2] Exceptions Gives You The Message To Understand the Problem
-# [3] Traceback Gives You The Line To Look For The Code In This Line
-# [4] Excpetions Have Types (SyntaxError, IndexError, KeyError, ValueError, TypeError, NameError, ZeroDivisionError, Etc...)
-# [5] Exceptions List https://docs.python.org/3/library/exceptions.html
-# [6] raise Keyword Used To Raise Your Own Exceptions
-
-# number = "Mohamed"
-
-# if type(number) != int:
-#     raise Exception("Sorry You Need To Enter A Number")
-#     raise TypeError("Only Numbers Allowed")
-#     raise ValueError("Only Numbers Allowed")
-# else:
-#     print("You Entered The Correct Number")
-
-
-# --      Exceptions Handling      --
-# -- Try | Except | Else | Finally --
-# -----------------------------------
-# Try     => Test The Code For Errors  # EOF => Means End Of File
-# Except  => Handle The Errors
-# ----------------------------
-# Else    => If No Errors
-# Finally => Run The Code
-
-# while True:
-#     try:
-#         age = int(input("What's Your Age:-").strip())
-#         10 / age
-#     except ZeroDivisionError:
-#         print("Your Age Can't Be Zero, Type Your Age Please")
-#     except:
-#         print("Enter A Number PLease")
-#     else:
-#         print(f"Your Age Is {age}")
-#         print("Thank You!")
-#         break
-
-
-# try:  # Try The Code And Test Errors
-#     number = int(input("Type Your Number Please:- "))
-#     print("This Is Integer, From try")
-# except:  # Handle The Error If Exist
-#     print("This Is Not Integer")
-# else:  # If There's No Errors
-#     print("This Is Integer, From else")
-# finally:  # Run Whatever Happened
-#     print("Print From Finally Whatever Happened")
-
-# try:
-#     # print(100 / 0)
-#     # print(name)
-#     int(input("Type Your Number:- ").strip())
-# except ZeroDivisionError:
-#     print("Zero Division Error Happened")
-# except NameError:
-#     print("Name Error Happened")
-# except ValueError:
-#     print("Value Error")
-# except:
-#     print("Error Happened Try Again :)")
-
-
-# Advanced Error Handling Example
-# the_file = None
-# the_tries = 5
-
-# while the_tries > 0:
-#     try:  # Try To Open The File
-#         print("Enter The File Name With Absolute Path To Open")
-#         print(f"You Have {the_tries} Tries Left")
-#         print("Example: D:\Python\Files\yourfile.extension")
-
-#         file_name_and_path = input("File Name => : ").strip()
-#         the_file = open(file_name_and_path, 'r')
-
-#         print(the_file.read())
-#         break
-
-#     except FileNotFoundError:
-#         print("File Not Found Please Be Sure The Name is Valid")
-
-#         the_tries -= 1
-#     except:
-#         print("Error Happened")
-#     finally:
-#         if the_file is not None:
-#             the_file.close()
-
-#             print("File Closed.")
-# else:
-#     print("All Tries Is Done")
-
-
-#################### Debugging Code ####################
-# my_list = [1, 2, 3, 4, 5, 6]
-# my_dict = {
-#     "Name": "Mohamed",
-#     "Age": 22,
-#     "Country": "Egypt"
-# }
-
-# for num in my_list:
-#     print(num)
-
-# for key, value in my_dict.items():
-#     print(f"{key} => {value}")
-
-
-# def function_one():
-#     print("Hello From Function One")
-
-
-# function_one()
-
-## Debugging With pdb Module ##
-# import pdb
-
-# def add(num1, num2):
-#     pdb.set_trace()
-#     return num1 + num2
-
-
-# print(add(1, 2))
-
-
-########## Type Hinting ##########
-# def say_hello(name) -> str:
-#     print(f"hello {name}")
-
-
-# say_hello("Mohamed")
-
-
-# def add(n1, n2) -> int:
-#     print(n1 + n2)
-
-
-# add(1, 2)
-
-
-##################### Docstrings And Commenting VS Documenting #####################
-
-# def func(name):
-#     # Single Line DocString
-#     # '''This Function Only Say Hello'''
-
-#     # Multiple Line DocString
-#     '''
-#     This Function Only Say:
-#         Hello For The Name Argument
-#     '''
-#     print(f"Hello {name}")
-
-
-# # func("Mohamed")
-# # print(func.__doc__)
-# help("keywords")
-
-
-##################### Installing And Use Pylint For Better Code #####################
-# """This Is My Function"""
-
-
-# def say_hello(name):
-#     '''Fuction For Saying Hello To The User'''
-#     msg = "Hello"
-#     return f"{msg} {name}"
-
-
-# say_hello("Ahmed")
-
-
-##################### Regular Expressions #####################
-# search() => Search A String For A Match And Return A First Match Only
-# findall() => Returns A List Of All Matches And Empty List If No Match
-# split(pattern, string, maxsplit) => Return A List Of Elements Splitted On Each Match
-# sub(pattern, Replace, string, replaceCount) => Replace Matches With What You Want
-# Email Pattern => [A-z0-9\n]+@[A-z0-9]+\.(com|net|org|info)
-# Regular Expression Return None If There's Match
-
-# import re
-# my_string = "This Is My String"
-# regualr = re.search("My", my_string)
-# print(regualr.start())
-# print(regualr.end())
-
-# my_search = re.search(r"[A-Z]{2}", "MMohamedSSalama")
-# print(my_search)
-# print(my_search.span())
-# print(my_search.string)
-# print(my_search.group())
-
-
-# is_email = re.search(
-#     r"[A-z0-9\n]+@[A-z0-9]+\.(com|net|org|info)", "os@osama.com")
-# if is_email:
-#     print("Valid Email")
-# else:
-#     print("Not Valid Email")
-
-# email_input = input("Write Your Email Here Please: ").strip()
-# search = re.findall(r"[A-z0-9\n]+@[A-z0-9]+\.com|net|org|info", email_input)
-# my_list = []
-# if search != []:
-#     my_list.append(search)
-#     print("Email Added")
-# else:
-#     print("Not Valid Email")
-
-# for email in my_list:
-#     print(email)
-
-
-# string_one = "I Love Python Programming Language"
-# search_one = re.split(r"\s", string_one, 2)
-# print(search_one)
-
-
-# string_two = "How-To_Write_A_Very-Good-Article"
-# search_two = re.split(r"-|_", string_two)
-# print(search_two)
-
-
-# Get Words From URL
-# for index, word in enumerate(search_two, 1):
-#     if len(word) == 1:
-#         continue
-#     print(f"Word Number: {index} => {word.lower()}")
-
-# my_string = "I Love Python Programming Language"
-# print(re.sub(r"\s", "-", my_string, 2))
-
-# website = "https://www.elzero.org:8080/category.php?article=105?name=how-to-do"
-# search = re.search(r"(https?)://(www)?\.?(\w+)\.(\w+):?(\d+)?/?(.+)", website)
-# print(dir(search))
-# print(search.group(1))
-# print(search.groups())
-
-# for item in search.groups():
-#     print(item)
-
-# print(f"Protocol: {search.group(1)}")
-# print(f"Sub Domain: {search.group(2)}")
-# print(f"Domain Name: {search.group(3)}")
-# print(f"Top Level Domain: {search.group(4)}")
-# print(f"Port: {search.group(5)}")
-# print(f"Query String: {search.group(6)}")
 
 
 ##################### Generators #####################
@@ -1938,6 +1681,85 @@
 # test()
 
 
+#################### Debugging Code ####################
+# my_list = [1, 2, 3, 4, 5, 6]
+# my_dict = {
+#     "Name": "Mohamed",
+#     "Age": 22,
+#     "Country": "Egypt"
+# }
+
+# for num in my_list:
+#     print(num)
+
+# for key, value in my_dict.items():
+#     print(f"{key} => {value}")
+
+
+# def function_one():
+#     print("Hello From Function One")
+
+
+# function_one()
+
+## Debugging With pdb Module ##
+# import pdb
+
+# def add(num1, num2):
+#     pdb.set_trace()
+#     return num1 + num2
+
+
+# print(add(1, 2))
+
+
+########## Type Hinting ##########
+# def say_hello(name) -> str:
+#     print(f"hello {name}")
+
+
+# say_hello("Mohamed")
+
+
+# def add(n1, n2) -> int:
+#     print(n1 + n2)
+
+
+# add(1, 2)
+
+
+##################### Docstrings And Commenting VS Documenting #####################
+
+# def func(name):
+#     # Single Line DocString
+#     # '''This Function Only Say Hello'''
+
+#     # Multiple Line DocString
+#     '''
+#     This Function Only Say:
+#         Hello For The Name Argument
+#     '''
+#     print(f"Hello {name}")
+
+
+# # func("Mohamed")
+# # print(func.__doc__)
+# help("keywords")
+
+
+##################### Installing And Use Pylint For Better Code #####################
+# """This Is My Function"""
+
+
+# def say_hello(name):
+#     '''Fuction For Saying Hello To The User'''
+#     msg = "Hello"
+#     return f"{msg} {name}"
+
+
+# say_hello("Ahmed")
+
+
 ################ Loop On Many Iterators With zip() ###############
 # zip() Return A Zip Object Contains All Objects
 # zip() Length Is The Length Of Lowest Object
@@ -1981,6 +1803,179 @@
 # # Black And White Image
 # img_converted = my_img.convert("L")
 # img_converted.show()
+
+
+###################### Errors Handling ######################
+# [1] Exceptions Is A runtime Error Reporting Mechanism
+# [2] Exceptions Gives You The Message To Understand the Problem
+# [3] Traceback Gives You The Line To Look For The Code In This Line
+# [4] Excpetions Have Types (SyntaxError, IndexError, KeyError, ValueError, TypeError, NameError, ZeroDivisionError, Etc...)
+# [5] Exceptions List https://docs.python.org/3/library/exceptions.html
+# [6] raise Keyword Used To Raise Your Own Exceptions
+
+# number = "Mohamed"
+
+# if type(number) != int:
+#     raise Exception("Sorry You Need To Enter A Number")
+#     raise TypeError("Only Numbers Allowed")
+#     raise ValueError("Only Numbers Allowed")
+# else:
+#     print("You Entered The Correct Number")
+
+
+# --      Exceptions Handling      --
+# -- Try | Except | Else | Finally --
+# -----------------------------------
+# Try     => Test The Code For Errors  # EOF => Means End Of File
+# Except  => Handle The Errors
+# ----------------------------
+# Else    => If No Errors
+# Finally => Run The Code
+
+# while True:
+#     try:
+#         age = int(input("What's Your Age:-").strip())
+#         10 / age
+#     except ZeroDivisionError:
+#         print("Your Age Can't Be Zero, Type Your Age Please")
+#     except:
+#         print("Enter A Number PLease")
+#     else:
+#         print(f"Your Age Is {age}")
+#         print("Thank You!")
+#         break
+
+
+# try:  # Try The Code And Test Errors
+#     number = int(input("Type Your Number Please:- "))
+#     print("This Is Integer, From try")
+# except:  # Handle The Error If Exist
+#     print("This Is Not Integer")
+# else:  # If There's No Errors
+#     print("This Is Integer, From else")
+# finally:  # Run Whatever Happened
+#     print("Print From Finally Whatever Happened")
+
+# try:
+#     # print(100 / 0)
+#     # print(name)
+#     int(input("Type Your Number:- ").strip())
+# except ZeroDivisionError:
+#     print("Zero Division Error Happened")
+# except NameError:
+#     print("Name Error Happened")
+# except ValueError:
+#     print("Value Error")
+# except:
+#     print("Error Happened Try Again :)")
+
+
+# Advanced Error Handling Example
+# the_file = None
+# the_tries = 5
+
+# while the_tries > 0:
+#     try:  # Try To Open The File
+#         print("Enter The File Name With Absolute Path To Open")
+#         print(f"You Have {the_tries} Tries Left")
+#         print("Example: D:\Python\Files\yourfile.extension")
+
+#         file_name_and_path = input("File Name => : ").strip()
+#         the_file = open(file_name_and_path, 'r')
+
+#         print(the_file.read())
+#         break
+
+#     except FileNotFoundError:
+#         print("File Not Found Please Be Sure The Name is Valid")
+
+#         the_tries -= 1
+#     except:
+#         print("Error Happened")
+#     finally:
+#         if the_file is not None:
+#             the_file.close()
+
+#             print("File Closed.")
+# else:
+#     print("All Tries Is Done")
+
+
+##################### Regular Expressions #####################
+# search() => Search A String For A Match And Return A First Match Only
+# findall() => Returns A List Of All Matches And Empty List If No Match
+# split(pattern, string, maxsplit) => Return A List Of Elements Splitted On Each Match
+# sub(pattern, Replace, string, replaceCount) => Replace Matches With What You Want
+# Email Pattern => [A-z0-9\n]+@[A-z0-9]+\.(com|net|org|info)
+# Regular Expression Return None If There's Match
+
+# import re
+# my_string = "This Is My String"
+# regualr = re.search("My", my_string)
+# print(regualr.start())
+# print(regualr.end())
+
+# my_search = re.search(r"[A-Z]{2}", "MMohamedSSalama")
+# print(my_search)
+# print(my_search.span())
+# print(my_search.string)
+# print(my_search.group())
+
+
+# is_email = re.search(
+#     r"[A-z0-9\n]+@[A-z0-9]+\.(com|net|org|info)", "os@osama.com")
+# if is_email:
+#     print("Valid Email")
+# else:
+#     print("Not Valid Email")
+
+# email_input = input("Write Your Email Here Please: ").strip()
+# search = re.findall(r"[A-z0-9\n]+@[A-z0-9]+\.com|net|org|info", email_input)
+# my_list = []
+# if search != []:
+#     my_list.append(search)
+#     print("Email Added")
+# else:
+#     print("Not Valid Email")
+
+# for email in my_list:
+#     print(email)
+
+
+# string_one = "I Love Python Programming Language"
+# search_one = re.split(r"\s", string_one, 2)
+# print(search_one)
+
+
+# string_two = "How-To_Write_A_Very-Good-Article"
+# search_two = re.split(r"-|_", string_two)
+# print(search_two)
+
+
+# Get Words From URL
+# for index, word in enumerate(search_two, 1):
+#     if len(word) == 1:
+#         continue
+#     print(f"Word Number: {index} => {word.lower()}")
+
+# my_string = "I Love Python Programming Language"
+# print(re.sub(r"\s", "-", my_string, 2))
+
+# website = "https://www.elzero.org:8080/category.php?article=105?name=how-to-do"
+# search = re.search(r"(https?)://(www)?\.?(\w+)\.(\w+):?(\d+)?/?(.+)", website)
+# print(dir(search))
+# print(search.group(1))
+# print(search.groups())
+
+# for item in search.groups():
+#     print(item)
+
+# print(f"Protocol: {search.group(1)}")
+# print(f"Sub Domain: {search.group(2)}")
+# print(f"Domain Name: {search.group(3)}")
+# print(f"Top Level Domain: {search.group(4)}")
+# print(f"Port: {search.group(5)}")
+# print(f"Query String: {search.group(6)}")
 
 
 ################################################### OOP ( Object Oriented Programming ) ###################################################
@@ -2783,14 +2778,14 @@
 #         print("It's a draw")
 
 # GUI Exercise
-picture = [
-    [0, 0, 0, 1, 0, 0, 0],
-    [0, 0, 1, 1, 1, 0, 0],
-    [0, 1, 1, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1, 1, 1],
-    [0, 0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 1, 0, 0, 0]
-]
+# picture = [
+#     [0, 0, 0, 1, 0, 0, 0],
+#     [0, 0, 1, 1, 1, 0, 0],
+#     [0, 1, 1, 1, 1, 1, 0],
+#     [1, 1, 1, 1, 1, 1, 1],
+#     [0, 0, 0, 1, 0, 0, 0],
+#     [0, 0, 0, 1, 0, 0, 0]
+# ]
 
 # empty = " "
 # star = "*"
@@ -3076,50 +3071,6 @@ picture = [
 # calculator()
 
 
-########### Heart Shape ############
-# from turtle import *
-# color("red")
-# begin_fill()
-# pensize(10)
-# left(50)
-# forward(133)
-# circle(50, 200)
-# right(140)
-# circle(50, 200)
-# forward(133)
-# end_fill()
-
-
-########## Circle Shape ########
-# import turtle
-# import colorsys
-# t = turtle.Turtle()
-# s = turtle.Screen()
-# s.bgcolor("red")
-# t.speed(0)
-# n = 36
-# h = 0
-# for i in range(460):
-#     c = colorsys.hsv_to_rgb(h, 1, 0.9)
-#     h += 1/n
-#     t.color(c)
-#     t.left(145)
-#     for j in range(5):
-#         t.forward(300)
-#         t.left(150)
-
-############### Annoying My Friend ##############
-# import random
-# import pyautogui as pg
-# import time
-# # my_list = ("I Hacked Your Friend Computer :)")
-# time.sleep(8)
-# for i in range(100):
-#     # a = random.choice(animal)
-#     pg.write("stop this all of you")
-#     pg.press("enter")
-
-
 ####### Caesar Cipher #######
 # logo = """
 #  ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,
@@ -3243,6 +3194,52 @@ picture = [
 # print(travel_log)
 
 
+
+########### Heart Shape ############
+# from turtle import *
+# color("red")
+# begin_fill()
+# pensize(10)
+# left(50)
+# forward(133)
+# circle(50, 200)
+# right(140)
+# circle(50, 200)
+# forward(133)
+# end_fill()
+
+
+########## Circle Shape ########
+# import turtle
+# import colorsys
+# t = turtle.Turtle()
+# s = turtle.Screen()
+# s.bgcolor("red")
+# t.speed(0)
+# n = 36
+# h = 0
+# for i in range(460):
+#     c = colorsys.hsv_to_rgb(h, 1, 0.9)
+#     h += 1/n
+#     t.color(c)
+#     t.left(145)
+#     for j in range(5):
+#         t.forward(300)
+#         t.left(150)
+
+
+############### Annoying My Friend ##############
+# import random
+# import pyautogui as pg
+# import time
+# # my_list = ("I Hacked Your Friend Computer :)")
+# time.sleep(8)
+# for i in range(100):
+#     # a = random.choice(animal)
+#     pg.write("stop this all of you")
+#     pg.press("enter")
+
+
 ######### Flower #########
 # import turtle
 
@@ -3324,6 +3321,7 @@ picture = [
 # turtle.right(90)
 # turtle.circle(200, 60)
 # turtle.done()
+
 
 ###################### Messi ######################
 # from sketchpy import canvas
@@ -3407,6 +3405,7 @@ picture = [
 # pic = canvas.sketch_from_svg(
 #     r"D:\Programming\Python\Python Projects\manar.svg")
 # pic.draw()
+
 
 # ########### Convert The Image Into Sketch ##########
 # import cv2
