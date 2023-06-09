@@ -660,7 +660,7 @@
 # skills = ["HTML", "CSS", "JS"]
 
 # for name in peoples:
-#     print(f"My Name Is {name} And My Skills Is")
+#     print(f"My Name Is {name} And My Skills Are")
 #     for skill in skills:
 #         print(f"{skill}")
 
@@ -684,7 +684,7 @@
 # }
 
 # for name in peoples:
-#     print(f"Hello {name} Your Skills Is: ")
+#     print(f"Hello {name} Your Skills Are: ")
 #     for skill in peoples[name]:
 #         print(f"\t{skill} => {peoples[name][skill]}")
 
@@ -3512,6 +3512,7 @@
 # button.pack(side=TOP)
 
 # root.mainloop()
+
 
 # remove image Background
 # from rembg import remove
