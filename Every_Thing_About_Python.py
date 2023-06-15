@@ -1367,6 +1367,32 @@
 # print(list(zip(my_list, your_list)))
 
 
+## Loop On Many Iterators With zip() ##
+# zip() Return A Zip Object Contains All Objects
+# zip() Length Is The Length Of Lowest Object
+
+# list1 = [1, 2, 3, 4, 5]
+# list2 = ["A", "B", "C"]  # Control The Zip Object ( The Lowest One )
+# tuple1 = ("Man", "Woman", "Girl", "Boy")
+# dict1 = {
+#     "Name": "Mohamed",
+#     "age": 22,
+#     "Country": "Egypt"
+# }
+
+# for item1, item2, item3, item4 in zip(list1, list2, tuple1, dict1):
+#     print("List 1 Item =>", item1)
+#     print("List 2 Item =>", item2)
+#     print("Tuple 1 Item =>", item3)
+#     print("Dict 1 key =>", item4, "Value =>", dict1[item4])
+
+
+# ultimatel_list = zip(list1, list2)
+# print(ultimatel_list)
+# for item in ultimatel_list:
+#     print(item)
+
+
 ################################ Modules ################################
 
 # [1] Use Camel_Case for naming your modules
@@ -1554,11 +1580,13 @@
 
 
 ##################### Generators #####################
-# 1- Generator is  a function with "yield" keyword instead of "return"
-# 2- It support iteration and retrun generator itearator by calling "yield"
+# 1- Generator is a function with "yield" keyword instead of "return"
+# 2- It supports iteration and retrun generator itearator by calling "yield"
 # 3- Generator functions can have one or more "yield"
 # 4- By using next() it resume from where it called "yield" not from begining (Feature)
-# 5- When called, its not start automatically, it's give you the control
+# 5- When it's called, it's not start automatically, it will give you the control
+# 6- Generators can pause and resume functions
+
 
 # def my_generator():
 #     yield "Salama"
@@ -1605,6 +1633,7 @@
 # 4- Decorator wrap other function and enhance their behaviour
 # 5- Decorator is higher order function (function accept function as parameter)
 # 6- You Can Add More Than One Decorator To The Same Function
+
 
 # def my_decorator(func):  # Decorator
 #     def nested_func():  # Any Name It's Just For Decoration
@@ -1730,21 +1759,21 @@
 
 ##################### Docstrings And Commenting VS Documenting #####################
 
-# def func(name):
-#     # Single Line DocString
-#     # '''This Function Only Say Hello'''
+def func(name):
+    # Single Line DocString
+    # '''This Function Only Say Hello'''
 
-#     # Multiple Line DocString
-#     '''
-#     This Function Only Say:
-#         Hello For The Name Argument
-#     '''
-#     print(f"Hello {name}")
+    # Multiple Line DocString
+    '''
+    This Function Only Say:
+        Hello For The Name Argument
+    '''
+    print(f"Hello {name}")
 
 
-# # func("Mohamed")
-# # print(func.__doc__)
-# help("keywords")
+# func("Mohamed")
+# print(func.__doc__)
+# help(func)
 
 
 ##################### Installing And Use Pylint For Better Code #####################
@@ -1758,32 +1787,6 @@
 
 
 # say_hello("Ahmed")
-
-
-################ Loop On Many Iterators With zip() ###############
-# zip() Return A Zip Object Contains All Objects
-# zip() Length Is The Length Of Lowest Object
-
-# list1 = [1, 2, 3, 4, 5]
-# list2 = ["A", "B", "C"]  # Control The Zip Object ( The Lowest One )
-# tuple1 = ("Man", "Woman", "Girl", "Boy")
-# dict1 = {
-#     "Name": "Mohamed",
-#     "age": 22,
-#     "Country": "Egypt"
-# }
-
-# for item1, item2, item3, item4 in zip(list1, list2, tuple1, dict1):
-#     print("List 1 Item =>", item1)
-#     print("List 2 Item =>", item2)
-#     print("Tuple 1 Item =>", item3)
-#     print("Dict 1 key =>", item4, "Value =>", dict1[item4])
-
-
-# ultimatel_list = zip(list1, list2)
-# print(ultimatel_list)
-# for item in ultimatel_list:
-#     print(item)
 
 
 ############# Manipulating Images With Pillow ###############
@@ -3194,6 +3197,26 @@
 # print(travel_log)
 
 
+##### Bisection Search Alghorithm #####
+# print("Please Think Of A Number Between 0 and 100:- ")
+# low = 0
+# high = 100
+# medium = (low + high) // 2
+# state = True
+# while state:
+#     print(f"Is Your Secret Number {medium}")
+#     guess = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low, Enter 'c' to indicate the guess is correct:- ")
+#     if guess == 'c':
+#         print(f"Game Over, Your Guess {medium} Is Correct.")
+#         state = False
+#     elif guess == 'h':
+#         high = medium
+#         medium = (high + low) // 2
+#     elif guess == 'l':
+#         low = medium
+#         medium = (high + low) // 2
+#     else:
+#         print("You need to enter a number")
 
 ########### Heart Shape ############
 # from turtle import *

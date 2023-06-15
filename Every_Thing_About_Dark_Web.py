@@ -33,5 +33,8 @@
 # 5- Forces all the websites to use the HTTPS Protocol to provide more privacy and to solve the exit node problem
 # 6- Disables scripts like js scripts using noscript plugin
 # 7- With TOR borwser all the traffics sent throught the browser it is in the tor network
+# 8- Never use tor browser in the full screen mode because any hacker can identify what kind of labtop or computer you're using
+# 9- Always check for updates
+# 10- New identify option in tor browser will remove all of yours cache and remove all your data and histroy and the browser wil reload the brwoser with new IP
 
 # When you download the TOR browser from the torproject website you must download the signature file and then download the Gpg4win program to see if the signature matches the tor app you download cause the file you downloaded could be modified the ISP or a hacker
