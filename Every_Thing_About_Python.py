@@ -1912,6 +1912,7 @@ def func(name):
 # Email Pattern => [A-z0-9\n]+@[A-z0-9]+\.(com|net|org|info)
 # Regular Expression Return None If There's Match
 
+
 # import re
 # my_string = "This Is My String"
 # regualr = re.search("My", my_string)
@@ -1984,11 +1985,11 @@ def func(name):
 ################################################### OOP ( Object Oriented Programming ) ###################################################
 # Notes:-
 # Objects In Python Divides Into Two Parts 1-Scaler => Can't Be Subdivided 2-Non-scaler => can be subdivided  => يعني متقدرش تشتق منها objects
-# 1- Python Support OOP
+# 1- Python Supports OOP
 # 2- OOP Is A Paradigm Or Coding Style
-# 3- Paradigm => Means structuring program so the methods( functions ) and attributes( data ) are bundled into objects
+# 3- Paradigm => Means structuring program so the methods ( functions ) and attributes ( data ) are bundled into objects
 # 4- Methods => Act as function that use the information of the object
-# 5- Python is Multi-Paradigm programming language (Procedural, OOP, Functional) Programming
+# 5- Python is Multi-Paradigm programming language ( Procedural, OOP, Functional ) Programming
 # 6- Procedural Programming => Structure of the app like Recipe, sets of steps to make the task ( Means The Way of Structurning Our Code Like The Code We Write )
 # 7- Functional Programming => Built on the concept of Mathematical Functions
 # 8- We Use PascalCase ( UpperCamelCase ) Method For Creating Classes
@@ -1998,8 +1999,8 @@ def func(name):
 # 12- __init__ method called every time you create an object from class
 # 13- __init__ method is initialize the data for the object
 # 14- Any method with two underscore in the start and the end called Dunder or Magic method
-# 15- Self refer to the current instance( object ) created from the class ( blueprint, constructor ) and must be first parameter
-# 16- Self can be named anything
+# 15- Self refer to the current instance ( object ) created from the class ( blueprint, constructor ) and must be first parameter
+# 16- Self parameter can be named anything
 # 17- In python you don't need to call new() keyword to create object
 # 18- Instance Attributes Defined Inside The Constructor
 # Instance Methods:-
@@ -2012,16 +2013,17 @@ def func(name):
 # 21- Class methods take cls parameter not self to point to the class not the instance
 # 22- Static methods takes no parameters
 # 23- Static methods makred with @staticmethod Decorator to flag it as static method
-# 24- Static methods Its Bound To The Class Not Instance
+# 24- Static methods It's Bound To The Class Not Instance
 # 25- Static methods Used when doing something doesn't have access to object or class but related to class
 # 26- Everything in python is an object
 # 27- self.__class__ To Show You Which Class The Instance Belongs To
 # 28- __str__ Gives a human-readable output of the object
-# 29- __len__ Rturns the length of the container and it's called when we use the built-in len() Function of the object
+# 29- __len__ Rturns the length of the container and it's called when we use the built-in len() function of the object
 # 30- To override a method in the parent class you need to write it with the same name in the child class
 # 31- mro() or method resoultion order => To Show You The Order Of The Classes In Your Object
 # 32- When Function does not have return it returns None
 # 33- child class = sub class = derived class
+
 #### Encapsulation ####
 # - Restrict Access To The Data Stored in Attirbutes and Methods
 # Public
@@ -2039,12 +2041,14 @@ def func(name):
 # - Attributes = Variables = Properties
 # -------------------------------------
 
+
 # Class Syntax
 # class NameOfTheClass:
-#     Constructor => Do Instantiation [create instance from a class]
-#     Each Instance is separate object
-#     def __init__(self, other_data):
+#     Constructor => Do Instantiation [ create instance from a class ]
+#     Each Instance is a separate object
+#     def __init__(self, other_parameters):
 #         body of the function
+
 
 # class MemberList:
 #     def __init__(self):
@@ -2073,17 +2077,17 @@ def func(name):
 #     @staticmethod
 #     def say_hello():
 #         print("Hello From Static Method")
-#     # Creating Instance Attributes
 
 #     def __init__(self, fName, mName, lName, gender):
+#         # Creating Instance Attributes
 #         self.firstname = fName
 #         self.middlename = mName
 #         self.lastname = lName
 #         self.gender = gender
 
 #         Member.users_num += 1
-#     # Creating Instance Methods
 
+#     # Creating Instance Methods
 #     def full_name(self):
 #         if self.firstname in Member.not_allowed_names:
 #             raise ValueError("Not Allowed Name.")
@@ -2101,10 +2105,10 @@ def func(name):
 
 #     def delete_user(self):
 #         Member.users_num -= 1
-#         return f"User {self.full_name()} Is Deleted."
+#         return f"User {self.full_name()} Has Been Deleted."
 
 
-# # print(Member.users_num)
+# print(Member.users_num)
 
 # member_one = Member("Mohamed", "Ali", "Youssef", "Male")
 # member_two = Member("Salama", "Ahmed", "Ebrahim", "Male")
@@ -2112,13 +2116,13 @@ def func(name):
 
 # print(Member.users_num)
 
-# print(member_three.delete_user())
+# print(member_one.delete_user())
 
 # print(Member.users_num)
 
-# Printing The Content Of The Instance (Attributes, Methods)
+# # Printing The Content Of The Instance (Attributes, Methods)
 # print(dir(member_one))
-# print(dir(Member))  # Printing The Content Of The Instance (Methods)
+# print(dir(Member))  # Printing The Content Of The Class (Attributes & Methods)
 
 # To Call The Instance Attributes
 # print(member_one.firstname, member_one.middlename, member_one.lastname)
@@ -2126,7 +2130,7 @@ def func(name):
 
 # To Call The Instance Methods
 # print(member_one.full_name())
-# print(Member.full_name(member_one))  # What Happens Behind The Scene
+# print(Member.full_name(member_one))  # What Happens Behind The Scenes
 # print(member_one.name_with_title())
 # print(member_three.name_with_title())
 # print(member_one.get_all_info())
@@ -2144,7 +2148,7 @@ def func(name):
 ### Dunder Or Magic Methods ###
 # class Skill:
 #     def __init__(self):
-#         self.skills = ["Html", "Css", "Js"]
+#         self.skills = ["Html", "Css", "Js", "Python"]
 
 #     def __str__(self):
 #         return f'This Is My Skills => {self.skills}'
@@ -2201,14 +2205,14 @@ def func(name):
 
 
 # food_one = Food("Pizza", 30)
-# food_two = Apple("Pizza", 150, 200)
+# food_two = Apple("Pizza", 150, 3)
 # food_two.eat()
 # food_two.get_from_tree()
 
 # Check If The Object Is An Instance From The Class => isinstance(subclass, class)
 # print(isinstance(food_two, Food))
 # Any Functionality In Python Comes From The Main Class Of Python Which Is object ( Everything in python is object )
-# print(isinstance(food_one, object))
+# print(isinstance(food_two, object))
 
 
 #### Multiple Inheritance ####
@@ -2258,7 +2262,7 @@ def func(name):
 # object1.func_two()
 
 
-# Polymorphism ( Many Forms )
+##### Polymorphism ( Many Forms ) ##### 
 # class A:
 #     def do_something(self):
 #         print("From Class A")
@@ -2277,7 +2281,7 @@ def func(name):
 # my_object.do_something()
 
 
-# Encapsulation
+##### Encapsulation #####
 # class Member:
 #     def __init__(self, name):
 #         self.name = name  # Public
@@ -2294,7 +2298,7 @@ def func(name):
 
 
 # one = Member("Mohamed")
-# # print(one._name)
+# print(one._name)
 # one._name = "Osama"
 # print(one._name)
 
@@ -2310,7 +2314,7 @@ def func(name):
 # one = Member("Mohamed")
 # print(one.__name)
 # print(one.say_hello())
-# print(one._Member__name) # Will Print The Name For Sorry Even If It Is A Private Attribute Because It's Like A Name Convention Not Built In Python
+# print(one._Member__name) # Will Print The Name For Sorry Even If It Is A Private Attribute Because It's Like A Name Convention Between The Developers Not Built In Python
 
 # Getters And Setters
 # class Member:
@@ -2354,9 +2358,10 @@ def func(name):
 # print(one.age)
 # print(one.say_hello())
 # print(one.age_in_days)
+# print(one.age_in_days())
 
 
-# ABC => Abstract Base Class (مجرد يعني مبيعملش حاجة )
+##### ABC => Abstract Base Class ( مجرد يعني مبيعملش حاجة وفي نفس الوقت رئيسي) #####
 # - Class Called Abstract Class If it Has One or More Abstract Methods
 # - abc module in Python Provides Infrastructure for Defining Custom Abstract Base Classes.
 # - By Adding @absttractmethod Decorator on The Methods
@@ -2421,6 +2426,7 @@ def func(name):
 # print(player1.adding_things(2,4))
 # print(PlayerCharacter.adding_things(2,4))
 # print(player1.adding_things2(3,4))
+
 
 # Exercise Extending List
 # class SuperList(list):
@@ -2932,6 +2938,7 @@ def func(name):
 # random.shuffle(password)
 # final_password = "".join(password)
 # print(f"Your Password Could Be {final_password}")
+
 
 # Finding The Highest Even Number In A List
 # def highest_even_num(my_list):
@@ -3545,3 +3552,29 @@ def func(name):
 # input = Image.open(input_path)
 # output = remove(input)
 # output.save(output_path)
+
+############## Code_Wars ##############
+## Lario And Muigi Pipe Problem ##
+# def pipe_fix(numbers):
+#     return list(range(min(numbers), max(numbers) + 1))
+
+# print(pipe_fix([-1,3,5]))
+
+
+## Digit*Digit ##
+## My_Solution ##
+# def square_digits(num):
+#     for n in str(num):
+#         print(int(n) ** 2, end="")
+
+
+# square_digits(123)
+
+# Another_Solution
+# def square_digits(num):
+#     ret = ""
+#     for x in str(num):
+#         ret += str(int(x)**2)
+#     return int(ret)
+
+# print(square_digits(123))
