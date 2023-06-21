@@ -1759,16 +1759,16 @@
 
 ##################### Docstrings And Commenting VS Documenting #####################
 
-def func(name):
-    # Single Line DocString
-    # '''This Function Only Say Hello'''
+# def func(name):
+#     # Single Line DocString
+#     # '''This Function Only Say Hello'''
 
-    # Multiple Line DocString
-    '''
-    This Function Only Say:
-        Hello For The Name Argument
-    '''
-    print(f"Hello {name}")
+#     # Multiple Line DocString
+#     '''
+#     This Function Only Say:
+#         Hello For The Name Argument
+#     '''
+#     print(f"Hello {name}")
 
 
 # func("Mohamed")
@@ -2444,6 +2444,94 @@ def func(name):
 # print(issubclass(list, object))
 
 
+################################## SQLite Database ##################################
+# Notes
+# 1- cursor => all operations in SQL done by cursor not the connection itself
+# 2- commit => save all changes
+# 3- fetchone => returns a single record or None if no more rows are available, returns the data from one row and if there's no more rows it returns None
+# 4- fetchall => fetches all the rows of a query result. It returns all the rows
+#               as a list of tuples. An empty list is returned if there is no record to fetch.
+# 5- fetchmany(size) =>
+
+# # Import SQLite Module
+# import sqlite3
+
+# # Create database and connect
+# database = sqlite3.connect("app.db")
+
+# # Setting up the cursor
+# cr = database.cursor()
+
+# # Create the tables and fields
+# # database.execute("CREATE TABLE if not exists skills (name TEXT, progress INTEGER, user_id INTEGER)")
+# cr.execute("CREATE TABLE users (user_id INTEGER, name TEXT)")
+
+# # # Inserting data
+# # cr.execute("INSERT INTO users(user_id, name) VALUES(1, 'Mohamed')")
+# # cr.execute("INSERT INTO users(user_id, name) VALUES(2, 'Hoda')")
+# # cr.execute("INSERT INTO users(user_id, name) VALUES(3, 'Mona')")
+
+# users = ["Mohamed", "Ahmed", "Mona", "Abrar"]
+# for id, user in enumerate(users):
+#     cr.execute(f"INSERT INTO users(user_id, name) VALUES({id + 1}, '{user}')")
+
+# # Save changes
+# database.commit()
+
+# # Close database
+# # database.close()
+
+# ## Retrieve Data From Database ##
+# cr.execute("SELECT user_id, name FROM users")
+# print(cr.fetchone())
+# print(cr.fetchone())
+# print(cr.fetchone())
+# print(cr.fetchone())
+
+
+# ---------------------------------------------------
+# -- Databases => SQLite => Training On Everything --
+# ---------------------------------------------------
+import sqlite3
+
+def get_all_data():
+    try:
+        # Connect To Database
+        db = sqlite3.connect("app.db")
+
+        # Print Success Message
+        print("Connected To Database Successfully")
+
+        # Setting Up The Cursor
+        cr = db.cursor()
+
+        # Fetch Data From Database
+        cr.execute("select * from users")
+
+        # Assign Data To Variable
+        results = cr.fetchall()
+
+        # Print Number Of Rows
+        print(f"Database Has {len(results)} Rows.")
+
+        # Printing Message
+        print("Showing Data:")
+
+        # Loop On Results
+        for row in results:
+            print(f"UserID => {row[0]},", end=" ")
+            print(f"Username => {row[1]}")
+
+    except sqlite3.Error as er:
+        print(f"Error Reading Data {er}")
+
+    finally:
+        if (db):
+            # Close Database Connection
+            db.close()
+            print("Connection To Database Is Closed")
+
+get_all_data()
 #################################################################### Exercises ####################################################################
 # Practical Email Slice Exercise
 # name = input("What's Your Name: \n").strip().capitalize()
