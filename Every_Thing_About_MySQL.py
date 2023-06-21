@@ -70,18 +70,4 @@
 # 16- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value2)                            => to insert data into tables 
 # 17- SELECT * FROM table_name                                                                            => this tells SQL give me everything you have in this specified table
 # 18- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value1), (value2, value2)          => this is for multiple inserting
-# 17- 
-# 18- 
-# 19- 
-# 20- 
-# 20- 
-# 21- 
-# 22- 
-# 23- 
-# 24- 
-# 25- 
-# 26- 
-# 27- 
-# 28- 
-# 29- 
-# 30- 
+
