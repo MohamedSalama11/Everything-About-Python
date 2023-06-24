@@ -26,15 +26,16 @@
 # CRUD => it stands for Create Read Update Delete 
 
 ## String Functions ##
-# 1- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output (you should use SELECT before it to work or it will raise an error).
-# 2- CONCAT_WS(column_one, column_two, string, ...)               => Stands for concat with separator, it means that it will put a separator you chooose between every values you put.
+# 1- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output ( you should use SELECT before it to work or it will raise an error ).
+# 2- CONCAT_WS(separator, column_one, string, ...)                => Stands for concat with separator, it means that it will put a separator you chooose between every values you put.
 # 3- SUBSTRING(column_name, start position, length)               => It takes a single larger string and returns a smaller part of that string  == SUBSTR().
-# 4- REPLACE(initial_str, old_str, new_str)                       => it replaces old string with new string (Case Sesnsitive ).
-# 5- REVERSE(str or int)                                          => Will take whatever string we provide to it and reverse it (When you try to reverse NULL it will gives you NULL).
+# 4- REPLACE(initial_str, old_str, new_str)                       => It replaces old string with new string ( Case Sesnsitive ).
+# 5- REVERSE(str or int)                                          => Will take whatever string or int we provide to it and reverse it (When you try to reverse NULL it will gives you NULL).
 # 6- CHAR_LENGTH(str)                                             => It's going to tell us the number of characters in a given string.
 # 7- LENGTH(str)                                                  => Returns the lenght of the string measured in bytes
 # 8- UPPER(str)                                                   => Will make all the characters of the string upper  == UCASE()
 # 9- LOWER(str)                                                   => Will make all the characters of the string lower  == LCASE()
+# 10- LEFT(string, number_of_chars)                               => Will Return the number of chars you need from the string
 
 
 # Notes
@@ -53,7 +54,7 @@
 # 02- CREATE DATABASE <name>;                                                                             => To create a database
 # 03- DROP DATABASE   <name>;                                                                             => Will remove the database and it's content
 # 04- USE <database name>;                                                                                => To work with the database we choose
-# 05- SELECT database();                                                                                  => To show you the database you are working in
+# 05- SELECT database();                                                                                  => To show you the database you are currently working in
 # 06- CREATE TABLE table_name (                                                                           => To create a table (create table if not exists)
 #   column_name data_type,
 #   column_name data_type      
