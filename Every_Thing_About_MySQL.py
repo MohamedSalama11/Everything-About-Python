@@ -7,7 +7,7 @@
 #     MySQL is open-source and is widely used on the web and in enterprise applications.
     # In summary, SQL is a language used to work with databases while MySQL is a specific type of database management system that uses SQL as its language.
 #     Other popular RDBMS that use SQL include Oracle, Microsoft SQL Server, and PostgreSQL.
-print("Hello world")
+
 # DBMS Divided To:- 
     # 1- Relational Databases ( SQL )  => like MySQL, SQL Server, Oracle
         # in relatoinal databases we used tables that connected with each others by relationships
