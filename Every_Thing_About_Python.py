@@ -12,7 +12,6 @@
 # is   => checks for the equality in value and type
 
 
-
 # """
 # This is
 # not multipile line

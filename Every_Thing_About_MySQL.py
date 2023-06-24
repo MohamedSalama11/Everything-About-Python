@@ -7,7 +7,7 @@
 #     MySQL is open-source and is widely used on the web and in enterprise applications.
     # In summary, SQL is a language used to work with databases while MySQL is a specific type of database management system that uses SQL as its language.
 #     Other popular RDBMS that use SQL include Oracle, Microsoft SQL Server, and PostgreSQL.
-
+print("Hello world")
 # DBMS Divided To:- 
     # 1- Relational Databases ( SQL )  => like MySQL, SQL Server, Oracle
         # in relatoinal databases we used tables that connected with each others by relationships
@@ -26,20 +26,27 @@
 # CRUD => it stands for Create Read Update Delete 
 
 ## String Functions ##
-# 1- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output (you should use SELECT before it to work or it will raise an error)
-# 2- CONCAT_WS(column_one, column_two, string, ...)               => Stands for concat with separator, it means that it will put a separator you chooose between every values you put
-# 3- SUBSTRING(column_name, start position, length)               => It takes a single larger string and returns a smaller part of that string  == SUBSTR()
+# 1- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output (you should use SELECT before it to work or it will raise an error).
+# 2- CONCAT_WS(column_one, column_two, string, ...)               => Stands for concat with separator, it means that it will put a separator you chooose between every values you put.
+# 3- SUBSTRING(column_name, start position, length)               => It takes a single larger string and returns a smaller part of that string  == SUBSTR().
+# 4- REPLACE(initial_str, old_str, new_str)                       => it replaces old string with new string (Case Sesnsitive ).
+# 5- REVERSE(str or int)                                          => Will take whatever string we provide to it and reverse it (When you try to reverse NULL it will gives you NULL).
+# 6- CHAR_LENGTH(str)                                             => It's going to tell us the number of characters in a given string.
+# 7- LENGTH(str)                                                  => Returns the lenght of the string measured in bytes
+# 8- UPPER(str)                                                   => Will make all the characters of the string upper  == UCASE()
+# 9- LOWER(str)                                                   => Will make all the characters of the string lower  == LCASE()
+
 
 # Notes
 # 1- is sql case sensitive? It depends on the database management system being used. In general, SQL is not case sensitive for keywords such as SELECT, FROM, WHERE, etc
 # However, it may be case sensitive for identifiers such as table and column names, depending on how the database has been configured or the collation sequence being used
     # For example, in some databases, "mytable" and "MyTable" could refer to different tables.
-# 2- my sql doesn't care about new lines
-# 3- A database is just really a bunch of tables at least in relational databases, tables holding the data
-# 4- Table is a collection of related data held in a structured format within a database, it contains columns and rows
-# 5- When you put ; in the end of a line you till SQL this is the end of the command or the query
-# 6- Null in SQL doesn't means zero it means no value at all or unknown
-# 7- Before you perform update and delete operations be sure selecting the right data you want to update or delete
+# 2- my sql doesn't care about new lines.
+# 3- A database is just really a bunch of tables at least in relational databases, tables holding the data.
+# 4- Table is a collection of related data held in a structured format within a database, it contains columns and rows.
+# 5- When you put ; in the end of a line you till SQL this is the end of the command or the query.
+# 6- Null in SQL doesn't means zero it means no value at all or unknown.
+# 7- Before you perform update and delete operations be sure selecting the right data you want to update or delete.
 
 ############# Commands #############
 # 01- show databases;                                                                                     => To show the databases you created
