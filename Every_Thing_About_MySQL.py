@@ -25,29 +25,40 @@
 
 # CRUD => it stands for Create Read Update Delete 
 
-## String Functions ##
-# 1- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output ( you should use SELECT before it to work or it will raise an error ).
-# 2- CONCAT_WS(separator, column_one, string, ...)                => Stands for concat with separator, it means that it will put a separator you chooose between every values you put.
-# 3- SUBSTRING(column_name, start position, length)               => It takes a single larger string and returns a smaller part of that string  == SUBSTR().
-# 4- REPLACE(initial_str, old_str, new_str)                       => It replaces old string with new string ( Case Sesnsitive ).
-# 5- REVERSE(str or int)                                          => Will take whatever string or int we provide to it and reverse it (When you try to reverse NULL it will gives you NULL).
-# 6- CHAR_LENGTH(str)                                             => It's going to tell us the number of characters in a given string.
-# 7- LENGTH(str)                                                  => Returns the lenght of the string measured in bytes
-# 8- UPPER(str)                                                   => Will make all the characters of the string upper  == UCASE()
-# 9- LOWER(str)                                                   => Will make all the characters of the string lower  == LCASE()
-# 10- LEFT(string, number_of_chars)                               => Will Return the number of chars you need from the string
-
 
 # Notes
-# 1- is sql case sensitive? It depends on the database management system being used. In general, SQL is not case sensitive for keywords such as SELECT, FROM, WHERE, etc
+# 01- is sql case sensitive? It depends on the database management system being used. In general, SQL is not case sensitive for keywords such as SELECT, FROM, WHERE, etc
 # However, it may be case sensitive for identifiers such as table and column names, depending on how the database has been configured or the collation sequence being used
     # For example, in some databases, "mytable" and "MyTable" could refer to different tables.
-# 2- my sql doesn't care about new lines.
-# 3- A database is just really a bunch of tables at least in relational databases, tables holding the data.
-# 4- Table is a collection of related data held in a structured format within a database, it contains columns and rows.
-# 5- When you put ; in the end of a line you till SQL this is the end of the command or the query.
-# 6- Null in SQL doesn't means zero it means no value at all or unknown.
-# 7- Before you perform update and delete operations be sure selecting the right data you want to update or delete.
+# 02- my sql doesn't care about new lines.
+# 03- A database is just really a bunch of tables at least in relational databases, tables holding the data.
+# 04- Table is a collection of related data held in a structured format within a database, it contains columns and rows.
+# 05- When you put ; in the end of a line you till SQL this is the end of the command or the query.
+# 06- Null in SQL doesn't means zero it means no value at all or unknown.
+# 07- Before you perform update and delete operations be sure selecting the right data you want to update or delete.
+# 08- WHERE Clause to specify and select the exact value you want.
+# 09- DISTINCT Clause which is used to eliminate duplicate results ( will remove duplicates ), it comes after the SELECT and before the column_name.
+# 10- ORDER BY Clause it is used to order the data as we want, it comes at the end of the query, by deafault it sorted alphapitcally (a-z) (ASC).
+# 11- When we use DESC it will describe the table, but when we use it after ORDER BY Clause it will sort the values from (z-a) (DESC).
+# 12- LIMIT Clause allows you to control the number of results you get back, followed by a number.
+
+
+## String Functions ##
+# 01- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output ( you should use SELECT before it to work or it will raise an error ).
+# 02- CONCAT_WS(separator, column_one, string, ...)                => Stands for concat with separator, it means that it will put a separator you chooose between every values you put.
+# 03- SUBSTRING(column_name, start position, length)               => It takes a single larger string and returns a smaller part of that string  == SUBSTR().
+# 04- REPLACE(initial_str, old_str, new_str)                       => It replaces old string with new string ( Case Sesnsitive ).
+# 05- REVERSE(str or int)                                          => Will take whatever string or int we provide to it and reverse it (When you try to reverse NULL it will gives you NULL).
+# 06- CHAR_LENGTH(str)                                             => It's going to tell us the number of characters in a given string.
+# 07- LENGTH(str)                                                  => Returns the lenght of the string measured in bytes
+# 08- UPPER(str)                                                   => Will make all the characters of the string upper  == UCASE().
+# 09- LOWER(str)                                                   => Will make all the characters of the string lower  == LCASE().
+# 10- LEFT(string, number_of_chars)                                => Will Return the number of chars you need from left of the string.
+# 11- RIGHT(string, number_of_chars)                               => Will Return the number of chars you need from right of the string.
+# 12- INSERT()                                                     => It allows us to insert some substring into another string.
+# 13- REPEAT(str, number_of_repeats)                               => Will repeat the string number of times.
+# 14- TRIM(str)                                                    => Will Remove the spaces in the beginning and the end of the string not spaces between string.
+
 
 ############# Commands #############
 # 01- show databases;                                                                                     => To show the databases you created
