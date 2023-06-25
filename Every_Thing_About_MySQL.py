@@ -41,7 +41,9 @@
 # 10- ORDER BY Clause it is used to order the data as we want, it comes at the end of the query, by deafault it sorted alphapitcally (a-z) (ASC).
 # 11- When we use DESC it will describe the table, but when we use it after ORDER BY Clause it will sort the values from (z-a) (DESC).
 # 12- LIMIT Clause allows you to control the number of results you get back, followed by a number.
-
+# 13- LIKE Clause you can use it when you serach for something and you don't remember exctly what it is and we use % before and after the value (%moh%), % means zero character or more
+#     and it called wild cards, it's optional, ____ (four underscores) means search for four characters cause every underscore represents exactly one charcater we can escape them ( %, _ )
+#     with escape sequence like this "%\%%", "%\_%". 
 
 ## String Functions ##
 # 01- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output ( you should use SELECT before it to work or it will raise an error ).
