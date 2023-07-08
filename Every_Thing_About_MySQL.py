@@ -95,10 +95,28 @@
 # 26- DATE_FORMAT(date, format)                                    => Will give you the format date you want 
 # 27- TIME_FORMAT(time, format)                                    => Will give you the format time you want 
 # 28- DATEDIFF(exp1, exp2)                                         => Will differ the exp1 - exp2
-
+# 29- CAST(string AS data_type)                                    => It takes a string and convert it to the data type you want
 
 ############# Logical Operators #############
-
+# 01- Not Equal                          ( != )                              => Technically it is a comparsion operators.
+# 02- NOT LIKE  
+# 03- Greater Than                       ( > )                               => Technically it is a comparsion operators.
+# 04- Less Than                          ( < )                               => Technically it is a comparsion operators.
+# 05- Greater Than or Equal To           ( >= )                              => Technically it is a comparsion operators.
+# 06- Less Than or Equal To              ( <= )                              => Technically it is a comparsion operators.
+# 07- Logical AND                        ( AND )                             => The two conditions should be True, When one condition is not true sql will evaluate an empty table.
+# 08- Logical OR                         ( OR )                              => Only one condition should be True.
+# 09- Logical BETWEEN                    ( BETWEEN )
+# 10- Logical NOT BETWEEN                ( NOT BETWEEN )
+# 11- IN Operator                        ( IN )
+# 12- NOT IN Operator                    ( NOT IN )
+# 13- IS NULL Operator                   ( IS NULL )
+# 14- IS NOT NULL Operator               ( IS NOT NULL )
+# 15- 
+# 16- 
+# 17- 
+# 18- 
+# 19- 
 
 
 ############# Commands #############
