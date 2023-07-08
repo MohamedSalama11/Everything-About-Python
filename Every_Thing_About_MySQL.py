@@ -97,6 +97,7 @@
 # 28- DATEDIFF(exp1, exp2)                                         => Will differ the exp1 - exp2
 # 29- CAST(string AS data_type)                                    => It takes a string and convert it to the data type you want
 
+
 ############# Logical Operators #############
 # 01- Not Equal                          ( != )                              => Technically it is a comparsion operators.
 # 02- NOT LIKE  
@@ -112,11 +113,6 @@
 # 12- NOT IN Operator                    ( NOT IN )
 # 13- IS NULL Operator                   ( IS NULL )
 # 14- IS NOT NULL Operator               ( IS NOT NULL )
-# 15- 
-# 16- 
-# 17- 
-# 18- 
-# 19- 
 
 
 ############# Commands #############
