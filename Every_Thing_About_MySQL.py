@@ -96,7 +96,7 @@
 # 27- TIME_FORMAT(time, format)                                    => Will give you the format time you want.
 # 28- DATEDIFF(exp1, exp2)                                         => Will differ the exp1 - exp2.
 # 29- CAST(string AS data_type)                                    => It takes a string and convert it to the data type you want.
-
+# 30- IFNULL(expression, replace)                                  => it takes some expression and evaluate it and if ti's null it replaces with what ever we put in replace.
 
 ############# Logical Operators #############
 # 01- Not Equal                          ( != )                              => Technically it is a comparsion operators.
@@ -166,7 +166,7 @@
 # 23- SELECT * FROM table_name;                                                                    => This means give me all the data in all columns.
 # 24- SELECT column_name FROM table_name;                                                          => This means give me only the data in this column name.
 # 25- SELECT column_name, column_name2 FROM table_name;                                            => This means give me the data in these two columns.
-# 26- SELECT * FROM table_name WHERE column_name="value";                                          => IT will search for "value" and return all the rows that have it.
+# 26- SELECT * FROM table_name WHERE column_name="value";                                          => It     will search for "value" and return all the rows that have it.
 # 27- SELECT column_name AS col FROM table_name;                                                   => AS here for aliases and can rename the column name temporary in the output.
 # 28- UPDATE table_name SET column_name="value";                                                   => This means update everything in column_name to value ( Always use WHERE Clause to specify the value you want to change ).
 # 29- UPDATE table_name SET column_name="value", column_name2="value";                             => To update multiple values.
@@ -184,4 +184,8 @@
 # 41- ALTER TABLE table_name MODIFY column_name data_type                                          => We use modify to change an existing column type.
 # 42- ALTER TABLE table_name CHANGE old_col_name new_col_name data_type                            => We use change to rename a column and change it's data type
 
-
+############ Relationships And Joins ############ 
+# There's 3 categories of relationships
+    # 1- One to one relationship
+    # 2- Many to many relationship
+    # 3- One to many relastionship ( the most common )
