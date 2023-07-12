@@ -2531,6 +2531,8 @@
 #             print("Connection To Database Is Closed")
 
 # get_all_data()
+
+
 #################################################################### Exercises ####################################################################
 # Practical Email Slice Exercise
 # name = input("What's Your Name: \n").strip().capitalize()
@@ -3101,6 +3103,7 @@
 
 # prime_checker(number=n)
 
+
 ########## Calculator App ##########
 # logo = """
 #  _____________________
@@ -3311,6 +3314,7 @@
 #         medium = (high + low) // 2
 #     else:
 #         print("You need to enter a number")
+
 
 ########### Heart Shape ############
 # from turtle import *

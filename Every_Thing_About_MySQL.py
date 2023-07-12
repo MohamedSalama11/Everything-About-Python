@@ -26,6 +26,7 @@
 
 # CRUD => it stands for Create Read Update Delete.
 
+
 ############# Data Types #############
 # 1- CHAR(length)                                                   => To store strings, it has a fixed length, we use char when our data is similar in size, EX CHAR(3) => this means that this column
 #                                                                      should always be three characters, but if it's smaller than 3 characters MySQL will exapnd it using whitespace characters to fit 
@@ -42,6 +43,7 @@
 # 11- DATE                                                          => It stores a date with no time involved with format YYYY-MM-DD.
 # 12- TIME                                                          => It represents the time with no date with format HH:MM:SS.
 # 13- DATETIME                                                      => It store values with date and time with format YYYY-MM-DD HH:MM:SS.
+
 
 ############# Notes #############
 # 01- is sql case sensitive? It depends on the database management system being used. In general, SQL is not case sensitive for keywords such as SELECT, FROM, WHERE, etc
@@ -97,6 +99,7 @@
 # 28- DATEDIFF(exp1, exp2)                                         => Will differ the exp1 - exp2.
 # 29- CAST(string AS data_type)                                    => It takes a string and convert it to the data type you want.
 # 30- IFNULL(expression, replace)                                  => it takes some expression and evaluate it and if ti's null it replaces with what ever we put in replace.
+
 
 ############# Logical Operators #############
 # 01- Not Equal                          ( != )                              => Technically it is a comparsion operators.
