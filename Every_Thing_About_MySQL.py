@@ -66,6 +66,7 @@
 # 14- GROUP BY Clause summarizes or aggregates identical data into single rows.
 # 15- SIGNED means the number could be negative or positive.
 # 16- UNSIGNED means the number must be positive.
+# 17- HAVING CLAUSE is used with GROUP BY and it's used to filter the groups that we get back from GROUP BY.
 
 
 ############# String Functions #############
@@ -187,8 +188,21 @@
 # 41- ALTER TABLE table_name MODIFY column_name data_type                                          => We use modify to change an existing column type.
 # 42- ALTER TABLE table_name CHANGE old_col_name new_col_name data_type                            => We use change to rename a column and change it's data type
 
+
 ############ Relationships And Joins ############ 
 # There's 3 categories of relationships
     # 1- One to one relationship
     # 2- Many to many relationship
     # 3- One to many relastionship ( the most common )
+
+
+########### Views In MySQL ( Like Aliases ) ###########
+# views  allow us to take a query that returns some results and we'll be able to store it and give it a name and then we'll be able to treat it as a true table but in fact it's a virtual table
+# and when you show your tables it will appear in it and you can work with it as if it's a real table, and it's allow us to write shorter querys.
+
+# NOTE: Some views are updateable and insertable.
+
+# 1- CREATE VIEW the_name AS the_query
+# 2- DROP VIEW table_name                                      => To delete a view.
+# 3- CREATE OR REPLACE VIEW the_name AS the_updated_query      => To update the view or to update the query in the view.
+# 4- ALTER VIEW the_name AS the_query                          => To update the view or to update the query in the view.
