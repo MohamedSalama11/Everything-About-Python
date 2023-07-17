@@ -67,6 +67,7 @@
 # 15- SIGNED means the number could be negative or positive.
 # 16- UNSIGNED means the number must be positive.
 # 17- HAVING CLAUSE is used with GROUP BY and it's used to filter the groups that we get back from GROUP BY.
+# 18- WITH ROLLUP Clause it's only working with GROUP BY and it will gives you a summary of all the rows in the table 
 
 
 ############# String Functions #############
@@ -206,3 +207,20 @@
 # 2- DROP VIEW table_name                                      => To delete a view.
 # 3- CREATE OR REPLACE VIEW the_name AS the_updated_query      => To update the view or to update the query in the view.
 # 4- ALTER VIEW the_name AS the_query                          => To update the view or to update the query in the view.
+
+
+########### Modes In MySQL ###########
+# Thye're basically settings that we can turn on and off to change the behaviour and the validations of my MySQL.
+
+# There's to different scopes for a SQL mode and it's 
+#   1- GLOBAL Mode  => What settings are enabled globally.
+#   2- SESSION Mode => What settings are enabled or disabled in your current session.
+
+## Some Modes ##
+# 1- ERROR_FOR_DIVISION_BY_ZERO  => This mode prevents divisions by zero it will work if you division a number by zero but it will gives you a warning. 
+# 2- STRICT_TRANS_TABLES         => This mode controls how MySQL handels invalid or missing values in data-change statments such as INSERT or UPDATE, in other words it's responsible for
+#                                   what happens when you try inserting a string into a column that accepts numbers or the opposite.
+
+# 1- SELECT @@GLOBAL.sql_mode;            => To show you the settings of the global mode.
+# 2- SELECT @@SESSION.sql_mode            => To show you the settings of your current mode.
+# 3- SET SESSION sql_mode = "the_mode"    => To change the modes, SET SESSION sql_mode=""  => This means remove all modes
