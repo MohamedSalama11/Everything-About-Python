@@ -45,6 +45,76 @@
 # 13- DATETIME                                                      => It store values with date and time with format YYYY-MM-DD HH:MM:SS.
 
 
+############# Commands #############
+# 01- show databases;                                                                              => To show the databases you created.
+# 02- CREATE DATABASE <name>;                                                                      => To create a database.
+# 03- DROP DATABASE   <name>;                                                                      => Will remove the database and it's content.
+# 04- USE <database name>;                                                                         => To work with the database we choose.
+# 05- SELECT database();                                                                           => To show you the database you are currently working in.
+# 06- CREATE TABLE table_name (                                                                    => To create a table (create table if not exists).
+#   column_name data_type,
+#   column_name data_type      
+# );
+# 07- CREATE TABLE table_name (                                                                    => To create a table, NOT NULL means that this column shouldn't be empty you must
+#   column_name data_type NOT NULL,                                                                   write a value into it or it will raise an error.
+#   column_name data_type NOT NULL      
+# );
+# 08- CREATE TABLE table_name (                                                                    => To create a table with a default value.
+#   column_name data_type DEFAULT 'Mohamed',
+#   column_name data_type DEFAULT 10
+# );
+# 09- CREATE TABLE table_name (                                                                    => To create a table, PRIMARY KEY means that this column shouldn't have the same value,
+#   column_name data_type PRIMARY KEY,                                                                the value of this column should be unique.
+#   column_name data_type
+# );
+# 10- CREATE TABLE table_name (                                                                    => Another Syntax For Primary Key.
+#   column_name data_type,                                                                       
+#   column_name data_type,
+#   PRIMARY KEY(column_name)
+# );
+# 11- CREATE TABLE table_name (                                                                    => AUTO_INCREMENT will automaticaly generate the numbers (1...100).
+#   column_name data_type AUTO_INCREMENT PRIMARY KEY                                                                    
+# );
+# 12- CREATE TABLE table_name (                                                                    => UNIQUE means that you can't add the same value in the same column, the value should be unique.
+#   column_name data_type UNIQUE                                                                        
+# );
+# 13- CREATE TABLE table_name (                                                                    => To check for a condition.
+#   column_name data_type CHECK (Condition)                                                                      
+# );
+# 14- CREATE TABLE table_name (                                                                    => To rename the constraint name as we want, it is good for us to understand the error.
+#   column_name data_type,
+#   CONSTRAINT constraint_name CHECK (Condition)                                                                        
+# );
+# 15- SHOW TABLES;                                                                                 => To show the tables of the database you currently in.
+# 16- SHOW COLUMNS FROM table_name;                                                                => To show you information about the columns of the table you choose.
+# 17- DESC table_name == DESCRIBE table_name;                                                      => To show you information about the columns of the table you choose.
+# 18- DROP TABLE table_name;                                                                       => To delete the specified table.
+# 19- --                                                                                           => To comment your line or query, shortcut key is CTRL + /.
+# 20- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value2);                    => To insert data into tables.
+# 21- SELECT * FROM table_name;                                                                    => This tells SQL give me everything you have in this specified table.
+# 22- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value1), (value2, value2);  => This is for multiple inserting.
+# 23- SELECT * FROM table_name;                                                                    => This means give me all the data in all columns.
+# 24- SELECT column_name FROM table_name;                                                          => This means give me only the data in this column name.
+# 25- SELECT column_name, column_name2 FROM table_name;                                            => This means give me the data in these two columns.
+# 26- SELECT * FROM table_name WHERE column_name="value";                                          => It     will search for "value" and return all the rows that have it.
+# 27- SELECT column_name AS col FROM table_name;                                                   => AS here for aliases and can rename the column name temporary in the output.
+# 28- UPDATE table_name SET column_name="value";                                                   => This means update everything in column_name to value ( Always use WHERE Clause to specify the value you want to change ).
+# 29- UPDATE table_name SET column_name="value", column_name2="value";                             => To update multiple values.
+# 30- DELETE FROM table_name;                                                                      => This will delete every row from the table, will empty the table but it's still exists ( don't use it like this ).
+# 31- DELETE FROM table_name WHERE column_name="value";                                            => This will delete only the specified value.
+# 32- SHOW WARNINGS;                                                                               => To show you the warnings you get.
+# 33- SELECT SLEEP(time_in_seconds);                                                               => To stop the database from working for a specific amount of time.
+# 34- ALTER TABLE table_name ADD COLUMN column_name data_type;                                     => We use alter table here to add a new column to an existing table, and the values by default of the column is NULL.
+# 35- ALTER TABLE table_name ADD COLUMN column_name data_type NOT NULL;                            => NOT NULL here means that the values of this column shouldn't be null.
+# 36- ALTER TABLE table_name ADD COLUMN column_name data_type DEFAULT 1;                           => DEFAULT here means that the default values of the new column should be 1.
+# 37- ALTER TABLE table_name DROP COLUMN column_name;                                              => To drop a column from a table.
+# 38- RENAME TABLE table_name TO new_table_name                                                    => To rename a table. 
+# 39- ALTER TABLE table_name RENAME TO new_table_name                                              => another syntax to rename a table.
+# 40- ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name                      => To rename a column of a table.
+# 41- ALTER TABLE table_name MODIFY column_name data_type                                          => We use modify to change an existing column type.
+# 42- ALTER TABLE table_name CHANGE old_col_name new_col_name data_type                            => We use change to rename a column and change it's data type
+
+
 ############# Notes #############
 # 01- is sql case sensitive? It depends on the database management system being used. In general, SQL is not case sensitive for keywords such as SELECT, FROM, WHERE, etc
 # However, it may be case sensitive for identifiers such as table and column names, depending on how the database has been configured or the collation sequence being used
@@ -120,76 +190,6 @@
 # 14- IS NOT NULL Operator               ( IS NOT NULL )
 
 
-############# Commands #############
-# 01- show databases;                                                                              => To show the databases you created.
-# 02- CREATE DATABASE <name>;                                                                      => To create a database.
-# 03- DROP DATABASE   <name>;                                                                      => Will remove the database and it's content.
-# 04- USE <database name>;                                                                         => To work with the database we choose.
-# 05- SELECT database();                                                                           => To show you the database you are currently working in.
-# 06- CREATE TABLE table_name (                                                                    => To create a table (create table if not exists).
-#   column_name data_type,
-#   column_name data_type      
-# );
-# 07- CREATE TABLE table_name (                                                                    => To create a table, NOT NULL means that this column shouldn't be empty you must
-#   column_name data_type NOT NULL,                                                                   write a value into it or it will raise an error.
-#   column_name data_type NOT NULL      
-# );
-# 08- CREATE TABLE table_name (                                                                    => To create a table with a default value.
-#   column_name data_type DEFAULT 'Mohamed',
-#   column_name data_type DEFAULT 10
-# );
-# 09- CREATE TABLE table_name (                                                                    => To create a table, PRIMARY KEY means that this column shouldn't have the same value,
-#   column_name data_type PRIMARY KEY,                                                                the value of this column should be unique.
-#   column_name data_type
-# );
-# 10- CREATE TABLE table_name (                                                                    => Another Syntax For Primary Key.
-#   column_name data_type,                                                                       
-#   column_name data_type,
-#   PRIMARY KEY(column_name)
-# );
-# 11- CREATE TABLE table_name (                                                                    => AUTO_INCREMENT will automaticaly generate the numbers (1...100).
-#   column_name data_type AUTO_INCREMENT PRIMARY KEY                                                                    
-# );
-# 12- CREATE TABLE table_name (                                                                    => UNIQUE means that you can't add the same value in the same column, the value should be unique.
-#   column_name data_type UNIQUE                                                                        
-# );
-# 13- CREATE TABLE table_name (                                                                    => To check for a condition.
-#   column_name data_type CHECK (Condition)                                                                      
-# );
-# 14- CREATE TABLE table_name (                                                                    => To rename the constraint name as we want, it is good for us to understand the error.
-#   column_name data_type,
-#   CONSTRAINT constraint_name CHECK (Condition)                                                                        
-# );
-# 15- SHOW TABLES;                                                                                 => To show the tables of the database you currently in.
-# 16- SHOW COLUMNS FROM table_name;                                                                => To show you information about the columns of the table you choose.
-# 17- DESC table_name == DESCRIBE table_name;                                                      => To show you information about the columns of the table you choose.
-# 18- DROP TABLE table_name;                                                                       => To delete the specified table.
-# 19- --                                                                                           => To comment your line or query, shortcut key is CTRL + /.
-# 20- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value2);                    => To insert data into tables.
-# 21- SELECT * FROM table_name;                                                                    => This tells SQL give me everything you have in this specified table.
-# 22- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value1), (value2, value2);  => This is for multiple inserting.
-# 23- SELECT * FROM table_name;                                                                    => This means give me all the data in all columns.
-# 24- SELECT column_name FROM table_name;                                                          => This means give me only the data in this column name.
-# 25- SELECT column_name, column_name2 FROM table_name;                                            => This means give me the data in these two columns.
-# 26- SELECT * FROM table_name WHERE column_name="value";                                          => It     will search for "value" and return all the rows that have it.
-# 27- SELECT column_name AS col FROM table_name;                                                   => AS here for aliases and can rename the column name temporary in the output.
-# 28- UPDATE table_name SET column_name="value";                                                   => This means update everything in column_name to value ( Always use WHERE Clause to specify the value you want to change ).
-# 29- UPDATE table_name SET column_name="value", column_name2="value";                             => To update multiple values.
-# 30- DELETE FROM table_name;                                                                      => This will delete every row from the table, will empty the table but it's still exists ( don't use it like this ).
-# 31- DELETE FROM table_name WHERE column_name="value";                                            => This will delete only the specified value.
-# 32- SHOW WARNINGS;                                                                               => To show you the warnings you get.
-# 33- SELECT SLEEP(time_in_seconds);                                                               => To stop the database from working for a specific amount of time.
-# 34- ALTER TABLE table_name ADD COLUMN column_name data_type;                                     => We use alter table here to add a new column to an existing table, and the values by default of the column is NULL.
-# 35- ALTER TABLE table_name ADD COLUMN column_name data_type NOT NULL;                            => NOT NULL here means that the values of this column shouldn't be null.
-# 36- ALTER TABLE table_name ADD COLUMN column_name data_type DEFAULT 1;                           => DEFAULT here means that the default values of the new column should be 1.
-# 37- ALTER TABLE table_name DROP COLUMN column_name;                                              => To drop a column from a table.
-# 38- RENAME TABLE table_name TO new_table_name                                                    => To rename a table. 
-# 39- ALTER TABLE table_name RENAME TO new_table_name                                              => another syntax to rename a table.
-# 40- ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name                      => To rename a column of a table.
-# 41- ALTER TABLE table_name MODIFY column_name data_type                                          => We use modify to change an existing column type.
-# 42- ALTER TABLE table_name CHANGE old_col_name new_col_name data_type                            => We use change to rename a column and change it's data type
-
-
 ############ Relationships And Joins ############ 
 # There's 3 categories of relationships
     # 1- One to one relationship
@@ -223,4 +223,4 @@
 
 # 1- SELECT @@GLOBAL.sql_mode;            => To show you the settings of the global mode.
 # 2- SELECT @@SESSION.sql_mode            => To show you the settings of your current mode.
-# 3- SET SESSION sql_mode = "the_mode"    => To change the modes, SET SESSION sql_mode=""  => This means remove all modes
+# 3- SET SESSION sql_mode = "the_mode"    => To change the modes, SET SESSION sql_mode=""  => This means remove all modes.

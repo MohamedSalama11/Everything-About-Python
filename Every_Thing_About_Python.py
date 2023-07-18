@@ -11,7 +11,7 @@
 # ==   => checks for the equality in value
 # is   => checks for the equality in value and type
 
-print("Hello world")
+
 # """
 # This is
 # not multipile line
