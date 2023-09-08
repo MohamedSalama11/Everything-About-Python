@@ -41,6 +41,37 @@
 # ACL stands for Access Control List, it is a set of rules that is usually used to filter network traffic.
 # SSID stands for Service Set ID and it's the name of your wifi and if you set to disable in the router configuration this will hide your wifi.
 # enable wireless isolation this is a seeting in the router configurations always enable it to keep the channels and frequencies isolated from each other to act more like a switch not a hub.
+# CIA Triad stands for 
+#   Confidenttiality :- keeps data private and safe using encryption and authentication to access resources.
+#   Integrity :- ensuers that the data was not modified in transit and verifies it came from it's original source and it helps to prevent attacks like ip spoofing, ARP spoofing, MAC spoofing
+#   Availability :- measures data accessibility and is increased by designing redundant networks.
+
+
+# there's two types of encryption
+# 1- symmetric encryption :- sender and receiver use the same key to encrypt and decrypt a message.
+# 2- Asymmetric Encryption :- sender and receiver use the different keys to encrypt and decrypt a message.
+
+# Technical Vulnerabiliteis :- System-specific conditions that create security weakness like CVE or Zero-day vulnerability.
+#   CVE stands for Common Vulnerabilities and Exposure :- it's a list of disclosed computer security weakness, basically it's an official list of all the known technical vulnerabilities
+#   for each and every piece of software that's publicly avaliable.
+#   Zero-Day :- is a brand new vulnerability that's no one has discovered or reported it yet and only the professional cyber security engineer's know it, when they reported it it becomes
+#   no more a Zero-Day vulnerability and becomes a CVE
+
+# when you take advantage of a vulnerability this is called an exploit, exploit is a piece of software code that takes advantage of a security vulnerability within a system or a network.
+
+# Threat Assessment :- focused on identification of the different threats that may wish to attack or cause harm to your system or network
+#   a common tool to do this called MITRE ATT&CKL and it's a globally accessible knowledge base of adversary tactics and techniques based on real world observations from the field
+#   and it lets an administrator or analyst walk through the typical methodologies that are used by different threats or hackers to harm your network and help you to identify the 
+#   vulnerability and protect your self.
+
+# vulnerability assessment :- focused on identifying and prioritizing the risks and vuljnerabiliteis in a system or network using a vulnerability scanner like Nessus, QulaysGuard, OpenVAS
+
+# penetration test :- evaluates teh security of an IT infrastructure by safely trying to exploit vulnerabiliteis within the systems or network.
+
+# Brute force attack :- tries every possible combination until they figure out the password, if the password short and weak it's just a matter of time until the attacker gets your password.
+# hubrid attack is a combination of dictionary and burteforce attacks.
+# Authentication :- is the process of determining whether someone or something is who or what it claims itself to be.
+# AD stands for Active Directory :- organizes and manages everything on the network including clients servers devices users.
 
 
 ############# ShortCuts #############
@@ -112,6 +143,7 @@
 # Example => D2:51:F1:3A:34:65
 # FF:FF:FF:FF:FF:FF is the broadcast mac address at layer two.
 
+
 ############# IPv4 #############
 # Writeen in a series of four decimal numbers separated by dot which known as Dotted-Decimal Notation
 # each part of the four decimal numbers knows as Octet 
@@ -152,8 +184,8 @@
     ## usage  => it's a network analyzer 
 
 # 7- netstat => lists all the open ports and connections on your computer, and to show you what is the type of network connections esablished between your computer and any other computer
-    ## usage => netstat -n option will give you the ip address of the foreign address
-            # netstat -b option shows the executable for every connection
-            # netstat -o option shows you the executable and process id for every connection
-            # netstat -a option shows you all the active ports
-            # netstat -r option shows you the local routing table
+    ## usage => netstat -n option will give you the ip address of the foreign address.
+#               netstat -b option shows the executable for every connection.
+#               netstat -o option shows you the executable and process id for every connection.
+#               netstat -a option shows you all the active ports.
+#               netstat -r option shows you the local routing table.
