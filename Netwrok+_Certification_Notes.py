@@ -72,6 +72,35 @@
 # hubrid attack is a combination of dictionary and burteforce attacks.
 # Authentication :- is the process of determining whether someone or something is who or what it claims itself to be.
 # AD stands for Active Directory :- organizes and manages everything on the network including clients servers devices users.
+# DoS attack stands for Denial of servcie attack :- occurs when one machine continually floods a victim with requests for services, to make a DoS attack the attacker may use 2 ways,
+#   1- TCP SYN flood :- occurs when an attacker initiates multiple TCP sessions, but never completes them.
+#   2- ICMP flood ( Smurf Attack ):- occurs when an attacker sends a ping to a subnet broadcast address with the source IP spoofed to be that of the victim server, to handle this attack
+#      you shoud block ping requests to your server.
+
+# DDoS attack stands for Distributed Denial of Service Attack :- occurs when an attacker uses multiple computers to ask for access to the same server at the same time.
+# MITM attack stands for man in the middle attack or On-Path attack :- occurs when an attacker puts themselves between the victim and the intended destination, in this attack the attacker
+#   have the ability to monitor whatever you're sending or manipulate the data you're sending to the server.
+
+# session Hijacking Attack :- occurs when an attacker guesses the session ID that is in used between a client and a server and takes over authenticated sessoin.
+
+# DNS poisoning Attack :- occurs when an attacker manipulates known vulnerabilities within the DNS to reroute traffic from one site to a fake version of that site, to overcome this attack
+#   a new version of DNS servers invented called DNS SEC and it uses encrypted digital signatures when passing DNS information between servers to help protect it from poisoning.
+
+# Rogue DHCP server :- A DHCP server on a netwrok which is not under the administrative contorl of the network administrators, it happens when the attacker connect his DHCP server on your
+#    network and have control on it and handle everything like ip addresses, subnet masks, gateways, DNS servers.
+
+# IP spoofing attack :- Modifying the source address of an IP packet to hide the identity of the sender or impersonate another client.
+# MAC spoofing attack :- changing the MAC address to pretend the use of a different network interface card or device, to change the mac address in mac system you can use the command
+#   sudo ifconfig en0 ether <MAC address>.
+
+# MALWARE :- is a shorthand for Malicoius Software, designed for damage a computer system and possibly damage it without the user's knowledge.
+# RAT stands for Remote Access Trojan :- provides the attacker with remote control of a victim machine.
+# spyWare :- gathers informatin about you without your consent
+# key looger :- captures any strokes made on the victim machine.
+# rootkit:- designed to gain administrative control over a computer system or network device without being detected.
+
+# Phishing attack :- is a one type of social engineering attacks, it's a method of sending an email in  an attempt to get a user to click a link, those types of attacks depends of the user,
+#   because when you sending a link to a user he will probably open it without thinking so it's a great way for us as attackers.
 
 
 ############# ShortCuts #############
@@ -151,31 +180,50 @@
 # total address is 32 bits ( 4 * 8 ) 
 # ipv4 address is actually in binary digits but it is written as decimal to make it easirer for us to read
 # 255 represents in binary as 11111111 and 0 in binary is 00000000
-# the first 3 parts (octets) represents the network portion while the last part represents the host (desktop computer, server, labtop, mobile, tablet)
-# 255 in the subnet mask represents the network portion
+# the first 3 parts (octets) represents the network portion while the last part represents the host (desktop computer, server, labtop, mobile, tablet) in class C address.
+# subnet mask is useless without a ip address and ip address is useless without subnet mask.
+# 255 or 1 in the subnet mask represents the network portion
 # 0 in the subnet make represents the host portion
 # 127.0.0.1 represents the local host or the home network, and it is also called the loopback address.
 # APIPA Adresses always will be in range from 169.254.0.0 To 169.254.255.255
+# 192.168.1.1/24  /24 this tells you how many bits are set to one in the subnet mask, class C, 255.255.255.0 or 11111111.11111111.11111111.00000000
+# 224.0.0.0 to 239.255.255.255 is the multicast address
+# 255.255.255.255 is the broadcast address
 
 
 ############# IPv6 #############
+# 128 bit address expressed in hexadecimal separated by colons
 # The loopback address for ipv6 is ::1
+# FE80 is a link local address for IPv6 similar to APIPA in IPv4
+# FC00 or FD00 is a unique local addres and it's the internal private IP addresses
+# There's no broadcast address in IPv6
+# FF00::/8 is the multicast address 
 
 
 ############# Commands #############
-# 1- tracert   => is a command that allows you to check all the routers you go through from your system to any other system
+# 1- tracert   => is a command that allows you to check all the routers you go through from your system to any other system, displays the path between device and it's destinatio, showing
+#                 the source and destination ip address for each hop along the way.
     ## tracert (Windows), traceroute (Linux)
     ## usage  => tracert destination  => tracert www.google.com
+# Hop is any router or firewall that is in the path of the transmission from client to destination.
 
 # 2- pathping  => similary to tracert but with more information and more faster.
     ## usage => pathping destination  => pathping www.google.com
 
 # 3- ping      => used to get the status of a specific destination, helps us in network troubleshouting
     ## usage => ping www.google.com
+#               ping -n option allows you to calculate the number of ping ( ping -n 10 google.com )
+#               ping -t option allows you to ping forever, you can use it to test if the WAN connection is running or not
+#               ping -c number option works in linux and it will specify the number of ping ( ping -c 10 google.com )
+# in windows ping will ping the target 4 times as default and if you want to ping it forever use ping -t, while in linux by default it will ping the target for ever until you stop it.
 
-# 4- ipconfig
+
+# 4- ipconfig  => displays all of the current TCP/IP network configuration values and refreshes DHCP and DNS settings for a windows client or server.
     ## ipconfig (Windows) ifconfig (Linux)
     ## usage => gives you information about your network like ipv4, ipv6, DHCP server, etc...
+#               ipconfig /release :- to remove the ipv4 address and the subnet mask and the default gateway
+#               ipconfig /renew   :- to renew the ipv4, subnetmask, default gatway
+#               ipconfig /all     :- will give you more configurations like mac address, DNS server.
 
 # 5- route print == netstat -r
     ## usage  => to print the routing table in windows.
@@ -189,3 +237,12 @@
 #               netstat -o option shows you the executable and process id for every connection.
 #               netstat -a option shows you all the active ports.
 #               netstat -r option shows you the local routing table.
+
+# 8- ip => Assigns an address to a network interface or configures netwrok interface prameters on a Unix, Linux, or OS X operating systems, replaced the ifconfig.
+
+# 9- nslookup (name server lookup) :- used to query the DNS to provide the mapping between domain names and IP addresses or other DNS records, it is used to know the ip address of a domain name.
+
+# 10- hostname => used to display the hostname portion of the full computer name for a given system.
+
+# 11- arp (address resolution protocol) => used to display and modify entries in the ARP cache on a system.
+    ## usage => arp -a option to show you the ARP cache
