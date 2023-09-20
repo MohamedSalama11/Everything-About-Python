@@ -1,9 +1,9 @@
 # python is a dynamically typed language ( data can change during run time )
 # Mutable => Means That You Can Change It Just Like Lists
-# Immutable => Means That You Cannot Change It Just Like Strings
+# Immutable => Means That You Can't Change It Just Like Strings
 # [] => Square Brackets
-# () => Parentheses
-# {} => Curly Braces
+# () => Parentheses, Prackets
+# {} => Curly Braces, Curly Prackets
 # variable just refering to the location of the data in the computer memory
 # expression is part of a code that produces a value
 # statement is an entire line of code that performs some sort of action
@@ -17,6 +17,17 @@
 # not multipile line
 # comment
 # """   # This Is Not Comment It's A String
+
+
+### How to see the bytecode before it converted to 0,1
+# source_code = """
+# def greet(name):
+#     print("Hello, " + name)
+# greet("Alice")
+# """
+# compiled_code = compile(source_code, filename="code.txt", mode="exec")
+# import dis
+# dis.dis(compiled_code)
 
 
 # name = input("What's Your Name: ")
@@ -262,6 +273,7 @@
 # duplicates = list(set([x for x in my_list if my_list.count(x) > 1]))
 # print(duplicates)
 
+
 ################ Tuples ################
 # [1] Tuple items are enclosed in parentheses
 # [2] You can remove the parentheses if you want
@@ -350,6 +362,7 @@
 # my_set2 = {num ** 2 for num in range(1,100) if num % 2 == 0}
 # print(my_set2)
 
+
 ############### Dictionarys ###############
 # [1] Dict items are enclosed in curly braces
 # [2] Dict items contains key : value
@@ -422,6 +435,8 @@
 
 # my_dictionary = {num:num*2 for num in [1,2,3] if num % 2 == 0}
 # print(my_dictionary)
+
+
 ################ Control Flow ################
 # boolean Values (False)
 # print(bool())
@@ -622,7 +637,6 @@
 
 
 ################ For Loop ################
-
 # numbers = [1, 2, 3, 4, 5, 6]
 
 # for num in numbers:
@@ -1022,7 +1036,6 @@
 # while (length := len(name)) > 0:
 #     print(length)
 #     name = name[:-1]
-
 
 
 ################ in && not in Operator #################
@@ -3349,18 +3362,6 @@
 #         t.left(150)
 
 
-############### Annoying My Friend ##############
-# import random
-# import pyautogui as pg
-# import time
-# # my_list = ("I Hacked Your Friend Computer :)")
-# time.sleep(8)
-# for i in range(100):
-#     # a = random.choice(animal)
-#     pg.write("stop this all of you")
-#     pg.press("enter")
-
-
 ######### Flower #########
 # import turtle
 
@@ -3514,6 +3515,18 @@
 # Turtle.draw_fn("end", retain=True, co=(230, 239, 234), mode=0)
 
 
+############### Annoying My Friend ##############
+# import random
+# import pyautogui as pg
+# import time
+# # my_list = ("I Hacked Your Friend Computer :)")
+# time.sleep(8)
+# for i in range(100):
+#     # a = random.choice(animal)
+#     pg.write("stop this all of you")
+#     pg.press("enter")
+
+
 # Drawing Bill Gates
 # from sklearn.preprocessing import scale
 # pic = canvas.sketch_from_svg(
@@ -3635,7 +3648,7 @@
 # root.mainloop()
 
 
-# remove image Background
+################ remove image Background ################
 # from rembg import remove
 # from PIL import Image
 # input_path = "Mohamed.jpg"
@@ -3643,6 +3656,7 @@
 # input = Image.open(input_path)
 # output = remove(input)
 # output.save(output_path)
+
 
 ############## Code_Wars ##############
 ## Lario And Muigi Pipe Problem ##
