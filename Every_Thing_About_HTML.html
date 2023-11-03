@@ -1,0 +1,333 @@
+<!-- 
+    Notes:-
+    01- HTML stands for hyper text markup langauge.
+    02- HTML is the language to build the WEB.
+    03- there's v4 and v5 for HTML.
+    04- <html>  => this is called html tag or openning tag
+    05- </html> => this is called closing tag
+    06- the elements that doesn't need a closing tag is called self closing tag like <br>
+    07- user agent style sheet is the custom properties that the browser gives to some elemetns of html like h1
+    08- the browser doesn't look for space and taps in the html code, if the property has only one word you don't need the single or double quotes
+    09- global attribute is the attribute where you can put in any element
+    10- element attribute is the attribute where you can put in a specific element
+    11- id attribute must not repeat
+    12- 
+    13- 
+    14- 
+    15- 
+    16- 
+
+-->
+
+<!DOCTYPE html> <!-- instructions to tell the browser what version of html you are working at ( HTML 5 ) -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/> <!-- to describe the character set of the website -->
+        <meta name="description" content="a new project is coming soon"/>
+        <title>New Beginning</title>
+        <link rel="stylesheet" href=""> <!-- to link the CSS file -->
+        <style>
+            body {
+                background-color: #EEE
+            }
+        </style>
+        <script></script> <!-- To link the JS file -->
+    </head>
+        <!-- <h1>Mohamed Salama</h1>
+        <h2>My project</h2> -->
+        <!-- paragraph is a block element -->
+        <!-- <p class="one">this is my project.</p> 
+        <p hidden>this is my project2</p> -->
+        
+
+        <!-- formatting elemetns -->
+        <!--
+            <b></b>                => to bold the word
+            <strong></strong>      => same as bold ( important text )
+            <i></i>                => stands for italic
+            <em></em>              => same as i element
+            <mark></mark>          => to highlight the text
+            <u></u>                => underline
+            <small></small>        => to shrink the text
+            <del></del>            => to delete the text (to put a line over the word)
+            <ins></ins>            => inserted text (put a line under the word)
+            <sub><sub>
+            <sup><sup>
+        -->
+        <!-- <p>hello <b>world</b></p>
+        <p>hello <i>world</i></p>
+        <p>hello <mark>world</mark></p>
+        <p>hello <u>world</u></p>
+        <p>hello <small>world</small></p>
+        <p>hello <del>wolrd</del> world</p>
+        <p>hello <ins>world</ins></p>
+        <p>h<sub>2</sub>o</p>
+        <p>2<sup>*</sup>2</p> -->
+
+
+        <!-- Anchor links -->
+        <!-- inline element -->
+        <!-- <a href="https://google.com" target="_blank" titel="press to go to google">google</a>  -->
+        <!-- <a href="mailto:mohamedsalama111916@gmail.com">contact me</a> -->
+
+
+        <!-- Images -->
+        <!--
+            alt="missing photo"  => to tell the user anything when there's an error like the image is not found
+            src=""               => here we write the source of the image in the system
+        -->
+        <!-- <img src="./kanye-quotes/background.png" alt="phtot is missing" width="100px" height="100px"> -->
+
+
+        <!-- Lists -->
+        <!-- 
+            ul => unordered list
+            li => list item
+            ol => ordredred list
+            dl => description list
+            dt => term
+            dd => description of the term
+        -->
+        <!-- <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS
+                <ul>
+                    <li>React</li>
+                    <li>Angular</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ol reversed start="5">
+            <li>Mohamed</li>
+            <li>Salama</li>
+        </ol>
+
+        <dl>
+            <dt>HTML</dt>
+            <dd>stands for Hyber Text Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>stands for Cascading style sheet</dd>
+        </dl> -->
+
+
+        <!-- Table -->
+        <!-- <table border="1" cellpadding="10px">
+            <caption>Student Marks</caption>
+            <thead>
+                <tr>
+                    <th>Frist_Name</th>
+                    <th>Last_Name</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mohamed</td>
+                    <td>Salama</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Mohamed</td>
+                    <td>Salama</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Mohamed</td>
+                    <td>Salama</td>
+                    <td>60</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">summing</td>
+                    <td>180</td>
+                </tr>
+            </tfoot>
+        </table> -->
+        
+        <!-- span is an inline element -->
+        <!-- <span>Word</span> word -->
+
+        <!-- <p>this is <br>paragraph<p> -->
+        
+        <!-- hr is a block element -->
+        <!-- <hr/> -->
+
+        <!-- HTML Entities -->
+        <!-- 
+        &lt;    => less that <
+        &gt;    => greater than >
+        &copy;  => copyright
+        -->
+        <!-- <p>this is my &lt;p&gt;</p> -->
+
+
+        <!-- Audio -->
+        <!-- <audio controls autoplay loop muted>
+            <source src="../../../../Mohamed Salama/My Favourite Songs/jvla - Such a Whore (Lyrics) “she’s a whore i love it” [TikTok song].mp3" type="audio/mpeg">
+            your browser does not support this audio type
+        </audio> -->
+
+
+        <!-- Video -->
+        <!-- poster attributes is a photo will appear to the user until the video loaded -->
+        <!-- <video controls width="600" height="400" autoplay loop muted >
+            <source src="../../../../Mohamed Salama/Attack On Titans Season 4/17.mp4" type="video/mp4">
+            your browser does not support this video type
+            <track src="" kind="subtitles" srclang="en" label="english">
+        </video> -->
+
+        <!-- quote -->
+        <!-- <q>this is wise sentence</q>
+        <blockquote>this is wise word, this element is block</blockquote>
+        <button>click</button>
+        word break opportunity, to specify from where the link break, Lorem ipsum dolor sit amet consectetur adipisicing elit.<wbr> Tempore ullam cupiditate, veniam culpa quam distinctio quaerat maiores, eius provident deleniti rerum, error perspiciatis est fugit eaque voluptatem ex iure. Provident? -->
+
+<!-- 
+        <code>
+            <pre>
+                int num = 10;
+                str name = "Mohamed"
+            </pre>
+        </code> -->
+
+        <!-- <iframe src="https://elzero.com" width="1000" height="1000"></iframe> -->
+
+
+        <!-- Forms -->
+        <!-- Notes
+        1- when action attribute is empty the data will be sent to the same page you are currenlty in.
+        2- when you write a file in the action attribute the data will be sent to the file you write, the same as if you let it empty.
+        3- there's two methods to send the data one called GET and the other called POST
+        4- GET method sends the data in the url and it's appearing in the query string parameters
+        5- POST does not send the data in the URL
+        -->
+        <form action="" method="GET" novalidate target="_blank">
+            <!-- input is inline element, self closing tab -->
+            <!-- <div>
+                <label>Username</label>
+                <input type="text"
+                name="username" 
+                required 
+                placeholder="Type Your Username Here" 
+                autofocus>
+            </div>
+            <br>
+            <div>
+                <label>Password</label>
+                <input 
+                type="password" 
+                name="password" 
+                required 
+                placeholder="Type Your Password Here" 
+                minlength="10" 
+                maxlength="32">
+            </div>
+            <div>
+                <label>Subject</label>
+                <input type="text" value="write your subject here" disabled>
+            </div>
+            <br>
+            <div>
+                <label>Email</label>
+                <input type="email" name="mail" value="mohamed@yahoo.com" placeholder="Type A Valid Email" required readonly>
+            </div>
+            <br>
+            <div>
+                <input type="hidden" value="Mohamed" name="hidden">
+            </div>
+            <br>
+            <div>
+                <label>Color</label>
+                <input type="color" name="color">
+            </div>
+            <br>
+            <div>
+                <label>Range</label>
+                <input type="range" name="range" value="0" min="0" max="100" step="10">
+            </div>
+            <br>
+            <div>
+                <label>Number</label>
+                <input type="number" name="number" min="10" max="100" step="10">
+            </div>
+            <hr>
+            <div>
+                <input id="win" type="radio" name="OS" value="windows">
+                <label for="win">Windows</label>
+            </div>
+            <div>
+                <input id="lin" type="radio" name="OS" value="Linux" checked>
+                <label for="lin">Linux</label>
+            </div>
+            <div>
+                <input id="mac" type="radio" name="OS" value="MAC">
+                <label for="mac">MAC</label>
+            </div>
+            <hr>
+            <div>
+                <input id="win2" type="checkbox" name="OS" value="windows">
+                <label for="win2">Windows</label>
+            </div>
+            <div>
+                <input id="lin2" type="checkbox" name="OS" value="Linux" checked>
+                <label for="lin2">Linux</label>
+            </div>
+            <div>
+                <input id="mac2" type="checkbox" name="OS" value="MAC">
+                <label for="mac2">MAC</label>
+            </div>
+            <br>
+            <label for="book"></label>
+            <select name="book" id="book" multiple>
+                <optgroup label="romance">
+                    <option value="1">Book1</option>
+                    <option value="2">Book2</option>
+                    <option value="3">Book3</option>
+                </optgroup>
+                <optgroup label="police">
+                    <option value="4" selected>Book4</option>
+                    <option value="5">Book5</option>
+                    <option value="6">Book6</option>
+                </optgroup>
+            </select>
+            <hr>
+            <textarea name="subject" id="sub" placeholder="write your problem here" cols="30" rows="10"></textarea> -->
+            <!-- <hr>
+            <div>
+                <label>Upload A File</label>
+                <input type="file">
+            </div>
+            <hr>
+            <div>
+                <label>Search</label>
+                <input type="search">
+            </div>
+            <hr>
+            <div>
+                <input type="url">
+            </div>
+            <div>
+                <label>Date</label>
+                <input type="date">
+            </div>
+            <div>
+                <label>Month</label>
+                <input type="month">
+            </div>
+            <div>
+                <label>Time</label>
+                <input type="time">
+            </div> -->
+            <div>
+                <input type="reset" name="reset">
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Sign In">
+            </div>
+        </form>
+    </body>
+</html>

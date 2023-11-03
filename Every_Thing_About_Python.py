@@ -1,15 +1,15 @@
-# python is a dynamically typed language ( data can change during run time )
-# Mutable => Means That You Can Change It Just Like Lists
-# Immutable => Means That You Can't Change It Just Like Strings
-# [] => Square Brackets
-# () => Parentheses, Prackets
-# {} => Curly Braces, Curly Prackets
-# variable just refering to the location of the data in the computer memory
-# expression is part of a code that produces a value
-# statement is an entire line of code that performs some sort of action
-# Python is a grabage collection language uses the mark and sweep alghroithm in deleteing obejcts in the memory
-# ==   => checks for the equality in value
-# is   => checks for the equality in value and type
+# python is a dynamically typed language ( data can change during run time ).
+# Mutable => Means That You Can Change It Just Like Lists.
+# Immutable => Means That You Can't Change It Just Like Strings.
+# [] => Square Brackets.
+# () => Parentheses, Prackets.
+# {} => Curly Braces, Curly Prackets.
+# variable just refering to the location of the data in the computer memory.
+# expression is part of a code that produces a value.
+# statement is an entire line of code that performs some sort of action.
+# Python is a grabage collection language uses the mark and sweep alghroithm in deleteing obejcts in the memory.
+# ==   => checks for the equality in value.
+# is   => checks for the equality in value and type.
 
 
 # """
@@ -22,15 +22,17 @@
 ### How to see the bytecode before it converted to 0,1
 # source_code = """
 # def greet(name):
-#     print("Hello, " + name)
-# greet("Alice")
+#     print(f"Hello {name}")
+# greet("Mohamed")
 # """
+
 # compiled_code = compile(source_code, filename="code.txt", mode="exec")
+
 # import dis
 # dis.dis(compiled_code)
 
 
-# name = input("What's Your Name: ")
+# name = input("What's Your Name: ")  # inpute function always produces a string
 # print("Hello " + name)
 # print(type(name))  # Always String
 # a = 20 / 5
@@ -49,7 +51,8 @@
 # value *= 10
 # print(value)
 
-# Opeartor Precedence  (الاولوية للعمليات الحسابية)
+
+### Opeartor Precedence ###  (الاولوية للعمليات الحسابية)
 # 1- ()
 # 2- **
 # 3- * /
@@ -85,7 +88,7 @@
 # I Love \
 # Python")
 
-# print(""" Hello
+# print("""Hello
 # I Love
 # Python
 # """)
@@ -130,7 +133,7 @@
 # print(name)
 # print(name[0:3])
 # print(name[0:len(name)])
-# name[0:1] = "a" Strings In Python Are immutabile (You Can't Change The Strings)
+# name[0:1] = "a" # Strings In Python Are immutabile (You Can't Change The Strings)
 
 # name = "Mohamed Salama"
 # name2 = name.replace("Mohamed", "Gehad")
@@ -148,7 +151,7 @@
 # print("Your Age Is : %.2f" % (age))
 
 # name = ["Mohamed", "Salama", "Ali"]
-# name = " ".join(name)
+# name = ", ".join(name)
 # print(name)
 
 
@@ -191,7 +194,7 @@
 
 # names = ["Mohamed", "Ahmed", "Abeer"]
 # names.append("Rahma")
-# names.extend("Manar")
+# names.extend("manar")
 # new = names.extend(["Hager", "Nada", "Nour"])
 # print(names)
 # print(new)
@@ -205,6 +208,7 @@
 
 # usernames = ["Mohamed", "Ahmed", "Manar", "Rahma"]
 # usernames[0] = "Ahmed"
+# print(usernames)
 # new_users = usernames[:]
 # new = "Mohmed" in usernames
 # new = usernames.reverse()
@@ -221,14 +225,7 @@
 # print(two_diminsional_list[0][1])
 
 
-# print(list(range(11)))
-
-# sentence = " "
-# my_name = sentence.join(["Mohamed", "Ali", "Salama"])
-# print(my_name)
-
-
-# Unpacking Lists
+### Unpacking Lists ###
 # one, two, three, four, five, *other = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 # print(one)
 # print(two)
@@ -241,11 +238,12 @@
 # print(a)
 # print(b)
 # print(c)
+# print(_)
 
-# my_list = ["m", "o", "a"]
+# my_list = ["Mohamed", "Ali", "Youssef"]
 # print(*my_list)
 
-## Lists Comprehensions
+## Lists Comprehensions ##
 # It's a unique way in python for creating lists without looping or using append method
 # Syntax   => [param for param in iterable]
 
@@ -258,6 +256,7 @@
 # New Way
 # my_list = [char for char in "Mohamed"]
 # print(my_list)
+
 # my_list2 = [num for num in range(1,101)]
 # print(my_list2)
 
@@ -267,7 +266,7 @@
 # my_list4 = [num ** 2 for num in range(1,100) if num % 2 == 0]
 # print(my_list4)
 
-#Exercise => Find Duplicates in the list
+### Exercise => Find Duplicates in the list
 # my_list = ["a", "b", "c", "b", "d", "m", "n", "n"]
 
 # duplicates = list(set([x for x in my_list if my_list.count(x) > 1]))
@@ -285,7 +284,7 @@
 
 # Tuples Syntax
 # names = ("Mohamed", "Ahmed", "Manar")
-# names2 = "Mohamed", "Manar", "Abeer"
+# names2 = "Mohamed", "Manar", "Abeer", 1
 # print(names)
 # print(type(names2))
 
@@ -303,6 +302,12 @@
 # print(x)
 # print(y)
 # print(z)
+
+# a,b,c,_,d = (1,2,3,4,5)
+# print(a)
+# print(b)
+# print(c)
+# print(d)
 
 # a = ("A", "B", "C", "D", "E", "F")
 # x, y, z, *others = a
@@ -355,21 +360,21 @@
 # print(set(my_list))
 
 
-# Set Comprehension
-# Same as list comprehension
+# Set Comprehension ( Same as list comprehension )
 # my_set = {letter for letter in "Mohamed"}
 # print(my_set)
-# my_set2 = {num ** 2 for num in range(1,100) if num % 2 == 0}
+
+# my_set2 = {num for num in range(1,10) if num % 2 == 0}
 # print(my_set2)
 
 
 ############### Dictionarys ###############
 # [1] Dict items are enclosed in curly braces
 # [2] Dict items contains key : value
-# [3] Dict key need to be Immutable => (Number, string, tuple) List not allowed
+# [3] Dict key need to be Immutable => (Number, string, tuple), List not allowed
 # [4] Dict value can have any data types
 # [5] Dict key need to be unique
-# [6] Dict is not ordered you can access the value by it's key
+# [6] Dict is not ordered, you can access the value by it's key
 
 # my_dict = {
 #     "name": "Mohamed",
@@ -387,6 +392,9 @@
 
 # my_dict = dict.fromkeys(my_keys, my_values)
 # print(my_dict)  # Dictionary
+
+# user_info2 = dict(name="Mohamed", age=33, country="Egypt")
+# print(user_info2)
 
 
 # dictionary = {
@@ -412,33 +420,25 @@
 # print(user_info.values())
 # print(user_info.items())
 
-# user_info2 = dict(name="Mohamed", age=33, country="Egypt")
-# print(user_info2)
-
-
-# my_dict = {
-#     (1, 2): ["one", "two"],
-#     "age": 22
-# }
-# print(my_dict[(1, 2)])
-# print(my_dict.get((1, 2)))
-
 
 # Dictionary Comprehension
 # simple_dict = {
 #     "a": 1,
 #     "b": 2
 # }
-# my_dict = {(key, value**2) for key,value in simple_dict.items()} # my_way => will return a dictionary contain two tuples {("a", 1), ("b", 4)}
-# my_dict2 = {k:v ** 2 for k,v in simple_dict.items() if v % 2 == 0} # standard_way
+
+# my_dict2 = {k:v**2 for k,v in simple_dict.items() if v % 2 == 0} # standard_way
 # print(my_dict2)
+
+# my_dict = {(key, value**2) for key,value in simple_dict.items()} # my_way => will return a dictionary contain two tuples {("a", 1), ("b", 4)}
+# print(my_dict)
 
 # my_dictionary = {num:num*2 for num in [1,2,3] if num % 2 == 0}
 # print(my_dictionary)
 
 
 ################ Control Flow ################
-# boolean Values (False)
+### boolean Values (False) ###
 # print(bool())
 # print(bool(0))
 # print(bool(""))
@@ -460,7 +460,7 @@
 # if country == "Egypt" or country == "Russia":
 #     if student == "Y":
 #         print(
-#             f"Hello {name} Because You Are A Student And From {country} The Course Will Be Free For You, Enjoy :) ")
+#             f"Hello {name} Because You Are A Student And From {country}\nThe Course Will Be Free For You, Enjoy :) ")
 #     else:
 #         print(
 #             f"Hello {name} Because You Are From {country}\nThe Course Price Will Be {course_price - 90}")
@@ -478,17 +478,6 @@
 #     print("You Are Able To Drive.")
 # else:
 #     print("Sorry You Can Not Drive The Car.")
-
-
-# is_magician = True
-# is_expert = True
-
-# if is_magician and is_expert:
-#     print("You Are A Master Magician")
-# elif is_magician and not is_expert:
-#     print("At Least You're Getting There")
-# elif not is_magician:
-#     print("You Need Some Magic Powers")
 
 
 # username = input("Waht's Is Your Name? ").strip()
@@ -518,9 +507,9 @@
 # unit = input(
 #     "Choose The Unit : Months (M) Weeks (W) Days (D): ").strip().lower()
 
-# months = int(age) * 12
+# months = age * 12
 # weeks = months * 4
-# days = int(age) * 365
+# days = age * 365
 
 # if unit == "months" or unit == "m":
 #     print(f"Your Age In Months Is: {months} Months.")
@@ -533,7 +522,6 @@
 
 
 # country = input("What's Your Country? ").strip().capitalize()
-
 # countries_one = ["Egypt", "Bahrain", "Syria", "Libya"]
 # countries_one_dis = 80
 
@@ -595,7 +583,6 @@
 #     print("Loop Is Done.")
 
 # friends = ["Mohamed", "Ahmed", "Donia", "Abeer", "Mona", "Reem", "Abrar"]
-
 # index = 0
 
 # while index < len(friends):
@@ -792,24 +779,24 @@
 
 
 # Enumerate Exercises
-# for letter in enumerate("Mohamed Salama"):
+# for index, letter in enumerate("Mohamed Salama"):
 #     # print(str(index).zfill(2), letter)
-#     print(letter)
+#     print(index, letter)
 
 # for index, num in enumerate(range(101)):
 #     print(index, num)
-#     if num == 50:
-#         print(f"The Index Of 50 Is : {index}")
-#         break
+#     # if num == 50:
+#     #     print(f"The Index Of 50 Is : {index}")
+#     #     break
 
 
 ################ Functions ################
 # [1] A function is a reusable block of code can do a task
 # [2] A function run when you call it
-# [3] A function accept elements to deal with called [Parameters]
+# [3] A function accept elements to deal with called [ Parameters ]
 # [4] A function can do the task without returning data
 # [5] A function can return data after job is finished
-# [6] A function create to prevent DRY (Don't Repeat Yourself)
+# [6] A function create to prevent DRY ( Don't Repeat Yourself )
 # [7] A function accept elements when you call it called Arguments
 # [8] There's a built-in functions and user defined functions
 # [9] A function is for all team and all apps
@@ -935,14 +922,13 @@
 # num2()
 
 
-# Lambda Function
-# Anonymous Function
-# [1] It has no name
-# [2] You can call it inline without defineing it
-# [3] You can use it to return data from another function
-# [4] Lambda used for simple functions and Def handle the large tasks
-# [5] Lambda is one single expression not block of code
-# [6] Lambda type is function
+### Lambda Function ( Anonymous Function ) ###
+# [1] It has no name.
+# [2] You can call it inline without defineing it.
+# [3] You can use it to return data from another function.
+# [4] Lambda used for simple functions and Def handle the large tasks.
+# [5] Lambda is one single expression not block of code.
+# [6] Lambda type is function.
 
 # def say_hello(name, age): return f"Hello {name} Your Age Is {age}"
 
@@ -959,7 +945,7 @@
 # new_list = map(lambda num: num ** 2, my_list)
 # print(list(new_list))
 
-# # Sort Depending on the second element of the tuple
+# Sort Depending on the second element of the tuple
 # a = [(0,2), (4,3), (9,9), (10,-1)]
 # a.sort(key=lambda x: x[1])
 # print(a)
@@ -977,24 +963,11 @@
 # print(duplicates("WWWoooorrrllllllddddd"))
 
 
-# DocStrings
-# def sum(num1, num2):
-#     '''
-#     This Fucntion Returns The Sum Of Two Integers :) (Info By Mohamed Salama)
-#     '''
-#     return num1 + num2
-
-
-# print(sum(1, 2))
-# help(sum)
-# print(sum.__doc__)
-
-
 # Function Check If The Number Even Or Odd (Clean Code)
 # def is_even(num):
 #     return num % 2 == 0
 
-# print(is_even(11))
+# print(is_even(12))
 
 
 # Args & Kwargs
@@ -1020,6 +993,19 @@
 #     print(max(evens)) 
 
 # highest_even_num([1,2,3,4,10,12,24])
+
+
+### DocStrings ###
+# def sum(num1, num2):
+#     '''
+#     This Fucntion Returns The Sum Of Two Integers :) (Info By Mohamed Salama)
+#     '''
+#     return num1 + num2
+
+
+# print(sum(1, 2))
+# help(sum)
+# print(sum.__doc__)
 
 
 ################ Walrus Operator (:=) ################
@@ -1059,9 +1045,9 @@
 
 
 #################### Files Handling ####################
-# Note :- Use The Absoulte Path (Recommended)
-# Note := After Ending With Playing With The File It's Recommended To Close The File
-# PATHS
+# Note :- Always Use The Absoulte Path ( Recommended )
+# Note :- After Ending Playing With The File It's Recommended To Close The File
+## PATHS ##
 # 1- Absolute path => Begin From The Root To The Target File
 # 2- Relative path => Related With The Current Position Of The File
 
@@ -1070,7 +1056,6 @@
 # "r" Read    => [Default Value] Open File For Read and Give Error If File is Not Exists
 # "w" Write   => Open File For Writing, Create File If Not Exists
 # "x" Create  => Create File, Give Error If File Exists
-
 
 # Creating Files
 # try:
@@ -1082,11 +1067,9 @@
 # import os
 # Printing The Current Working Directory
 # print(os.getcwd())
-# D:\Programming\Python\Python Projects     (Current Working Directory)
 
 # Printing The Absoulte Path Of The Current Working File
 # print(os.path.abspath(__file__))
-# d:\Programming\Python\Python Projects\Mohamed.py
 
 # Standard Way Of File I/O
 # with open("sad.txt", mode="a") as new_file:
@@ -1172,7 +1155,8 @@
 #     print("There's At Least One Element False")
 
 # 2- any() # Retrun True If There's At Least One Element Is True Otherwise Return False
-# my_list = [False, [], 0]
+# my_list = [False, [], 1]
+# print(any(my_list))
 # if any(my_list):
 #     print(my_list)
 # else:
@@ -1193,7 +1177,7 @@
 # 6- sum(iterable, start)  => Sum all the elements in the iterable object and retrun the result
 # my_list = [1, 10, 20, 70]
 # print(sum(my_list))
-# print(sum(my_list, 10))
+# print(sum(my_list, 20))
 
 # 7- round(number, NumOfDigits)
 # print(round(100.65567))
@@ -1207,7 +1191,7 @@
 # 9- print()
 # Default Separator Between Words Is Space
 # print("Mohamed Salama")
-# print("Mohamed" "Salama")
+# print("Mohamed"  "Salama")
 # print("Mohamed", "Salama")
 # print("Mohamed", "Salama", sep="@")
 
@@ -1406,7 +1390,6 @@
 
 
 ################################ Modules ################################
-
 # [1] Use Camel_Case for naming your modules
 # [2] Module Is A File Contain A Set Of Functions
 # [3] You Can Import Module In Your App To Help You
@@ -2004,7 +1987,7 @@
 # 5- Python is Multi-Paradigm programming language ( Procedural, OOP, Functional ) Programming
 # 6- Procedural Programming => Structure of the app like Recipe, sets of steps to make the task ( Means The Way of Structurning Our Code Like The Code We Write )
 # 7- Functional Programming => Built on the concept of Mathematical Functions
-# 8- We Use PascalCase ( UpperCamelCase ) Method For Creating Classes
+# 8- We Use PascalCase ( UpperCamelCase ) For Creating Classes
 # 9- Instanciate from a class => Means create an object from a class
 # 10- Class is the blueprint or constructor of the object
 # 11- When creating object python look for the built in __init__ method
@@ -2546,6 +2529,176 @@
 # get_all_data()
 
 
+#################################################### API ( Application Programming Interfaces ) ####################################################
+# API :- is a set of commands, functions, protocols, and objects that programmers can use to create software or interact with an external system.
+#        simply the API is an interface between your program and external program
+
+# API Endpoint:- is simply a URL of the location of the data you want, and example of this is if you want to get some coin data you should use the URL (api.coinbase.com) to get the data.
+
+# Some API requires parameters to work.
+
+# Different responses or status code
+# 1- 1XX :- means hold on something happening this not final.
+# 2- 2XX :- means here you go everything was successful you should get the data you wanted.
+# 3- 3XX :- means go away you don't have permission to the data you trying to get,
+# 4- 4XX :- means you screwed up and the data you looking for doesn't even exist.
+# 5- 5XX :- means the server you are looking at is down or maybe there's some other issue.
+
+###### get the API of the ISS ( International Space Station ) ######
+# import requests
+
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")   # this method help you to get the data you want from the endpoint
+# print(response)
+
+# print(response.status_code) # to print only the status code ( 200 means everything was successful )
+
+# response.raise_for_status()  # there's alot of http status code so this method help us to show the user the actual problem
+
+# data = response.json() # to get the actual data of this API
+# data = response.json()["iss_position"] # to get a specific data of the json data, we get the data the as we get it in the dictionary
+# print(data)
+
+## to get the data in a tuple ##
+# longitude = data["iss_position"]["longitude"]
+# latitude = data["iss_position"]["latitude"]
+# iss_position = (longitude, latitude)
+
+# print(iss_position)
+
+
+##### generate quotes program #####
+# from tkinter import *
+# import requests
+
+# def get_quote():
+#     response = requests.get(url="https://api.kanye.rest")
+#     response.raise_for_status()
+#     data = response.json()
+#     qoute = data["quote"]
+#     canvas.itemconfig(quote_text, text=qoute)
+
+# window = Tk()
+# window.title("Kanye Says...")
+# window.config(padx=50, pady=50)
+
+# canvas = Canvas(width=300, height=414)
+# background_img = PhotoImage(file="./kanye-quotes/background.png")
+# canvas.create_image(150, 207, image=background_img)
+# quote_text = canvas.create_text(150, 207, text="Kanye Quote Goes HERE", width=250, font=("Arial", 30, "bold"), fill="white")
+# canvas.grid(row=0, column=0)
+
+# kanye_img = PhotoImage(file="./kanye-quotes/kanye.png")
+# kanye_button = Button(image=kanye_img, highlightthickness=0, command=get_quote)
+# kanye_button.grid(row=1, column=0)
+
+# window.mainloop()
+
+
+####### sunrise-sunset API #######
+# import requests
+
+# my_lat = 26.820553
+# my_lng = 30.802498
+
+# parameters = {
+#     "lat" : my_lat,
+#     "lng" : my_lng,
+#     "formatted": 0,
+# }
+
+# response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
+# response.raise_for_status()
+# data = response.json()
+
+# sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
+# sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
+
+# print(sunrise)
+# print(sunset)
+
+
+#### API Authentication ####
+# when a big company has an api you must pay fot it they provide you with an API key to prevent people from abusing their service and limit their access to their API service
+# and it's almost like your personal account number and password
+# with this way they can track how much you're using their API and to authorize your access and deny your access once you gone over the limit.
+
+# api_key = "d6741bc1dc48b39fdbf09ab4af79af21"   => the API key from openweathermap.org site
+
+# apllist.fun  => is a website of fun APIs list to training on
+
+
+#### HTTP requests ####
+# 1- GET     => to ask the external program (request) to give us some piece of data (response)
+# 2- POST    => give the external program the data and wait for response of ok
+# 3- PUT     => to update the data in the external program
+# 4- DELETE  => to delete the data in the external program
+
+
+#### habit tracker project ####
+# import requests
+# from datetime import datetime
+
+# username = "mohamedsalama"
+# token = "jklf3fd34fhg34hg6"
+# graph_id = "graph2"
+
+# pixela_endpoint = "https://pixe.la/v1/users"
+
+# user_params = {
+#     "token": token,
+#     "username": username,
+#     "agreeTermsOfService": "yes",
+#     "notMinor": "yes",
+# }
+
+# # response = requests.post(url=pixela_endpoint, json=user_params)
+# # print(response.text) # to see if the post request done right or not
+
+# graph_endpoint = f"{pixela_endpoint}/{username}/graphs"
+
+# graph_config = {
+#     "id": graph_id,
+#     "name": "Cycling graph",
+#     "unit": "Km",
+#     "type": "float",
+#     "color": "ajisai"
+# }
+
+# headers = {
+#     "X-USER-TOKEN": token
+# }
+
+# # response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
+# # print(response.text)
+
+# pixel_creation_endpoint = f"{pixela_endpoint}/{username}/graphs/{graph_id}"
+
+# today = datetime(year=2023, month=10, day=11)
+
+# pixel_data = {
+#     "date": today.strftime(r"%Y%m%d"),
+#     "quantity": "15",
+# }
+
+# response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+
+# ## update request ##
+
+# update_endpoint = f"{pixela_endpoint}/{username}/graphs/{graph_id}/{today.strftime(r'%Y%m%d')}"
+
+# new_pixel_data = {
+#     "quantity": "4.5"
+# }
+
+# requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
+
+
+# ## Delete Request ##
+# delete_endpoint = f"{pixela_endpoint}/{username}/graphs/{graph_id}/{today.strftime(r'%Y%m%d')}"
+
+# response = requests.delete(url=delete_endpoint, headers=headers)
+# print(response.text)
+
 #################################################################### Exercises ####################################################################
 # Practical Email Slice Exercise
 # name = input("What's Your Name: \n").strip().capitalize()
@@ -3015,7 +3168,7 @@
 
 # print(f"Your Password Could Be {final_password}")
 
-# Hard Level
+# # Hard Level
 # import random
 # letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
 #            'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']

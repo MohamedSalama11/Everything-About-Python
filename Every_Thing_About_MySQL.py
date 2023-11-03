@@ -1,4 +1,4 @@
-# A Database :- is a collection of data stored in a format that can easily be accessed, in order to manage our databases we used a software application called DBMS ( Database Management System )
+# A Database :- is a collection of data stored in a format that can easily be accessed, in order to manage our databases we used a software application called DBMS (Database Management System)
 
 ### Difference Between SQL & MySQL ###
     # SQL ( Structured Query Language ) is a programming language used to manage and manipulate relational databases. It is used to perform various tasks such as inserting, updating, deleting
@@ -20,7 +20,7 @@
 
 # When you learn SQL language with any DBMS like mysql it's not that hard to switch to other DBMS that also uses SQL language like ( SQLite or PostgreSQL, Oracle ).
 
-# There's alot of data types in mysql like varchar (string), int (numbers).
+# There's alot of data types in mysql like varchar ( string ), int ( numbers ).
     # varchar(10)   => this means you can write 10 characters maximum ("Mohamed").
     # int           => is just a number (432).
 
@@ -46,9 +46,9 @@
 
 
 ############# Commands #############
-# 01- show databases;                                                                              => To show the databases you created.
+# 01- SHOW databases;                                                                              => To show the databases you created.
 # 02- CREATE DATABASE <name>;                                                                      => To create a database.
-# 03- DROP DATABASE   <name>;                                                                      => Will remove the database and it's content.
+# 03- DROP DATABASE <name>;                                                                        => Will remove the database and it's content.
 # 04- USE <database name>;                                                                         => To work with the database we choose.
 # 05- SELECT database();                                                                           => To show you the database you are currently working in.
 # 06- CREATE TABLE table_name (                                                                    => To create a table (create table if not exists).
@@ -96,7 +96,7 @@
 # 23- SELECT * FROM table_name;                                                                    => This means give me all the data in all columns.
 # 24- SELECT column_name FROM table_name;                                                          => This means give me only the data in this column name.
 # 25- SELECT column_name, column_name2 FROM table_name;                                            => This means give me the data in these two columns.
-# 26- SELECT * FROM table_name WHERE column_name="value";                                          => It     will search for "value" and return all the rows that have it.
+# 26- SELECT * FROM table_name WHERE column_name="value";                                          => It will search for "value" and return all the rows that have it.
 # 27- SELECT column_name AS col FROM table_name;                                                   => AS here for aliases and can rename the column name temporary in the output.
 # 28- UPDATE table_name SET column_name="value";                                                   => This means update everything in column_name to value ( Always use WHERE Clause to specify the value you want to change ).
 # 29- UPDATE table_name SET column_name="value", column_name2="value";                             => To update multiple values.
@@ -117,8 +117,8 @@
 
 ############# Notes #############
 # 01- is sql case sensitive? It depends on the database management system being used. In general, SQL is not case sensitive for keywords such as SELECT, FROM, WHERE, etc
-# However, it may be case sensitive for identifiers such as table and column names, depending on how the database has been configured or the collation sequence being used
-    # For example, in some databases, "mytable" and "MyTable" could refer to different tables.
+#     However, it may be case sensitive for identifiers such as table and column names, depending on how the database has been configured or the collation sequence being used
+#     For example, in some databases, "mytable" and "MyTable" could refer to different tables.
 # 02- my sql doesn't care about new lines.
 # 03- A database is just really a bunch of tables at least in relational databases, tables holding the data.
 # 04- Table is a collection of related data held in a structured format within a database, it contains columns and rows.
