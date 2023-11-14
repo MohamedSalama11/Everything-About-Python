@@ -1,19 +1,19 @@
 # A Database :- is a collection of data stored in a format that can easily be accessed, in order to manage our databases we used a software application called DBMS (Database Management System)
 
 ### Difference Between SQL & MySQL ###
-    # SQL ( Structured Query Language ) is a programming language used to manage and manipulate relational databases. It is used to perform various tasks such as inserting, updating, deleting
+# SQL ( Structured Query Language ) is a programming language used to manage and manipulate relational databases. It is used to perform various tasks such as inserting, updating, deleting
 #   or querying data in a database. SQL is not a database management system, but rather a language that database management systems use.
-    # MySQL, on the other hand, is a popular Relational Database Management System ( RDBMS ) that uses SQL as it's language for managing and manipulating data.
+# MySQL, on the other hand, is a popular Relational Database Management System ( RDBMS ) that uses SQL as it's language for managing and manipulating data.
 #     MySQL is open-source and is widely used on the web and in enterprise applications.
-    # In summary, SQL is a language used to work with databases while MySQL is a specific type of database management system that uses SQL as its language.
+# In summary, SQL is a language used to work with databases while MySQL is a specific type of database management system that uses SQL as its language.
 #     Other popular RDBMS that use SQL include Oracle, Microsoft SQL Server, and PostgreSQL.
 
-# DBMS Divided To:- 
-    # 1- Relational Databases ( SQL )  => like MySQL, SQL Server, Oracle
-        # in relatoinal databases we used tables that connected with each others by relationships.
-        # SQL ( Structured Query Language ) => is the language we use to work with Relational DBMS, or it is the language we use to talk to our databases.
-    # 2- Non Relational Databases or NoSQL
-        # in non relational databases we don't have tables or relationships, don't understand SQL, they have their own query langauge such as MongoDB.
+# DBMS Divided To:-
+# 1- Relational Databases ( SQL )  => like MySQL, SQL Server, Oracle
+# in relatoinal databases we used tables that connected with each others by relationships.
+# SQL ( Structured Query Language ) => is the language we use to work with Relational DBMS, or it is the language we use to talk to our databases.
+# 2- Non Relational Databases or NoSQL
+# in non relational databases we don't have tables or relationships, don't understand SQL, they have their own query langauge such as MongoDB.
 
 # Query    => Is the line of code you write with SQL language.
 # subquery => It's a query within a larger query, we surround it with parentheses, and this tells MySQL to run subquery first.
@@ -21,24 +21,24 @@
 # When you learn SQL language with any DBMS like mysql it's not that hard to switch to other DBMS that also uses SQL language like ( SQLite or PostgreSQL, Oracle ).
 
 # There's alot of data types in mysql like varchar ( string ), int ( numbers ).
-    # varchar(10)   => this means you can write 10 characters maximum ("Mohamed").
-    # int           => is just a number (432).
+# varchar(10)   => this means you can write 10 characters maximum ("Mohamed").
+# int           => is just a number (432).
 
 # CRUD => it stands for Create Read Update Delete.
 
 
 ############# Data Types #############
-# 1- CHAR(length)                                                   => To store strings, it has a fixed length, we use char when our data is similar in size, EX CHAR(3) => this means that this column
-#                                                                      should always be three characters, but if it's smaller than 3 characters MySQL will exapnd it using whitespace characters to fit 
+# 01- CHAR(length)                                                   => To store strings, it has a fixed length, we use char when our data is similar in size, EX CHAR(3) => this means that this column
+#                                                                      should always be three characters, but if it's smaller than 3 characters MySQL will exapnd it using whitespace characters to fit
 #                                                                      three characters, and will take 3 bytes of memory.
-# 2- VARCHAR(length)                                                => To store strings, we use it when we don't know the length of the string or when we insert long strings, it's more efficient.
-# 3- INT or INTEGER                                                 => To store large numbers.
-# 4- TINYINT                                                        => To store small numbers (up to 127).
-# 5- BIGINT                                                         => To store larger numbers.
-# 6- SMALLINT
-# 7- MEDIUMINT
-# 8- DECIMAL(total number of digits, digits after decimal)
-# 9- FLOAT                                                          => it takes 4 bytes in the memory.
+# 02- VARCHAR(length)                                                => To store strings, we use it when we don't know the length of the string or when we insert long strings, it's more efficient.
+# 03- INT or INTEGER                                                 => To store large numbers.
+# 04- TINYINT                                                        => To store small numbers (up to 127).
+# 05- BIGINT                                                         => To store larger numbers.
+# 06- SMALLINT
+# 07- MEDIUMINT
+# 08- DECIMAL(total number of digits, digits after decimal)
+# 09- FLOAT                                                          => it takes 4 bytes in the memory.
 # 10- DOUBLE                                                        => DOUBLE is more precsion than float, it takes 8 bytes in the memory.
 # 11- DATE                                                          => It stores a date with no time involved with format YYYY-MM-DD.
 # 12- TIME                                                          => It represents the time with no date with format HH:MM:SS.
@@ -46,18 +46,18 @@
 
 
 ############# Commands #############
-# 01- SHOW databases;                                                                              => To show the databases you created.
+# 01- SHOW DATABASES;                                                                              => To show the databases you created.
 # 02- CREATE DATABASE <name>;                                                                      => To create a database.
 # 03- DROP DATABASE <name>;                                                                        => Will remove the database and it's content.
 # 04- USE <database name>;                                                                         => To work with the database we choose.
-# 05- SELECT database();                                                                           => To show you the database you are currently working in.
+# 05- SELECT DATABASE();                                                                           => To show you the database you are currently working in.
 # 06- CREATE TABLE table_name (                                                                    => To create a table (create table if not exists).
 #   column_name data_type,
-#   column_name data_type      
+#   column_name data_type
 # );
 # 07- CREATE TABLE table_name (                                                                    => To create a table, NOT NULL means that this column shouldn't be empty you must
 #   column_name data_type NOT NULL,                                                                   write a value into it or it will raise an error.
-#   column_name data_type NOT NULL      
+#   column_name data_type NOT NULL
 # );
 # 08- CREATE TABLE table_name (                                                                    => To create a table with a default value.
 #   column_name data_type DEFAULT 'Mohamed',
@@ -68,22 +68,22 @@
 #   column_name data_type
 # );
 # 10- CREATE TABLE table_name (                                                                    => Another Syntax For Primary Key.
-#   column_name data_type,                                                                       
+#   column_name data_type,
 #   column_name data_type,
 #   PRIMARY KEY(column_name)
 # );
 # 11- CREATE TABLE table_name (                                                                    => AUTO_INCREMENT will automaticaly generate the numbers (1...100).
-#   column_name data_type AUTO_INCREMENT PRIMARY KEY                                                                    
+#   column_name data_type AUTO_INCREMENT PRIMARY KEY
 # );
 # 12- CREATE TABLE table_name (                                                                    => UNIQUE means that you can't add the same value in the same column, the value should be unique.
-#   column_name data_type UNIQUE                                                                        
+#   column_name data_type UNIQUE
 # );
 # 13- CREATE TABLE table_name (                                                                    => To check for a condition.
-#   column_name data_type CHECK (Condition)                                                                      
+#   column_name data_type CHECK (Condition)
 # );
 # 14- CREATE TABLE table_name (                                                                    => To rename the constraint name as we want, it is good for us to understand the error.
 #   column_name data_type,
-#   CONSTRAINT constraint_name CHECK (Condition)                                                                        
+#   CONSTRAINT constraint_name CHECK (Condition)
 # );
 # 15- SHOW TABLES;                                                                                 => To show the tables of the database you currently in.
 # 16- SHOW COLUMNS FROM table_name;                                                                => To show you information about the columns of the table you choose.
@@ -108,7 +108,7 @@
 # 35- ALTER TABLE table_name ADD COLUMN column_name data_type NOT NULL;                            => NOT NULL here means that the values of this column shouldn't be null.
 # 36- ALTER TABLE table_name ADD COLUMN column_name data_type DEFAULT 1;                           => DEFAULT here means that the default values of the new column should be 1.
 # 37- ALTER TABLE table_name DROP COLUMN column_name;                                              => To drop a column from a table.
-# 38- RENAME TABLE table_name TO new_table_name                                                    => To rename a table. 
+# 38- RENAME TABLE table_name TO new_table_name                                                    => To rename a table.
 # 39- ALTER TABLE table_name RENAME TO new_table_name                                              => another syntax to rename a table.
 # 40- ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name                      => To rename a column of a table.
 # 41- ALTER TABLE table_name MODIFY column_name data_type                                          => We use modify to change an existing column type.
@@ -132,12 +132,12 @@
 # 12- LIMIT Clause allows you to control the number of results you get back, followed by a number.
 # 13- LIKE Clause you can use it when you serach for something and you don't remember exctly what it is and we use % before and after the value (%moh%), % means zero character or more
 #     and it called wildcards, it's optional, ____ (four underscores) means search for four characters because every underscore represents exactly one charcater we can escape them ( %, _ )
-#     with escape sequence like this "%\%%", "%\_%". 
+#     with escape sequence like this "%\%%", "%\_%".
 # 14- GROUP BY Clause summarizes or aggregates identical data into single rows.
 # 15- SIGNED means the number could be negative or positive.
 # 16- UNSIGNED means the number must be positive.
 # 17- HAVING CLAUSE is used with GROUP BY and it's used to filter the groups that we get back from GROUP BY.
-# 18- WITH ROLLUP Clause it's only working with GROUP BY and it will gives you a summary of all the rows in the table 
+# 18- WITH ROLLUP Clause it's only working with GROUP BY and it will gives you a summary of all the rows in the table
 
 
 ############# String Functions #############
@@ -175,7 +175,7 @@
 
 ############# Logical Operators #############
 # 01- Not Equal                          ( != )                              => Technically it is a comparsion operators.
-# 02- NOT LIKE  
+# 02- NOT LIKE
 # 03- Greater Than                       ( > )                               => Technically it is a comparsion operators.
 # 04- Less Than                          ( < )                               => Technically it is a comparsion operators.
 # 05- Greater Than or Equal To           ( >= )                              => Technically it is a comparsion operators.
@@ -190,11 +190,11 @@
 # 14- IS NOT NULL Operator               ( IS NOT NULL )
 
 
-############ Relationships And Joins ############ 
+############ Relationships And Joins ############
 # There's 3 categories of relationships
-    # 1- One to one relationship
-    # 2- Many to many relationship
-    # 3- One to many relastionship ( the most common )
+# 1- One to one relationship
+# 2- Many to many relationship
+# 3- One to many relastionship ( the most common )
 
 
 ########### Views In MySQL ( Like Aliases ) ###########
@@ -212,12 +212,12 @@
 ########### Modes In MySQL ###########
 # Thye're basically settings that we can turn on and off to change the behaviour and the validations of my MySQL.
 
-# There's to different scopes for a SQL mode and it's 
+# There's to different scopes for a SQL mode and it's
 #   1- GLOBAL Mode  => What settings are enabled globally.
 #   2- SESSION Mode => What settings are enabled or disabled in your current session.
 
 ## Some Modes ##
-# 1- ERROR_FOR_DIVISION_BY_ZERO  => This mode prevents divisions by zero it will work if you division a number by zero but it will gives you a warning. 
+# 1- ERROR_FOR_DIVISION_BY_ZERO  => This mode prevents divisions by zero it will work if you division a number by zero but it will gives you a warning.
 # 2- STRICT_TRANS_TABLES         => This mode controls how MySQL handels invalid or missing values in data-change statments such as INSERT or UPDATE, in other words it's responsible for
 #                                   what happens when you try inserting a string into a column that accepts numbers or the opposite.
 
