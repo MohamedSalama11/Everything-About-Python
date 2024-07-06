@@ -21,7 +21,7 @@
 # 07- password your_password                                      => to create a password for the user EXEC mode.
 # 08- login                                                       => to enable the password.
 # 09- line vty 0 15                                               => is used to configure the Virtual Terminal (VTY) lines for remote access to the device, such as through Telnet or SSH.
-# 10- banner motd #the message you want#                          => to display the message you want while accessing the device.
+# 10- banner motd #the message you want#                          => to display the message you want while accessing the device, motd stands for message of the day.
 # 11- enable password your_password                               => to create password for the global configuration mode.
 # 12- exit                                                        => to return to the back mode, will log out the device when you are in the privileges exec mode.
 # 13- show running-config                                         => to view the running configuration file on the privilege exec mode.
