@@ -1,6 +1,4 @@
-################################################################### Linux Operating System ###################################################################
-
-######### Linux File System ##########
+##################################################################### Linux File System #####################################################################
 
 ## Notes ##
 # 1- The Linux File System Follows A Tree-Like-Structure
@@ -191,8 +189,7 @@
 
 # Note /dev/null => will delete any folder or file you redirect to it
 
-
-########### Bash Scripts ###########
+############################################################## Bash Scripts ###############################################################
 # best behaviour to create scripts is ( to run your scripts from anywhere in your system )
 # 1- create a folder called bin in your home directory (all in lower case)
 # 2- move all you scripts inside it

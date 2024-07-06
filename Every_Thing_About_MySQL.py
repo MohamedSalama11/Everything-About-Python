@@ -38,7 +38,7 @@
 # 06- SMALLINT
 # 07- MEDIUMINT
 # 08- DECIMAL(total number of digits, digits after decimal)
-# 09- FLOAT                                                          => it takes 4 bytes in the memory.
+# 09- FLOAT                                                         => it takes 4 bytes in the memory.
 # 10- DOUBLE                                                        => DOUBLE is more precsion than float, it takes 8 bytes in the memory.
 # 11- DATE                                                          => It stores a date with no time involved with format YYYY-MM-DD.
 # 12- TIME                                                          => It represents the time with no date with format HH:MM:SS.
@@ -89,7 +89,7 @@
 # 16- SHOW COLUMNS FROM table_name;                                                                => To show you information about the columns of the table you choose.
 # 17- DESC table_name == DESCRIBE table_name;                                                      => To show you information about the columns of the table you choose.
 # 18- DROP TABLE table_name;                                                                       => To delete the specified table.
-# 19- --                                                                                           => To comment your line or query, shortcut key is CTRL + /.
+# 19- -- or #                                                                                      => To comment your line or query, shortcut key is CTRL + /.
 # 20- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value2);                    => To insert data into tables.
 # 21- SELECT * FROM table_name;                                                                    => This tells SQL give me everything you have in this specified table.
 # 22- INSERT INTO table_name(columne_one, columne_two) VALUES (value1, value1), (value2, value2);  => This is for multiple inserting.
@@ -112,8 +112,9 @@
 # 39- ALTER TABLE table_name RENAME TO new_table_name                                              => another syntax to rename a table.
 # 40- ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name                      => To rename a column of a table.
 # 41- ALTER TABLE table_name MODIFY column_name data_type                                          => We use modify to change an existing column type.
-# 42- ALTER TABLE table_name CHANGE old_col_name new_col_name data_type                            => We use change to rename a column and change it's data type
-
+# 42- ALTER TABLE table_name CHANGE old_col_name new_col_name data_type                            => We use change to rename a column and change it's data type.
+# 43- source dababase_name                                                                         => To open the database file with terminal.
+# 44- mysql -u username -p password                                                                => To start the MySQL server.
 
 ############# Notes #############
 # 01- is sql case sensitive? It depends on the database management system being used. In general, SQL is not case sensitive for keywords such as SELECT, FROM, WHERE, etc
@@ -137,8 +138,9 @@
 # 15- SIGNED means the number could be negative or positive.
 # 16- UNSIGNED means the number must be positive.
 # 17- HAVING CLAUSE is used with GROUP BY and it's used to filter the groups that we get back from GROUP BY.
-# 18- WITH ROLLUP Clause it's only working with GROUP BY and it will gives you a summary of all the rows in the table
-
+# 18- ROLLUP Clause it's only working with GROUP BY and it will gives you a summary of all the rows in the table.
+# 19- The default delimeter in sql is ; and you can change it by using DELIMITER character, EX => DELIMITER $$, and it basically means treat this query as a one statement.
+# 20- In other DBMS you don't need to change the delimiter.
 
 ############# String Functions #############
 # 01- CONCAT(column_one, column_two, string, ...)                  => Combine data for cleaner output ( you should use SELECT before it to work or it will raise an error ).
@@ -170,7 +172,7 @@
 # 27- TIME_FORMAT(time, format)                                    => Will give you the format time you want.
 # 28- DATEDIFF(exp1, exp2)                                         => Will differ the exp1 - exp2.
 # 29- CAST(string AS data_type)                                    => It takes a string and convert it to the data type you want.
-# 30- IFNULL(expression, replace)                                  => it takes some expression and evaluate it and if ti's null it replaces with what ever we put in replace.
+# 30- IFNULL(expression, replace)                                  => it takes some expression and evaluate it and if it's null it replaces with what ever we put in replace.
 
 
 ############# Logical Operators #############
@@ -191,6 +193,7 @@
 
 
 ############ Relationships And Joins ############
+# relationships shows you how the tables or data related to each other.
 # There's 3 categories of relationships
 # 1- One to one relationship
 # 2- Many to many relationship
@@ -198,10 +201,10 @@
 
 
 ########### Views In MySQL ( Like Aliases ) ###########
-# views  allow us to take a query that returns some results and we'll be able to store it and give it a name and then we'll be able to treat it as a true table but in fact it's a virtual table
+# views allow us to take a query that returns some results and we'll be able to store it and give it a name and then we'll be able to treat it as a true table but in fact it's a virtual table
 # and when you show your tables it will appear in it and you can work with it as if it's a real table, and it's allow us to write shorter querys.
 
-# NOTE: Some views are updateable and insertable.
+# NOTE: Some views are updateable and insertable which means that you can update or delete the data in a view but some views you can't.
 
 # 1- CREATE VIEW the_name AS the_query
 # 2- DROP VIEW table_name                                      => To delete a view.
@@ -210,17 +213,66 @@
 
 
 ########### Modes In MySQL ###########
-# Thye're basically settings that we can turn on and off to change the behaviour and the validations of my MySQL.
+# They're basically settings that we can turn on and off to change the behaviour and the validations of my MySQL.
 
-# There's to different scopes for a SQL mode and it's
-#   1- GLOBAL Mode  => What settings are enabled globally.
+# There's two different scopes for a SQL mode and it's
+#   1- GLOBAL Mode  => What settings are enabled or disabled globally.
 #   2- SESSION Mode => What settings are enabled or disabled in your current session.
 
 ## Some Modes ##
-# 1- ERROR_FOR_DIVISION_BY_ZERO  => This mode prevents divisions by zero it will work if you division a number by zero but it will gives you a warning.
-# 2- STRICT_TRANS_TABLES         => This mode controls how MySQL handels invalid or missing values in data-change statments such as INSERT or UPDATE, in other words it's responsible for
-#                                   what happens when you try inserting a string into a column that accepts numbers or the opposite.
+# 1- ERROR_FOR_DIVISION_BY_ZERO           => This mode prevents divisions by zero it will work if you division a number by zero but it will gives you a warning.
+# 2- STRICT_TRANS_TABLES                  => This mode controls how MySQL handels invalid or missing values in data-change statments such as INSERT or UPDATE, in other words
+#                                            it's responsible for what happens when you try inserting a string into a column that accepts numbers or the opposite.
 
 # 1- SELECT @@GLOBAL.sql_mode;            => To show you the settings of the global mode.
 # 2- SELECT @@SESSION.sql_mode            => To show you the settings of your current mode.
-# 3- SET SESSION sql_mode = "the_mode"    => To change the modes, SET SESSION sql_mode=""  => This means remove all modes.
+# 3- SET SESSION sql_mode = "modes"       => To change the modes in a session.
+# 4- SET SESSION sql_mode=""              => This means remove all modes from a session.
+# 5- SET GLOBAL sql_mode = "modes"        => To change the modes in the global mode.
+
+
+############# Stored Procedures #############
+# Let's say you are building an application that has database you shouldn't write you sql code in side your application code because it will make the code messy and hard to read
+# also some programmig languages need to compile again and again so every time you change your query you will need to recompile the app again
+# for this reason you should take your sql code out of your application code and store it in a database.
+
+# stored procedure is a database object that contains a block of sql code.
+# in your application code we call the procedure to get or set the data.
+
+# store procedure benefits
+# 1- store and organize SQL
+# 2- faster execution
+# 3- data security => we can decide who can execute the stored procedure and this will limit what the users can do with our data
+
+
+# 1-
+# DELIMITER $$
+# CREATE PROCEDURE procedure_name()                                     => To create a procedure.
+# BEGIN
+#    Your_SQL_QUERY
+# END$$
+# DELIMITER ;
+
+# 2- CALL procedure_name()                                               => To call the procedure.
+# 3- DROP PROCEDURE procedure_name                                       => To delete a procedure.
+# 4- DROP PROCEDURE IF EXISTS procedure_name                             => To delete a procedure if it's exists, it's a good practice.
+
+
+################## Securing the database ##################
+# so far we have been conneting to our database server as the root user, but when it comes to the production environment we need to create an additional accounts and give them
+# specific privileges, for example let's say you are building a web application and you are connecting it with a mysql server so you need to create a user for application
+# and give it permissions to read or write data to your database server but nothing more so he can't update the data or delete tables.
+
+# 01- CREATE USER name IDENTIFIED BY "password"                          => To create a user who can sign in from everywhere with no restrictions
+# 02- CREATE USER name@localhost IDENTIFIED BY "password"                => To create a user who can sign in only from the localhost
+# 03- CREATE USER name@127.0.0.1 IDENTIFIED BY "password"                => To create a user who can sign in only from the localhost
+# 04- CREATE USER name@domain IDENTIFIED BY "password"                   => To create a user who can sign in only from this domain
+# 05- CREATE USER name@"%.domain" IDENTIFIED BY "password"               => To connect the user from any subdomain of the main domain.
+# 07- SELECT * FROM mysql.user                                           => To view the list of users, user is a table in mysql.
+# 08- DROP USER name@host                                                => To drop the user.
+# 09- SET PASSWORD FOR name = "password"                                 => To change the password for a specific user.
+# 10- SET PASSWORD = "passowrd"                                          => To change the password for the current logged in user.
+# 11- GRANT privileges ON database.table TO username                     => To create privileges for a specific user.
+# 12- SHOW GRANTS                                                        => To show the privileges for the current user.
+# 13- SHOW GRANTS FOR username                                           => To show the privileges for a specific user.
+# 14- REVOKE privilege ON database.table FROM username                   => To drop privilege for a specific user.

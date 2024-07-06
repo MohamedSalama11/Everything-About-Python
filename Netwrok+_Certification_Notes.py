@@ -1,7 +1,7 @@
 # The whole purpose of networking is to send data from one machine to another.
 # Switches => A device that connects network devices together, Is just a next generation of hubs that combine hubs with another device called a bridge, and they can use logic
-    # to learn which physical ports are attached to which devices based on their mac addresses and in this way they can send data to specific devices in the network.
-    # also known as a multiport bridge, it's a layer 2 device that connects multiple network segments together
+# to learn which physical ports are attached to which devices based on their mac addresses and in this way they can send data to specific devices in the network.
+# also known as a multiport bridge, it's a layer 2 device that connects multiple network segments together
 # WAP ( wireless access point ) => Are devices that allows wireless devices to connect into a wired network, acts like a wireless hub.
 # WAN ( wide area network ) Links => It simply connects an internal netwrok to an external one.
 # IEEE 802.3 refers to Ethernet, IEEE 802.11 refer to Wi-Fi.
@@ -36,12 +36,12 @@
 #      it replaced the RC4 with AES ( Advanced Encryption Standard ) to provide security by using a 128-bit key or higher.
 #      the easiest way to crack WPA2 by using password attacks and this is means guessing the password using burte force attack or a dictionary attack.
 #      there's two modes for WPA2 one is personal mode with pre-shared key where everyone has the same password and is used in home or small office,
-#      two enterprise mode with centralized authentication, where every user gets a single username and password unique to them 
+#      two enterprise mode with centralized authentication, where every user gets a single username and password unique to them
 
 # ACL stands for Access Control List, it is a set of rules that is usually used to filter network traffic.
 # SSID stands for Service Set ID and it's the name of your wifi and if you set to disable in the router configuration this will hide your wifi.
 # enable wireless isolation this is a seeting in the router configurations always enable it to keep the channels and frequencies isolated from each other to act more like a switch not a hub.
-# CIA Triad stands for 
+# CIA Triad stands for
 #   Confidenttiality :- keeps data private and safe using encryption and authentication to access resources.
 #   Integrity :- ensuers that the data was not modified in transit and verifies it came from it's original source and it helps to prevent attacks like ip spoofing, ARP spoofing, MAC spoofing
 #   Availability :- measures data accessibility and is increased by designing redundant networks.
@@ -61,7 +61,7 @@
 
 # Threat Assessment :- focused on identification of the different threats that may wish to attack or cause harm to your system or network
 #   a common tool to do this called MITRE ATT&CKL and it's a globally accessible knowledge base of adversary tactics and techniques based on real world observations from the field
-#   and it lets an administrator or analyst walk through the typical methodologies that are used by different threats or hackers to harm your network and help you to identify the 
+#   and it lets an administrator or analyst walk through the typical methodologies that are used by different threats or hackers to harm your network and help you to identify the
 #   vulnerability and protect your self.
 
 # vulnerability assessment :- focused on identifying and prioritizing the risks and vuljnerabiliteis in a system or network using a vulnerability scanner like Nessus, QulaysGuard, OpenVAS
@@ -141,7 +141,7 @@
 # 35- ICMP ( Internet Control Message Protocol ).
 # 36- GRE ( Generic Routing Encapsulation ).
 # 37- STP ( Spanning Tree Protocol ).
-# 38- CIDR ( Classless Inter-domain Rounting Notation ).
+# 38- CIDR ( Classless Inter-domain Routing Notation ).
 # 39- FDDI Ring ( Fiber Distributed Data Interface ).
 # 40- IDS ( Intrusion Detection System )
 # 41- IPS ( Intrusion Prevention System )
@@ -174,21 +174,21 @@
 
 
 ############# IPv4 #############
-# Writeen in a series of four decimal numbers separated by dot which known as Dotted-Decimal Notation
-# each part of the four decimal numbers knows as Octet 
-# each part has 8 bits so the values can go from 0 to 255
-# total address is 32 bits ( 4 * 8 ) 
-# ipv4 address is actually in binary digits but it is written as decimal to make it easirer for us to read
-# 255 represents in binary as 11111111 and 0 in binary is 00000000
+# Writeen in a series of four decimal numbers separated by dot which known as Dotted-Decimal Notation.
+# each part of the four decimal numbers knows as Octet .
+# each part has 8 bits so the values can go from 0 to 255.
+# total address is 32 bits ( 4 * 8 ) .
+# ipv4 address is actually in binary digits but it is written as decimal to make it easirer for us to read.
+# 255 represents in binary as 11111111 and 0 in binary is 00000000.
 # the first 3 parts (octets) represents the network portion while the last part represents the host (desktop computer, server, labtop, mobile, tablet) in class C address.
 # subnet mask is useless without a ip address and ip address is useless without subnet mask.
-# 255 or 1 in the subnet mask represents the network portion
-# 0 in the subnet make represents the host portion
+# 255 or 1 in the subnet mask represents the network portion.
+# 0 in the subnet mask represents the host portion.
 # 127.0.0.1 represents the local host or the home network, and it is also called the loopback address.
 # APIPA Adresses always will be in range from 169.254.0.0 To 169.254.255.255
 # 192.168.1.1/24  /24 this tells you how many bits are set to one in the subnet mask, class C, 255.255.255.0 or 11111111.11111111.11111111.00000000
-# 224.0.0.0 to 239.255.255.255 is the multicast address
-# 255.255.255.255 is the broadcast address
+# 224.0.0.0 to 239.255.255.255 is the multicast address.
+# 255.255.255.255 is the broadcast address.
 
 
 ############# IPv6 #############
@@ -197,42 +197,42 @@
 # FE80 is a link local address for IPv6 similar to APIPA in IPv4
 # FC00 or FD00 is a unique local addres and it's the internal private IP addresses
 # There's no broadcast address in IPv6
-# FF00::/8 is the multicast address 
+# FF00::/8 is the multicast address
 
 
 ############# Commands #############
-# 1- tracert   => is a command that allows you to check all the routers you go through from your system to any other system, displays the path between device and it's destinatio, showing
+# 1- tracert   => is a command that allows you to check all the routers you go through from your system to any other system, displays the path between device and it's destination, showing
 #                 the source and destination ip address for each hop along the way.
-    ## tracert (Windows), traceroute (Linux)
-    ## usage  => tracert destination  => tracert www.google.com
+# tracert (Windows), traceroute (Linux)
+# usage  => tracert destination  => tracert www.google.com
 # Hop is any router or firewall that is in the path of the transmission from client to destination.
 
 # 2- pathping  => similary to tracert but with more information and more faster.
-    ## usage => pathping destination  => pathping www.google.com
+# usage => pathping destination  => pathping www.google.com
 
 # 3- ping      => used to get the status of a specific destination, helps us in network troubleshouting
-    ## usage => ping www.google.com
-#               ping -n option allows you to calculate the number of ping ( ping -n 10 google.com )
+# usage => ping www.google.com
+#               ping -n option allows you to specify the number of ping ( ping -n 10 google.com )
 #               ping -t option allows you to ping forever, you can use it to test if the WAN connection is running or not
 #               ping -c number option works in linux and it will specify the number of ping ( ping -c 10 google.com )
 # in windows ping will ping the target 4 times as default and if you want to ping it forever use ping -t, while in linux by default it will ping the target for ever until you stop it.
 
 
 # 4- ipconfig  => displays all of the current TCP/IP network configuration values and refreshes DHCP and DNS settings for a windows client or server.
-    ## ipconfig (Windows) ifconfig (Linux)
-    ## usage => gives you information about your network like ipv4, ipv6, DHCP server, etc...
+# ipconfig (Windows) ifconfig (Linux)
+# usage => gives you information about your network like ipv4, ipv6, DHCP server, etc...
 #               ipconfig /release :- to remove the ipv4 address and the subnet mask and the default gateway
 #               ipconfig /renew   :- to renew the ipv4, subnetmask, default gatway
 #               ipconfig /all     :- will give you more configurations like mac address, DNS server.
 
 # 5- route print == netstat -r
-    ## usage  => to print the routing table in windows.
+# usage  => to print the routing table in windows.
 
 # 6- tcpdump => works in linux, and it is a alternative capture tool like wireshark
-    ## usage  => it's a network analyzer 
+# usage  => it's a network analyzer
 
 # 7- netstat => lists all the open ports and connections on your computer, and to show you what is the type of network connections esablished between your computer and any other computer
-    ## usage => netstat -n option will give you the ip address of the foreign address.
+# usage => netstat -n option will give you the ip address of the foreign address.
 #               netstat -b option shows the executable for every connection.
 #               netstat -o option shows you the executable and process id for every connection.
 #               netstat -a option shows you all the active ports.
@@ -245,4 +245,4 @@
 # 10- hostname => used to display the hostname portion of the full computer name for a given system.
 
 # 11- arp (address resolution protocol) => used to display and modify entries in the ARP cache on a system.
-    ## usage => arp -a option to show you the ARP cache
+# usage => arp -a option to show you the ARP cache

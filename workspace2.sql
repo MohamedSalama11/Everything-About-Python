@@ -1,7 +1,7 @@
 -- CREATE TABLE people(
 -- 	first_name VARCHAR(20),
---     last_name VARCHAR(20),
---     age INT
+-- 	last_name VARCHAR(20),
+-- 	age INT
 -- );
 
 -- INSERT INTO people(first_name, last_name, age) VALUES ("Tina", "Bleacher", 13);
@@ -57,6 +57,9 @@
 -- desc employees; 
 -- SELECT * FROM employees;
 
+
+-- CREATE DATABASE pet_shop;
+-- USE pet_shop;
 -- CREATE TABLE cats (
 -- 	cat_id INT AUTO_INCREMENT,
 --     name VARCHAR(100),
@@ -73,10 +76,30 @@
 --        ('Misty', 'Tabby', 13),
 --        ('George Michael', 'Ragdoll', 9),
 --        ('Jackson', 'Sphynx', 7);
+
 -- DESC cats;
+-- SELECT * FROM cats;
+-- SELECT name FROM cats;
+-- SELECT name, breed FROM cats;
+-- SELECT * FROM cats WHERE age=4;
+-- SELECT name, age FROM cats WHERE age=4;
+-- SELECT * FROM cats WHERE name="Egg";
+-- SELECT name, age FROM cats WHERE breed="Tabby";
+-- SELECT cat_id, age FROM cats WHERE cat_id = age;
+-- SELECT cat_id AS id, name FROM cats; 
 
+-- UPDATE cats SET age=14 WHERE name="Misty";
+-- UPDATE cats SET name="Jack" WHERE name="Jackson";
+-- UPDATE cats SET breed="British Shorthair" WHERE breed="Tabby";
+-- UPDATE cats SET age=12 WHERE breed="Maine Coon";
 
--- Large Exercise --
+-- DELETE FROM cats WHERE name="Egg";
+-- DELETE FROM cats WHERE age=4;
+-- DELETE FROM cats WHERE age=cat_id;
+-- DELETE FROM cats;
+-- SHOW COLUMNS FROM cats;
+
+-- Large Exercise
 -- CREATE DATABASE shirts_db;
 -- use shirts_db;
 -- CREATE TABLE shirts (
@@ -99,6 +122,7 @@
 
 -- INSERT INTO shirts(article, color, shirt_size, last_worn) 
 -- VALUES ("Polo Shirt", "Purple", "M", 50);
+
 -- SELECT * FROM shirts;
 -- SELECT article, color FROM shirts;
 -- SELECT article, color, shirt_size, last_worn FROM shirts WHERE shirt_size="S";
@@ -127,7 +151,6 @@
 -- 		PRIMARY KEY(book_id)
 -- 	);
 
-
 -- INSERT INTO books (title, author_fname, author_lname, released_year, stock_quantity, pages)
 -- VALUES
 -- ('The Namesake', 'Jhumpa', 'Lahiri', 2003, 32, 291),
@@ -154,29 +177,33 @@
 
 -- SELECT * FROM books;
 -- SELECT CONCAT(author_fname, " ", author_lname) AS full_name FROM books;
--- SELECT CONCAT_WS("$", "Mohamed", "Salama", "Ali", "Youssef");
+-- SELECT CONCAT_WS("$", "Mohamed", "Salama", "Ali", "Youssef"); # stands for Concate with separator
 -- SELECT CONCAT_WS("-", author_fname, author_lname) FROM books;
 -- SELECT SUBSTRING("Mohamed Salama", 1, 4) AS ex;
 -- SELECT SUBSTRING(author_lname, 1, 1) AS example, author_lname FROM books;
 -- SELECT CONCAT(SUBSTR(title, 1, 10), "...") AS ex FROM books;
 -- SELECT SUBSTR(author_fname, 1, 1) AS short_name, SUBSTR(author_lname, 1, 1) AS short_name FROM books;
 -- SELECT CONCAT(SUBSTR(author_fname, 1, 1), ".", SUBSTR(author_lname, 1, 1)) AS full_name FROM books;
+-- SELECT RIGHT(author_fname, 1) FROM books;
 -- SELECT LEFT(author_fname, 1) FROM books;
 -- SELECT CONCAT(LEFT(author_fname, 1), ".", LEFT(author_lname, 1)) from books;
 -- SELECT REPLACE("Mohamed Salama", " ", " $ ") AS result;
 -- SELECT REPLACE(title, " ", "$") FROM books;
 -- SELECT REVERSE(123);
+-- SELECT REVERSE("Mohamed");
 -- SELECT REVERSE(NULL);
 -- SELECT REVERSE(author_fname) FROM books;
 -- SELECT 
---     CONCAT(author_fname, REVERSE(author_fname))
+--     CONCAT(author_fname, " => ", REVERSE(author_fname))
 -- FROM
 --     books;
 -- SELECT CHAR_LENGTH(title), title FROM books;
 -- SELECT UPPER("Mohamed");
 -- SELECT LOWER("MOHAMED");
+-- SELECT UCASE("mohamed");
+-- SELECT LCASE("MOHAMED");
 -- SELECT CONCAT("I LOVE ", UCASE(title), " !!!") FROM books;
--- SELECT INSERT("Mohamed Salama", 8, 2, "$"); 
+-- SELECT INSERT("Mohamed Salama", 8, 1, "$"); 
 -- SELECT TRIM("   Mohamed Salama    ");
 -- SELECT TRIM(LEADING "." FROM ".....Mohamed Salama....");
 -- SELECT TRIM(TRAILING "." FROM ".....Mohamed Salama....");
@@ -188,25 +215,27 @@
 -- SELECT author_lname AS forwards, REVERSE(author_lname) AS backwards FROM books;
 -- SELECT UCASE(CONCAT(author_fname, " ", author_lname)) AS full_name_in_caps FROM books;
 -- SELECT CONCAT(title, " Was Released In ", released_year) AS blurb FROM books;
--- SELECT title AS title, CHAR_LENGTH(title) AS character_count FROM books; 
+-- SELECT title AS title, CHAR_LENGTH(title) AS character_count FROM books;
 -- SELECT * FROM books;
 -- SELECT CONCAT(SUBSTR(title, 1, 10), "...") AS short_title,
 -- 	   CONCAT(author_lname, ",", author_fname) AS author,
 --        CONCAT(stock_quantity, " in stock") AS quantity
 --        FROM books;
 
+
 -- Refinning Selections --
--- SELECT DISTINCT author_fname FROM books;  -- will remove duplicates
+-- SELECT * FROM books;
+-- SELECT DISTINCT author_fname FROM books;  # will remove duplicates
 -- SELECT DISTINCT CONCAT(author_fname, " ", author_lname) FROM books;
 -- SELECT DISTINCT author_fname, author_lname FROM books;
--- SELECT author_fname, author_lname FROM books ORDER BY author_fname ASC;   -- will order the results ( a-z )
+-- SELECT author_fname, author_lname FROM books ORDER BY author_fname ASC; -- will order the results ( a-z )و ASC is the default value
 -- SELECT author_fname FROM books ORDER BY author_fname DESC;  -- will order the results (z-a)
 -- SELECT title, pages FROM books ORDER BY pages DESC;
 -- SELECT author_fname, author_lname, pages FROM books ORDER BY 2;
--- SELECT CONCAT(author_fname, " ", author_lname) AS author_full_name FROM books ORDER BY author_full_name ASC;
+-- SELECT CONCAT(author_fname, " ", author_lname) AS author_full_name FROM books ORDER BY author_full_name DESC;
 -- SELECT * FROM books LIMIT 5;
 -- SELECT * FROM books LIMIT 0,5;
--- SELECT author_fname, author_lname, released_year FROM books ORDER BY released_year LIMIT 1, 3;  -- first number is where we begin, second number is how much results we want
+-- SELECT author_fname, author_lname, released_year FROM books ORDER BY released_year LIMIT 2, 3;  -- first number is where we begin, second number is how much results we want
 -- SELECT * FROM books ORDER BY released_year DESC LIMIT 3;
 -- SELECT author_fname FROM books WHERE author_fname LIKE "%da%";
 -- SELECT author_fname FROM books WHERE author_fname LIKE "%";
@@ -215,31 +244,34 @@
 -- SELECT title FROM books WHERE title LIKE "%\%%";
 -- SELECT title FROM books WHERE title LIKE "%\_%";
 
--- Exercise Refinning Selections --
+-- Exercise Refinning Selections
 -- SELECT title FROM books WHERE title like "%stories%";
 -- SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1;
 -- SELECT CONCAT(title, " - ", released_year) AS summary FROM books ORDER BY released_year DESC LIMIT 3;
--- SELECT title author_lname FROM books WHERE author_lname LIKE "% %";
+-- SELECT title, author_lname FROM books WHERE author_lname LIKE "% %";
 -- SELECT title, released_year, stock_quantity FROM books ORDER BY 3 LIMIT 3;
 -- SELECT title, author_lname FROM books ORDER BY 2, 1;
 -- SELECT UCASE(CONCAT("My Favourite Author Is ", author_fname, " ", author_lname)) AS yell FROM books ORDER BY yell DESC;
 
 
 -- Aggregate Functions --
--- SELECT count(author_fname) FROM books;
--- SELECT COUNT(DISTINCT author_fname) FROM books;
+-- SELECT * FROM books;
+-- SELECT title, author_fname, COUNT(*) FROM books; # Error
+-- SELECT author_fname, COUNT(*) FROM books GROUP BY author_fname;
+-- SELECT COUNT(author_fname) FROM books;
+-- SELECT COUNT(DISTINCT author_fname) AS no_duplicates FROM books;
 -- SELECT COUNT(title) AS title FROM books WHERE title LIKE "%the%";
 
 -- SELECT author_fname, COUNT(author_fname) FROM books GROUP BY author_fname;
 -- SELECT COUNT(DISTINCT author_fname) FROM books GROUP BY author_fname;
--- SELECT * FROM books GROUP BY author_lname; -- Will raise an error
+-- SELECT * FROM books GROUP BY author_fname; -- Will raise an error
 
 -- SELECT COUNT(released_year), MIN(released_year) FROM books;
 -- SELECT MAX(pages) FROM books;
 -- SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1; -- find the title of the longest books
 -- SELECT title, pages FROM books WHERE pages=(SELECT MAX(pages) FROM books); -- find the title of the longest books
 -- SELECT MIN(released_year) FROM books; -- find the title of the book that was released earliest
--- SELECT title, released_year FROM books ORDER BY released_year ASC LIMIT 1; -- find the title of the book that was released earliest
+-- SELECT title, released_year FROM books ORDER BY released_year LIMIT 1; -- find the title of the book that was released earliest
 -- SELECT title, released_year FROM books WHERE released_year=(SELECT MIN(released_year) FROM books); -- find the title of the book that was released earliest
 
 -- SELECT author_fname, author_lname, COUNT(*) FROM books GROUP BY author_fname, author_lname;
@@ -252,7 +284,7 @@
 -- SELECT AVG(pages), AVG(released_year) FROM books;
 -- SELECT released_year, AVG(stock_quantity), COUNT(*) FROM books GROUP BY released_year;
 
--- -- Exercise --
+-- Agreggate Exercise --
 -- SELECT COUNT(*) FROM books;
 -- SELECT released_year, COUNT(*) FROM books GROUP BY released_year;
 -- SELECT SUM(stock_quantity) FROM books;
@@ -261,9 +293,10 @@
 -- SELECT CONCAT(author_fname, " ", author_lname) AS full_name, pages FROM books ORDER BY pages DESC LIMIT 1;
 -- SELECT released_year AS year, COUNT(*) AS "# books", AVG(pages) AS "avg pages" FROM books GROUP BY released_year ORDER BY released_year;
 
+
 -- Data Types
 -- CREATE TABLE parents (
--- 	childrens_num TINYINT UNSIGNED
+-- 	childrens_num TINYINT UNSIGNED # unsigned means the number must be positive
 -- );
 -- INSERT INTO parents(childrens_num) VALUES (-10);
 
@@ -312,6 +345,7 @@
 -- SELECT DATE_FORMAT(NOW(), "%W");  -- print out the current day of the week as a day name
 -- SELECT DATE_FORMAT(CURDATE(), "%m/%d%/%Y")  -- print out the current date with this format mm/dd/yy
 
+
 -- Logical Operators
 -- SELECT * FROM books WHERE released_year=2017;
 -- SELECT * FROM books WHERE released_year!=2017;
@@ -321,7 +355,9 @@
 -- SELECT title FROM books WHERE title NOT LIKE "% %";
 -- SELECT title, author_fname, author_lname FROM books WHERE author_fname NOT LIKE "Da%";
 
--- SELECT 1 > 1;
+-- SELECT 1 > 1; # false = 0
+-- SELECT 1 > 0; # true = 1
+
 -- SELECT title, released_year FROM books WHERE released_year > 2015;
 -- SELECT title, pages FROM books WHERE pages > 500;
 
@@ -329,20 +365,19 @@
 -- SELECT title, pages FROM books WHERE pages < 200;
 
 -- SELECT title, released_year FROM books WHERE released_year >= 2000 ORDER BY 2 ASC;
-
 -- SELECT title, released_year FROM books WHERE released_year <= 2000 ORDER BY 2 ;
 
 -- SELECT title, author_lname, released_year FROM books WHERE author_lname="Eggers" AND released_year > 2010;
 -- SELECT title, author_lname FROM books WHERE author_lname="Eggers" AND released_year > 2010 AND title LIKE "%novel%";
--- SELECT title, author_lname, pages FROM books WHERE CHAR_LENGTH(title) > 30 AND pages > 635;
+-- SELECT title, author_lname, pages FROM books WHERE CHAR_LENGTH(title) > 10 AND pages > 100;
 
--- SELECT title, author_lname, pages FROM books WHERE author_lname = "Eggers" OR released_year > 2010;
+-- SELECT title, author_lname, released_year FROM books WHERE author_lname = "Eggers" OR released_year > 2010;
 
 -- SELECT title, released_year FROM books WHERE released_year BETWEEN 2010 AND 2015;
 -- SELECT title, pages FROM books WHERE pages BETWEEN 200 AND 300 ORDER BY pages;
 -- SELECT title, pages FROM books WHERE pages NOT BETWEEN 200 AND 300 ORDER BY pages;
 
--- SELECT * FROM people WHERE the_date < "2023-01-01";  # the date here is a string but SQL cna recognize it as a date
+-- SELECT * FROM people WHERE the_date < "2023-01-01";  # the date here is a string but SQL can recognize it as a date
 -- SELECT * FROM people WHERE YEAR(the_date) < 2023;
 
 -- SELECT * FROM people WHERE the_time BETWEEN "12:00:00" AND "18:00:00";
@@ -396,14 +431,14 @@
 -- FROM books GROUP BY author_fname, author_lname;
 
 -- SELECT author_fname, author_lname,
--- 	IF(COUNT(*) > 1, CONCAT(COUNT(*), " Books"), "1 Book") AS "Count"
+-- 	IF(COUNT(*) > 1, CONCAT(COUNT(*), " Books"), "1 Book") AS "Count" # syntax IF (condition, ture, false);
 -- FROM books
 -- GROUP BY author_fname, author_lname;
 
 
--- Constraints & ALTER TABLE
+### Constraints ###
 -- CREATE TABLE contacts (
--- 	name VARCHAR(50) NOT NULL, 
+-- 	name VARCHAR(50) NOT NULL,
 --     phone CHAR(11) UNIQUE CHECK (CHAR_LENGTH(phone) = 11)
 -- );
 -- INSERT INTO contacts (name, phone) VALUES ("Mohamed", "01012342353");
@@ -414,6 +449,7 @@
 -- 	word VARCHAR(50) CHECK (REVERSE(word) = word)
 -- );
 -- INSERT INTO palindromes (word) VALUES ("racecar");
+-- INSERT INTO palindromes (word) VALUES ("Mohamed");
 -- SELECT * FROM palindromes;
 
 -- CREATE TABLE users (
@@ -431,12 +467,13 @@
 -- );
 -- iNSERT INTO companies (name, address) VALUES ("The Wolf Of Wall Street", "San Fransisco In America");
 -- iNSERT INTO companies (name, address) VALUES ("The Wolf Of Wall Street", "San Fransisco In America");
+-- SELECT * FROM companies;
 
-
-# ALTER TABLE 
+### ALTER TABLE ###
 -- ALTER TABLE companies
 -- ADD COLUMN employee_count INT NOT NULL DEFAULT 1;
 -- SELECT * FROM companies;
+-- INSERT INTO companies(the_name, address) VALUES ("company", "kafesaqr");
 
 -- ALTER TABLE companies
 -- DROP COLUMN employee_count;
@@ -444,7 +481,7 @@
 
 -- RENAME TABLE companies TO suppliers;
 -- DESC suppliers;
--- ALTER TABLE suppliers RENAME companies;
+-- ALTER TABLE suppliers RENAME TO companies;
 -- DESC companies;
 
 -- ALTER TABLE companies
@@ -472,7 +509,7 @@
 --     order_date DATE,
 --     amount DECIMAL(8,2),
 --     customer_id INT,
---     FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE  -- on delete cascade means that if you delete a customer it will also delete every data related with it in another database
+--     FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE  # on delete cascade means that if you delete a customer it will also delete every data related with it in another database
 -- );
 
 -- INSERT INTO customers (first_name, last_name, email) 
@@ -497,8 +534,9 @@
 -- SELECT * FROM customers, orders; # this is called cross join and it will join customer and orders databases together
 
 -- ## joins ##
--- -- NOTE:- you can use WHERE CLUSE instead of ON
--- -- INNER JOIN == JOIN
+-- NOTE:- you can use WHERE CLAUSE instead of ON
+-- INNER JOIN == JOIN
+
 -- SELECT * FROM customers                                                      # to know the orders of every customer 
 -- JOIN orders ON orders.customer_id = customers.id;
 
@@ -513,12 +551,13 @@
 -- GROUP BY first_name, last_name
 -- ORDER BY total;
 
--- -- LEFT JOIN
--- # Note:- if there's no matches it will represents as NULL
+-- LEFT JOIN
+# Note:- if there's no matches it will represents as NULL
+
 -- SELECT * FROM customers
 -- LEFT JOIN orders ON customers.id = orders.customer_id;
 
--- SELECT first_name, last_name, IFNULL(SUM(amount), 0) FROM customers          # to know the total amount of every customer and put 0 if there's NULL
+-- SELECT first_name, last_name, IFNULL(SUM(amount), 0) FROM customers  # to know the total amount of every customer and put 0 if there's NULL
 -- LEFT JOIN orders ON customers.id = orders.customer_id
 -- GROUP BY first_name, last_name;
 
@@ -548,14 +587,15 @@
 -- (2, 'De Montaigne and The Art of The Essay', 98),
 -- (4, 'Borges and Magical Realism', 89);
 
--- SELECT first_name, title, grade FROM students 
+-- SELECT first_name, title, grade FROM students
 -- JOIN papers ON students.id = papers.student_id ORDER BY grade DESC;
 
 -- SELECT first_name, title, grade FROM students
 -- LEFT JOIN papers ON papers.student_id = students.id;
 
 -- SELECT first_name, IFNULL(title, "MISSING"), IFNULL(grade, 0) FROM students
--- LEFT JOIN papers ON students.id = papers.student_id ORDER BY grade DESC;
+-- LEFT JOIN papers ON students.id = papers.student_id 
+-- ORDER BY grade DESC;
 
 -- SELECT first_name, IFNULL(AVG(grade), 0) AS average FROM students
 -- LEFT JOIN papers ON students.id = papers.student_id
@@ -678,38 +718,54 @@
 
 
 ######## VIEWS ########
+-- create a view
 -- CREATE VIEW full_review AS
 -- SELECT title, released_year, genre, rating, first_name, last_name
 -- FROM reviews
 -- JOIN series ON series.id = reviews.series_id
 -- JOIN reviewers ON reviewers.id = reviews.reviewer_id;
 
+-- SELECT * FROM full_review;
+
 -- # update the view name 
 -- CREATE VIEW full_reviews AS SELECT * FROM full_review;
+
 -- SELECT * FROM full_reviews;
 
+-- to show the views
 -- show tables;
--- SELECT * FROM full_review;
+
+-- DROP VIEW full_review;
 
 -- ## HAVING CLAUSE ##
 -- SELECT title,
 -- 	   AVG(rating),
 --        COUNT(rating) AS review_count
--- FROM full_review
+-- FROM full_reviews
 -- GROUP BY title HAVING COUNT(rating) > 1;
 
+-- SELECT title,
+-- 	   AVG(rating),
+--        COUNT(rating) AS review_count
+-- FROM full_reviews
+-- GROUP BY title HAVING AVG(rating) > 9.0;
+
 -- ## ROLLUP ##
+-- SELECT AVG(rating) FROM full_reviews;
+-- SELECT title, AVG(rating) AS average FROM full_reviews GROUP BY title WITH ROLLUP;
+
 -- SELECT title, COUNT(rating) FROM full_reviews GROUP BY title WITH ROLLUP;  # WITH ROLLUP it will gives you the summary of the count aggregate function
 
 -- SELECT released_year, genre, AVG(rating)
 -- FROM full_reviews
--- GROUP BY released_year, genre WITH ROLLUP;
+-- GROUP BY released_year, genre;
 
 
-## Modes in MySQL ##
+###### Modes in MySQL ######
 -- SELECT @@GLOBAL.sql_mode;
 -- SELECT @@SESSION.sql_mode;
 
+-- SELECT 2 / 0;
 -- SET SESSION sql_mode = "ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION";  # this will remove the warning of zero division
 -- SELECT 2 / 0;
 -- SHOW WARNINGS;
@@ -851,7 +907,9 @@
 -- LIMIT 1;
 
 # Identify inactive users ( users with no posted photos )
--- SELECT username FROM users LEFT JOIN photos ON users.id = photos.user_id WHERE photos.image_url IS NULL; 
+-- SELECT username FROM users
+-- LEFT JOIN photos ON users.id = photos.user_id 
+-- WHERE photos.image_url IS NULL; 
 
 # Identify most popular photo and the user who created it (the most photo has likes)
 -- SELECT username,
@@ -865,10 +923,10 @@
 -- ORDER BY total DESC
 -- LIMIT 1;
 
--- # Calculate average number of photos per user
+# Calculate average number of photos per user
 -- SELECT (SELECT COUNT(*) FROM photos) / (SELECT COUNT(*) FROM users) AS Averge;
 
--- # Find five most popular hashtags
+# Find five most popular hashtags
 -- SELECT
 -- 	tags.tag_name,
 --     COUNT(*) AS total
@@ -879,10 +937,106 @@
 -- LIMIT 5;
 
 
--- # Finding bots (users who have liked every single photo in the site)
+# Finding bots (users who have liked every single photo in the site)
 -- SELECT username,
 -- 	   COUNT(*) AS num_likes
 -- FROM users
 -- INNER JOIN likes ON users.id = likes.user_id
 -- GROUP BY likes.user_id
 -- HAVING num_likes = (SELECT COUNT(*) FROM photos);
+
+
+################## Stored Procedures ##################
+# we are using book_shop database, books table
+
+-- DELIMITER $$
+-- CREATE PROCEDURE get_titles()
+-- BEGIN
+-- 	SELECT * FROM books;
+-- END$$
+-- DELIMITER ;
+
+-- CALL get_titles(); # we globally use call in the application code
+
+-- DELIMITER $$
+-- CREATE PROCEDURE released_year()
+-- BEGIN
+-- 	SELECT title, author_fname, author_lname, released_year FROM books WHERE released_year > 2010;
+-- END$$
+-- DELIMITER ;
+
+-- CALL released_year();
+
+-- SELECT * FROM books alias WHERE alias.released_year > 2014; # to create an alias for the table name
+
+-- # using stored procedure with parameters
+-- DELIMITER $$
+-- CREATE PROCEDURE author_name(
+-- 	first_name VARCHAR(4)
+-- )
+-- BEGIN
+-- 	SELECT * FROM books WHERE books.author_fname = first_name;
+-- END $$
+-- DELIMITER ;
+
+-- CALL author_name("Neil");
+
+
+############# Securing The Database #############
+-- CREATE USER Abo_Salama IDENTIFIED BY "high in the holes";
+
+# viewing the users
+-- SELECT * FROM mysql.user;
+
+# dropping users
+-- CREATE USER mohamed@127.0.0.1 IDENTIFIED BY "1234";
+-- DROP USER mohamed@127.0.0.1;
+
+# changing the passwords
+-- SET PASSWORD FOR Abo_Salama = "new password"; # to change the password for a specific user
+-- SET PASSWORD = "bla bla" # change password to the current logged in user
+
+# granting privileges
+# Scenario 1:- web/desktop application => where we need to allow the application to read and write data in the database but nothing more
+#              so he can't create or delete tables this is only available for the admin
+CREATE USER moon_app IDENTIFIED BY "1234";
+
+GRANT SELECT, INSERT, UPDATE, DELETE, EXECUTE
+ON book_shop.* 
+TO moon_app; # EXECUTE here for execution of the stored procedures
+
+# Scenario 2:- admins => to give access for the new admin who come new to your organization to one or two databases or sometimes the whole database server
+GRANT ALL # all here means all privileges
+ON *.* # this means all tables in all databases
+TO Abo_Salama;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

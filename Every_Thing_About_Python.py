@@ -19,7 +19,7 @@
 # """   # This Is Not Comment It's A String
 
 
-### How to see the bytecode before it converted to 0,1
+# How to see the bytecode before it converted to 0,1
 # source_code = """
 # def greet(name):
 #     print(f"Hello {name}")
@@ -52,7 +52,7 @@
 # print(value)
 
 
-### Opeartor Precedence ###  (الاولوية للعمليات الحسابية)
+# Opeartor Precedence ###  (الاولوية للعمليات الحسابية)
 # 1- ()
 # 2- **
 # 3- * /
@@ -266,7 +266,7 @@
 # my_list4 = [num ** 2 for num in range(1,100) if num % 2 == 0]
 # print(my_list4)
 
-### Exercise => Find Duplicates in the list
+# Exercise => Find Duplicates in the list
 # my_list = ["a", "b", "c", "b", "d", "m", "n", "n"]
 
 # duplicates = list(set([x for x in my_list if my_list.count(x) > 1]))
@@ -939,7 +939,7 @@
 # print(say_hello("Osama", "36"))
 # print(hello("Mohamed", "22"))
 
-## Exersice on labmda function
+# Exersice on labmda function
 # Square Each Item In A List
 # my_list = [5,4,3]
 # new_list = map(lambda num: num ** 2, my_list)
@@ -990,7 +990,7 @@
 #     for num in li:
 #         if num % 2 == 0:
 #             evens.append(num)
-#     print(max(evens)) 
+#     print(max(evens))
 
 # highest_even_num([1,2,3,4,10,12,24])
 
@@ -1397,7 +1397,7 @@
 # [5] You Can Create Your Own Modules
 # [6] Modules Can Save Your Time
 # [7] Everytime you create a module and run it the interpreter will create __pycache__ file
-# Note:- in programming if you have this sentence "process finished with exit code 0" this means there's no errors if it's 1 this means there's an error 
+# Note:- in programming if you have this sentence "process finished with exit code 0" this means there's no errors if it's 1 this means there's an error
 
 # import random
 # print(random)
@@ -2257,7 +2257,7 @@
 # object1.func_two()
 
 
-##### Polymorphism ( Many Forms ) ##### 
+##### Polymorphism ( Many Forms ) #####
 # class A:
 #     def do_something(self):
 #         print("From Class A")
@@ -3674,9 +3674,9 @@
 # import time
 # # my_list = ("I Hacked Your Friend Computer :)")
 # time.sleep(8)
-# for i in range(100):
+# for i in range(200):
 #     # a = random.choice(animal)
-#     pg.write("stop this all of you")
+#     pg.write(" ###  ###")
 #     pg.press("enter")
 
 
@@ -3836,3 +3836,118 @@
 #     return int(ret)
 
 # print(square_digits(123))
+
+
+# class Sol:
+#     def __init__(self, matrix):
+#         self.matrix = matrix
+#         self.rows = len(matrix)
+#         self.columns = len(matrix[0]) if self.rows > 0 else 0
+
+#     def coolNumbers(self):
+#         cool_numbers = []
+
+#         row_max = [max(row) for row in self.matrix] # To Find Maximum Elements In Each Row
+
+#         column_min = [min(self.matrix[row][column] for row in range(self.rows))
+#         for column in range(self.columns)] # Find Minimum Elements In Each Column
+
+#         for row in range(self.rows):
+#             for column in range(self.columns):
+#                 element = self.matrix[row][column]
+#                 if element == row_max[row] and element == column_min[column]:
+#                     cool_numbers.append(element)
+#         return cool_numbers
+
+
+# matrix = [[3, 7, 8],
+#           [9, 11, 13],
+#           [15, 16, 17]]
+# cool_numbers_finder = Sol(matrix)
+# result = cool_numbers_finder.coolNumbers()
+# print(result)
+
+
+# class CoolNumbersFinder:
+#     def __init__(self, matrix):
+#         self.matrix = matrix
+
+#     def find_cool_numbers(self):
+#         cool_numbers = []
+
+#         # Find maximum elements in each row
+#         max_in_row = [max(row) for row in self.matrix]
+
+#         # Find minimum elements in each column
+#         min_in_col = [min(col) for col in zip(*self.matrix)]
+
+#         # Check for cool numbers
+#         for i in range(len(self.matrix)):
+#             for j in range(len(self.matrix[0])):
+#                 if self.matrix[i][j] == max_in_row[i] and self.matrix[i][j] == min_in_col[j]:
+#                     cool_numbers.append(self.matrix[i][j])
+
+#         return cool_numbers
+
+
+# # Example usage
+# matrix = [[3, 7, 8], [9, 11, 13], [15, 16, 17]]
+# cool_numbers_finder = CoolNumbersFinder(matrix)
+# result = cool_numbers_finder.find_cool_numbers()
+# print(result)
+
+
+# from typing import List
+
+# class Sol:
+#     def coolNumbers(self, matrix: List[List[int]]) -> List[int]:
+#         cool_numbers = []
+#         # Find the maximum element in each row
+#         max_in_row = [max(row) for row in matrix]
+#         # Find the minimum element in each column
+#         min_in_col = [min(col) for col in zip(*matrix)]
+#         # Check for cool numbers
+#         for i in range(len(matrix)):
+#             for j in range(len(matrix[0])):
+#                 if matrix[i][j] == max_in_row[i] and matrix[i][j] == min_in_col[j]:
+#                     cool_numbers.append(matrix[i][j])
+#         return cool_numbers
+
+# matrix = [
+#     [3, 7, 8],
+#     [9, 11, 13],
+#     [15, 16, 17]
+# ]
+
+# sol = Sol()
+# result = sol.coolNumbers(matrix)
+# print(result)
+
+
+# from typing import List
+# class Sol:
+#     def canPutTrees(self, flowerbed: List[int], n: int) -> bool:
+#         count = 0
+#         i = 0
+#         while i < len(flowerbed):
+#             if flowerbed[i] == 0:
+#                 # Check if the current plot and its adjacent ones are empty
+#                 if (i == 0 or flowerbed[i - 1] == 0) and (i == len(flowerbed) - 1 or flowerbed[i + 1] == 0):
+#                     flowerbed[i] = 1  # Plant an olive tree
+#                     count += 1
+#                     i += 2  # Skip the next plot
+#             i += 1
+#         return count >= n
+
+# flowerbed1 = [1, 0, 0, 0, 1]
+# n1 = 1
+
+# flowerbed2 = [1, 0, 0, 0, 1]
+# n2 = 2
+
+# sol = Sol()
+# result1 = sol.canPutTrees(flowerbed1, n1)
+# result2 = sol.canPutTrees(flowerbed2, n2)
+
+# print(result1)
+# print(result2)
