@@ -230,60 +230,55 @@
 # 05- 7                                                           => number seven indicates the type of ecnryption used to encrypt the password, means it's using cisco proprietary encryption alghorithm.
 # 06- 5                                                           => number five indicates MD5 Encryption.
 # 07- (config-if)#                                                => means that you are in the interface configuration mode.
-# 08- (config-if-range)                                            => means that you are in the range of interfaces
-# 09-
-# 10-
+# 08- (config-if-range)                                           => means that you are in the range of interfaces
+# 09- (config-line)                                               => means that you are in the line configuration mode, used to configure console, SSH, Telnet, AUX access.
+# 10- VTY lines                                                   => enable remote access using SSH, Telnet to the device, many cisco switches support up to 16 VTY lines ( from 0 to 15 ).
 
-# 01- enable                                                     => to enter the privileges exeuction mode, en is the shortcut.
+
+# 01- enable                                                     => to enter the privileges exeuction mode, en is the shortcut, disable to exit the privileged EXEC mode.
 # 02- ?                                                          => to view the commands available in the mode you are currently at.
 # 03- e?                                                         => will show the commands enable that starting with letter e.
 # 04- configure terminal                                         => to enter the global configuration mode, conf t is the shortcut.
-# 05- enable password your_password                              => to create password for the global configuration mode.
-# 06- exit                                                       => to return to the back mode, will log out the device when you are in the privileges exec mode.
-# 07- show running-config                                        => to view the running configuration file on the privilege exec mode.
-# 08- show startup-config                                        => to view the startup configuration file on the privilege exec mode, which will be loaded if the device restarted.
-# 09- write                                                      => to save the running configuration to make it the startup configuration, only from the privilege execution mode.
-# 10- write memory                                               => same as write.
-# 11- copy running-config startup-config                         => to copy the running-config file to the startup-config file, same as write and write memory.
-# 12- service password-encryption                                => will encrypt all passwords in a set of numbers and letters so they can not easily hacked, not secure enough it can be cracked easily.
-# 13- enable secret your_password                                => more secured method to create passwords with more tough encryption alghorithm.
-# 14- do                                                         => to run commands works in the privilege exec mode while you are in the global configuration mode, example => do show running-config.
-# 15- run                                                        => executes a privileged exec level command from global configuration mode, example => run privileged-exec-level-command.
-# 16- no                                                         => used to remove a command which you previously configured.
-# 17- hostname name                                              => to change the hostname to the name you want.
-# 18- show arp                                                   => to show the arp table in the privilege exec mode.
-# 19- show mac address-table                                     => to show the mac address table on a switch.
-# 20- clear mac address-table dynamic                            => to remove all the dynamic MAC addresess.
-# 21- clear mac address-table dynmaic address the_mac_address    => to remove a specific MAC address.
-# 22- clear mac address-table dynamic interface the_interface    => to remove all MAC address table entries for a specific interface.
-# 23- show ip interface brief                                    => to confirm the status of each interface on the device as well as their ip addressess.
-# 24- interface name_of_interface                                => to configure the interface on the device, example => interface gigabitethernet 0/0 or in g0/0, shortcut is in.
-# 25- ip address the_assigned_ip subnetmask                      => to assign ip address to specific interface, example ip address 10.255.255.254 255.0.0.0.
-# 26- no shutdown                                                => to enable the interface we currently at, we write it because cisco router interfaces have the shutdown command by default.
-# 27- show interfaces                                            => display alot of inforamtion about the interfaces on the device, also the errors.
-# 28- show interface name_of_interface                           => display alot of information only about the specified interface, example show interface g0/0.
-# 29- show interfaces description                                => give you a status of the interfaces.
-# 30- description description_you_want                           => to configure an interface description
-# 31- show inerfaces status                                      => display information on switch interfaces.
-# 32- speed speed_you_want                                       => to specify the speed you want on a specific interface.
-# 33- duplex auto/full/half                                      => to make the interface send and receive data in the same time.
-# 34- interface range f0/5 - 12                                  => this is an interfaces range from interafce f0/5 to f0/12
-# 35- interface range f0/5 - 6, f0/9 -12                         => this is an interface range from interface 5 to 6 and from 9 to 12, means that interface 7,8 not in the range.
-# 36- shutdown                                                   => to shutdown the interfaces.
-# 37-
-# 38-
-# 39-
-# 40-
-# 41-
-# 42-
-# 43-
-# 44-
-# 45-
-# 46-
-# 47-
-# 48-
-# 49-
-# 50-
+# 05- line                                                       => to enter the line configuration mode followed by the management line type, example => line console 0
+# 06- line console 0                                             => to enter the line console configuration mode.
+# 07- password your_password                                     => to create a password for the user EXEC mode.
+# 08- login                                                      => to enable the password.
+# 09- line vty 0 15                                              => is used to configure the Virtual Terminal (VTY) lines for remote access to the device, such as through Telnet or SSH.
+# 10- banner motd #the message you want#                          => to display the message you want while accessing the device.
+# 11- enable password your_password                              => to create password for the global configuration mode.
+# 12- exit                                                       => to return to the back mode, will log out the device when you are in the privileges exec mode.
+# 13- show running-config                                        => to view the running configuration file on the privilege exec mode.
+# 14- show startup-config                                        => to view the startup configuration file on the privilege exec mode, which will be loaded if the device restarted.
+# 15- write                                                      => to save the running configuration to make it the startup configuration, only from the privilege execution mode.
+# 16- write memory                                               => same as write.
+# 17- copy running-config startup-config                         => to copy the running-config file to the startup-config file, same as write and write memory.
+# 18- erase startup-config                                       => to delete all the configurations from the startup-config file, use reload command after using it.
+# 19- service password-encryption                                => will encrypt all passwords in a set of numbers and letters so they can not easily hacked, not secure enough it can be cracked easily.
+# 20- enable secret your_password                                => more secured method to create passwords with more tough encryption alghorithm.
+# 21- do                                                         => to run commands works in the privilege exec mode while you are in the global configuration mode, example => do show running-config.
+# 22- run                                                        => executes a privileged exec level command from global configuration mode, example => run privileged-exec-level-command.
+# 23- no                                                         => used to remove a command which you previously configured.
+# 24- hostname name                                              => to change the hostname to the name you want.
+# 25- reload                                                     => to reload the OS of the device.
+# 26- show arp                                                   => to show the arp table in the privilege exec mode.
+# 27- show mac address-table                                     => to show the mac address table on a switch.
+# 28- clear mac address-table dynamic                            => to remove all the dynamic MAC addresess.
+# 29- clear mac address-table dynmaic address the_mac_address    => to remove a specific MAC address.
+# 30- clear mac address-table dynamic interface the_interface    => to remove all MAC address table entries for a specific interface.
+# 31- show ip interface brief                                    => to confirm the status of each interface on the device as well as their ip addressess.
+# 32- interface name_of_interface                                => to configure the interface on the device, example => interface gigabitethernet 0/0 or in g0/0, shortcut is in.
+# 33- ip address the_assigned_ip subnetmask                      => to assign ip address to specific interface, example ip address 10.255.255.254 255.0.0.0.
+# 34- no shutdown                                                => to enable the interface we currently at, we write it because cisco router interfaces have the shutdown command by default.
+# 35- show interfaces                                            => display alot of inforamtion about the interfaces on the device, also the errors.
+# 36- show interface name_of_interface                           => display alot of information only about the specified interface, example show interface g0/0.
+# 37- show interfaces description                                => give you a status of the interfaces.
+# 38- description description_you_want                           => to configure an interface description
+# 39- show inerfaces status                                      => display information on switch interfaces.
+# 40- speed speed_you_want                                       => to specify the speed you want on a specific interface.
+# 41- duplex auto/full/half                                      => to make the interface send and receive data in the same time.
+# 42- interface range f0/5 - 12                                  => this is an interfaces range from interafce f0/5 to f0/12
+# 43- interface range f0/5 - 6, f0/9 -12                         => this is an interface range from interface 5 to 6 and from 9 to 12, means that interface 7,8 not in the range.
+# 44- shutdown                                                   => to shutdown the interfaces.
 
 
 ############################ Networking Commands For Troubleshooting ############################
