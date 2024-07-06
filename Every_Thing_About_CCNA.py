@@ -2,7 +2,6 @@
 # servers or clients also called endhosts or endpoints.
 # MAC addresess may also called (BIA) => Burned_In Address this is because the address is burned into the device as it's made.
 # There are MAC addresses known as locally unique MAC addresses which don't have to be globally unique.
-############### Routers ###############
 # when we see a router like this CISCO ISR 2911 => CISCO is the company made this router, ISR is a line of CISCO routers, 2911 is a particural model in that line.
 # Dynamic MAC addresess are removed from the MAC addresses table after 5 minutes if there's no traffic this is known as Aging.
 # the minimum payload size for an etherent frame is 46 bytes and if it's not 46 bytes padding will be added, padding is just a series of zeros.
