@@ -56,6 +56,17 @@
 # 42- interface range f0/5 - 12                                   => this is an interfaces range from interafce f0/5 to f0/12
 # 43- interface range f0/5 - 6, f0/9 -12                          => this is an interface range from interface 5 to 6 and from 9 to 12, means that interface 7,8 not in the range.
 # 44- shutdown                                                    => to shutdown the interfaces.
+# 45- show clock                                                  => to show the clock of the Device OS.
+# 46- clock set hh:mm:ss day month                                => to set clock and date, example => clock set 13:5:20 9 august 2023.
+# 47- clock timezone zone                                         => to set the time and the zone, example => clock timezone cairo 2.
+# 48-
+# 49-
+# 50-
+# 51-
+# 52-
+# 53-
+# 54-
+# 55-
 
 
 # NOTE:-
@@ -217,8 +228,8 @@
 # 05- MAC ( Media Access Control ).
 # 06- IP ( Internet Protocol ).
 # 07- TLS ( Transport Layer Security ).
-# 08- TELNET ().
-# 09- WI-FI ().
+# 08- TELNET (Teletype Network).
+# 09- WI-FI (wireless fidelity).
 # 10- SSH ( Secure Shell ).
 # 11- OSI ( Open System Interconnection ).
 # 12- ISO ( International Organisation for Standarization ).
@@ -270,9 +281,9 @@
 
 
 ######################### Standard numbers in network #########################
-# 1- 802.3    => is the standard number for ethernet.
-# 2-
-# 3-
+# 1- IEEE 802.3    => is the standard number for ethernet.
+# 2- IEEE 802.11   => is the standard number for WI-FI.
+# 3- H.323         => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
 # 4-
 # 5-
 # 6-
