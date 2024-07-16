@@ -59,7 +59,7 @@
 # 45- show clock                                                  => to show the clock of the Device OS.
 # 46- clock set hh:mm:ss day month                                => to set clock and date, example => clock set 13:5:20 9 august 2023.
 # 47- clock timezone zone                                         => to set the time and the zone, example => clock timezone cairo 2.
-# 48-
+# 48- show ip route                                               => to show the router routing table.
 # 49-
 # 50-
 # 51-
