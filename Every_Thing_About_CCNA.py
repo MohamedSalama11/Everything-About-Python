@@ -60,10 +60,10 @@
 # 46- clock set hh:mm:ss day month                                => to set clock and date, example => clock set 13:5:20 9 august 2023.
 # 47- clock timezone zone                                         => to set the time and the zone, example => clock timezone cairo 2.
 # 48- show ip route                                               => to show the router routing table.
-# 49- ip route ip_address net_mask next_hop                       => to configure the static route for the device.
-# 50-
-# 51-
-# 52-
+# 49- ip route destination_network_ip_address net_mask next_hop   => to configure the static route for the router.
+# 50- ip route destination_network_ip_address net_mask exit_int   => to configure the static route for the router, exit_interface option to specify which interface of the router should send the packet out of.
+# 51- ip route dest_net_ip_add net_mask exit_interface next_hop   => to configure the static route for the router, with both exit_interface and next_hop options.
+# 52- ip route 0.0.0.0 0.0.0.0 next_hop                           => to configure the default route ( the gateway route )
 # 53-
 # 54-
 # 55-
