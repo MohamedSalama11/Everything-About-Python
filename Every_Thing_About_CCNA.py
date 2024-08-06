@@ -10,6 +10,7 @@
 # 08- (config-if-range)                                           => means that you are in the range of interfaces
 # 09- (config-line)                                               => means that you are in the line configuration mode, used to configure console, SSH, Telnet, AUX access.
 # 10- VTY lines                                                   => enable remote access using SSH, Telnet to the device, many cisco switches support up to 16 VTY lines ( from 0 to 15 ).
+# 11- CTRL + A                                                    => to go to the beggining of the line in the CLI.
 
 
 # 01- enable                                                      => to enter the privileges exeuction mode, en is the shortcut, disable to exit the privileged EXEC mode.
@@ -64,10 +65,44 @@
 # 50- ip route destination_network_ip_address net_mask exit_int   => to configure the static route for the router, exit_interface option to specify which interface of the router should send the packet out of.
 # 51- ip route dest_net_ip_add net_mask exit_interface next_hop   => to configure the static route for the router, with both exit_interface and next_hop options.
 # 52- ip route 0.0.0.0 0.0.0.0 next_hop                           => to configure the default route ( the gateway route )
-# 53-
-# 54-
-# 55-
-
+# 53- show running-config | include ip route                      => this command will work the same as piping in linux ( will take the output of the first command and put it as an input to the second command )
+# 54- security password min-length specified_length               => to set a minimum acceptable password length, example => security password min-length 8.
+# 55- login block-for attempts within                             => to stop brute force attacks or dictionary attacks, example => login block-for 120 attempts 3 within 60.
+# 56- exec-timeout number_of_session time_specified               => to set the time you want for these sessions.
+# 57- dir nvram:                                                  => verify the location of the saved configuration file, dir for directory.
+# 58- dir flash:                                                  => verify the location of the OS device.
+# 59- ip default-gateway gateway_address                          => to assign manually the default gateway.
+# 60- transport input telnet                                      => to enable the telnet connection.
+# 61- show vlan brief                                             => displays the vlans that exist on the switch and which interfaces are in each vlan, vlan 1 is the vlan that all interfaces are assigned to by default.
+# 62- switchport mode access                                      => to set the interface as an access port.
+# 63- switchport access vlan number_of_vlan                       => this is the command that actually assigns the vlan to the port, if the vlan does not exist it will create it automatically.
+# 64- vlan number_of_vlan                                         => to create a vlan manually, if the vlan exists it will enter the vlan.
+# 65- name vlan_name                                              => to create name for the vlan.
+# 66- switchport trunk encapsulation dot1q                        => on switches that supports .1Q and ISL you must configure the encapsulation as .1Q or ISL (depreecated)
+# 67- switchport mode trunk                                       => to configure the interface as a trunk.
+# 68- show interfaces trunk                                       => to see the status of the turnk interfaces.
+# 68- switchport trunk allowed vlan word                          => to configure the vlans allowed on a trunk port, example => swithcport trunk allowed vlan 10,30.
+# 70- switchport trunk allowed vlan add 20                        => to configure the vlans allowed on a trunk port, will add the vlan 20 to the vlans allowed on the trunk port.
+# 71- switchport trunk allowed vlan remove 20                     => to remove a specific vlan from the trunk port, will remove vlan 20.
+# 72- switchport trunk allowed vlan all                           => will allow all the vlans on a trunk port, this is the same as the default state.
+# 73- switchport trunk allowed vlan except 1-5,10                 => this allows all vlans on a trunk port except the vlans you specified.
+# 74- switchport trunk allowed vlan none                          => this will not allow any vlans on the trunk, this command allows no traffic on the trunk port.
+# 75- switchport trunk native vlan 1001                           => to set the native vlan to the number of vlan you want, here we set the vlan to 1001, for security purposes you should set the native vlan to unused vlan.
+# 76- interface g0/0.10                                           => to enter a subinterface on a router on a stick (ROAS).
+# 77- encapsulation dot1q vlan_id                                 => this tells the router to treat any arrived frames tagged with this specific vlan number as if they arrived on the subinterface.
+# 78- encapsulation dot1q vlan_id native                          => this tells the router that this subinterface belongs to a native vlan.
+# 79- default interface interface_id                              => to return the interface to it's default state.
+# 80- ip routing                                                  => this command enables layer 3 routing on the multilayer switch.
+# 81- no switchport                                               => this configured the interface as a routed port so you can assign an ip address to it, changes the interface port from layer 2 switch port to layer 3 routing port.
+# 82- 
+# 83- 
+# 84- 
+# 85- 
+# 86- 
+# 87- 
+# 88- 
+# 89- 
+# 90- 
 
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
@@ -212,6 +247,10 @@
 
 
 ############# IPv6 #############
+# Each hexadecimal digit contains 4 bits.
+# Contain 32 hexadecimal character.
+# Contains eight groups, each group has 4 hexadecimal digits.
+# Each group separated by column.
 # 128 bit address expressed in hexadecimal separated by colons
 # The loopback address for ipv6 is ::1
 # FE80 is a link local address for IPv6 similar to APIPA in IPv4
