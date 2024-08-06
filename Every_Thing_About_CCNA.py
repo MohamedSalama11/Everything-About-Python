@@ -94,15 +94,15 @@
 # 79- default interface interface_id                              => to return the interface to it's default state.
 # 80- ip routing                                                  => this command enables layer 3 routing on the multilayer switch.
 # 81- no switchport                                               => this configured the interface as a routed port so you can assign an ip address to it, changes the interface port from layer 2 switch port to layer 3 routing port.
-# 82- 
-# 83- 
-# 84- 
-# 85- 
-# 86- 
-# 87- 
-# 88- 
-# 89- 
-# 90- 
+# 82-
+# 83-
+# 84-
+# 85-
+# 86-
+# 87-
+# 88-
+# 89-
+# 90-
 
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
@@ -323,12 +323,6 @@
 # 1- IEEE 802.3    => is the standard number for ethernet.
 # 2- IEEE 802.11   => is the standard number for WI-FI.
 # 3- H.323         => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
-# 4-
-# 5-
-# 6-
-# 7-
-# 8-
-# 9-
 
 
 ############################ Networking Commands For Troubleshooting ############################
@@ -376,4 +370,4 @@
 # 10- hostname => used to display the hostname portion of the full computer name for a given system.
 
 # 11- arp (address resolution protocol) => used to display and modify entries in the ARP cache on a system.
-# usage => arp -a option to show you the ARP cache
+# usage => arp -a option to show you the ARP cache.
