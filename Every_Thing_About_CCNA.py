@@ -94,11 +94,11 @@
 # 79- default interface interface_id                              => to return the interface to it's default state.
 # 80- ip routing                                                  => this command enables layer 3 routing on the multilayer switch.
 # 81- no switchport                                               => this configured the interface as a routed port so you can assign an ip address to it, changes the interface port from layer 2 switch port to layer 3 routing port.
-# 82-
-# 83-
-# 84-
-# 85-
-# 86-
+# 82- show spanning-tree                                          => to show information about the spanning tree protocol on the switch.
+# 83- show spanning-tree detail                                   => like show spanning-tree protocol but with more details.
+# 84- show spanning-tree summary                                  => this list each vlan and show how many interfaces are in STP state.
+# 85- show spanning-tree vlan vlan_number                         => this list the status of STP in the vlan.
+# 86- 
 # 87-
 # 88-
 # 89-
@@ -138,6 +138,7 @@
 # reverse DNS lookup determines the hostname based on the given IP and it's the opposite of A record in the DNS.
 # Nameserver is a type of DNS server that stores all the DNS recrods for a given domain
 # DNS resolver or DNS Cache makes a local copy of every DNS entry if resolves as you connect to websites
+# STP => is a layer 2 protocol
 # the three methods we use in wireless security
 #   1- WEB ( Wired Equivalent Privacy ) :- This is the original 802.11 wireless security standard which is an insecure security protocol,
 #      and it works using pre-shared key to every host and it's 40 bit key, and you can easily crack the key and hack the wifi using aircrack-ng software which is used for wireless pentesting
@@ -320,9 +321,11 @@
 
 
 ######################### Standard numbers in network #########################
-# 1- IEEE 802.3    => is the standard number for ethernet.
-# 2- IEEE 802.11   => is the standard number for WI-FI.
-# 3- H.323         => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
+# 1- IEEE 802.3         => is the standard number for ethernet.
+# 2- IEEE 802.11        => is the standard number for WI-FI.
+# 3- H.323              => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
+# 4- IEEE 802.1D        => is the standard for the classic spanning tree protocol.
+# 5- IEEE 802.1x        => User Authentication.
 
 
 ############################ Networking Commands For Troubleshooting ############################
