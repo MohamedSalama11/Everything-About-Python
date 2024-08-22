@@ -106,12 +106,12 @@
 # 91- show etherchannel summary                                   => to show a summary of the etherchannel interfaces.
 # 92- show etherchannel port-channel                              => to show information about the etherchannel and the protocol being used, number of ports in the etherchannel gorup.
 # 93- no switchport                                               => to make the interfaces act as layer three routed interfaces.
-# 94- ip routing                                                  => to enable the routing table on the multilayer switch
-# 95-
-# 96-
-# 97-
-# 98-
-# 99-
+# 94- ip routing                                                  => to enable the routing table on the multilayer switch.
+# 95- standby 1 ip ip_address                                     => to configure the virtual ip address.
+# 96- standby 1 priority 200                                      => to configure the priority for the active router, highest priority router will be the active router.
+# 97- standby 1 preempt                                           => causes the router to take the role of active router even if another router already has the role of active.
+# 98- show standby                                                => to show the settings of HSRP.
+# 99- standby version 2                                           => to configure the router to use HSRP v2.
 # 100-
 
 
