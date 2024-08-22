@@ -98,11 +98,22 @@
 # 83- show spanning-tree detail                                   => like show spanning-tree protocol but with more details.
 # 84- show spanning-tree summary                                  => this list each vlan and show how many interfaces are in STP state.
 # 85- show spanning-tree vlan vlan_number                         => this list the status of STP in the vlan.
-# 86- 
-# 87-
-# 88-
-# 89-
-# 90-
+# 86- show etherchannel load-balance                              => to see the current load balancing method.
+# 87- port-channel load-balance method                            => to change the load balance method.
+# 88- channel-protocol lacp                                       => to enable the lacp protocol for etherchannel
+# 89- channel-group 1 mode active                                 => to enable the LACP EtherChannel protocol.
+# 90- interface port-channel 1                                    => to enter the group interface of etherchannel, shortcut interface po1.
+# 91- show etherchannel summary                                   => to show a summary of the etherchannel interfaces.
+# 92- show etherchannel port-channel                              => to show information about the etherchannel and the protocol being used, number of ports in the etherchannel gorup.
+# 93- no switchport                                               => to make the interfaces act as layer three routed interfaces.
+# 94- ip routing                                                  => to enable the routing table on the multilayer switch
+# 95-
+# 96-
+# 97-
+# 98-
+# 99-
+# 100-
+
 
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
@@ -110,7 +121,7 @@
 # There are MAC addresses known as locally unique MAC addresses which don't have to be globally unique.
 # when we see a router like this CISCO ISR 2911 => CISCO is the company made this router, ISR is a line of CISCO routers, 2911 is a particural model in that line.
 # Dynamic MAC addresess are removed from the MAC addresses table after 5 minutes if there's no traffic this is known as Aging.
-# the minimum payload size for an etherent frame is 46 bytes and if it's not 46 bytes padding will be added, padding is just a series of zeros.
+# the minimum payload size for an rent frame is 46 bytes and if it's not 46 bytes padding will be added, padding is just a series of zeros.
 # The whole purpose of networking is to send data from one machine to another.
 # Switches => A device that connects network devices together, Is just a next generation of hubs that combine hubs with another device called a bridge, and they can use logic
 # to learn which physical ports are attached to which devices based on their mac addresses and in this way they can send data to specific devices in the network.
@@ -139,6 +150,11 @@
 # Nameserver is a type of DNS server that stores all the DNS recrods for a given domain
 # DNS resolver or DNS Cache makes a local copy of every DNS entry if resolves as you connect to websites
 # STP => is a layer 2 protocol
+# ASwitch => is an access layer switch, a switch that end hosts connect to
+# DSwitch => is a distribution layer switch, a switch that access layer switches connect to.
+# some other names of etherchannel is port channel, LAG ( Link Aggregation Group ).
+
+
 # the three methods we use in wireless security
 #   1- WEB ( Wired Equivalent Privacy ) :- This is the original 802.11 wireless security standard which is an insecure security protocol,
 #      and it works using pre-shared key to every host and it's 40 bit key, and you can easily crack the key and hack the wifi using aircrack-ng software which is used for wireless pentesting
@@ -326,6 +342,7 @@
 # 3- H.323              => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
 # 4- IEEE 802.1D        => is the standard for the classic spanning tree protocol.
 # 5- IEEE 802.1x        => User Authentication.
+# 6- IEEE 802.3ad       => is the standard number for LACP (Link Aggregation Control Protocol).
 
 
 ############################ Networking Commands For Troubleshooting ############################
