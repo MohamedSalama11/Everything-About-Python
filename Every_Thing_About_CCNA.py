@@ -112,8 +112,24 @@
 # 97- standby 1 preempt                                           => causes the router to take the role of active router even if another router already has the role of active.
 # 98- show standby                                                => to show the settings of HSRP.
 # 99- standby version 2                                           => to configure the router to use HSRP v2.
-# 100-
-
+# 100- ip dhcp excluded-address first_address second_address      => to specify a range of addresses that won't be given to DHCP clients.
+# 101- ip dhcp pool pool_name                                     => to create a DHCP pool, pool is subnet of addresses that can be assigned to DHCP clients.
+# 102- network network_address /prefix length                     => to configure the range of addresses to be assigned to the clients, ex => network 192.168.1.0 /24.
+# 103- dns-server 8.8.8.8                                         => specify the DNS server the clients should be used.
+# 104- default-router ip_address                                  => specify the default gateway
+# 105- lease days hours minutes or lease infinite                 => to specify the lease time ( when to expired ).
+# 106- show ip dhcp binding                                       => shows all of the dhcp clients that currently assigned.
+# 107- ip helper-address ip_address_of_DHCP_server                => to configure the router as a dhcp relay agent, make sure the agent router has a route to the dhcp server.
+# 108- ip address dhcp                                            => to tell the router to use the dhcp server to learn ip addresses for the router interfaces.
+# 109- switchport port-security                                   => to enable the port security on the interface, interface must be in access or trunk mode.
+# 110- switchport port-security mac-address mac_address           => to manually configure the allowed mac address on the interface.
+# 111- switchport port-security violation restrict                => to enable the restrict mode.
+# 113- switchport port-security violation protect                 => to enable the protect mode.
+# 114- switchport port-security aging time minutes                => to enable the aging time for an secure mac address.
+# 115- show port-security                                         => display which interfaces have port security enabled, the mac and current number of secure addresses on those interfaces.
+# 116- show port-security interface interface_id                  => to show the default settings of the port security.
+# 117- show interface interface_id switchport                     => to show the administrative mode and to see if the switchport is enabled on ther interface.
+# 118- switchort port-security mac-adddress sticky                => basically a way of configuring static secure mac addresses without actually having to manually configure them.
 
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
