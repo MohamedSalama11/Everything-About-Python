@@ -13,105 +13,105 @@
 # 11- CTRL + A                                                    => to go to the beggining of the line in the CLI.
 
 
-# 01- enable                                                      => to enter the privileges exeuction mode, en is the shortcut, disable to exit the privileged EXEC mode.
-# 02- ?                                                           => to view the commands available in the mode you are currently at.
-# 03- e?                                                          => will show the commands enable that starting with letter e.
-# 04- configure terminal                                          => to enter the global configuration mode, conf t is the shortcut.
-# 05- line                                                        => to enter the line configuration mode followed by the management line type, example => line console 0
-# 06- line console 0                                              => to enter the line console configuration mode.
-# 07- password your_password                                      => to create a password for the user EXEC mode.
-# 08- login                                                       => to enable the password.
-# 09- line vty 0 15                                               => is used to configure the Virtual Terminal (VTY) lines for remote access to the device, such as through Telnet or SSH.
-# 10- banner motd #the message you want#                          => to display the message you want while accessing the device, motd stands for message of the day.
-# 11- enable password your_password                               => to create password for the global configuration mode.
-# 12- exit                                                        => to return to the back mode, will log out the device when you are in the privileges exec mode.
-# 13- show running-config                                         => to view the running configuration file on the privilege exec mode.
-# 14- show startup-config                                         => to view the startup configuration file on the privilege exec mode, which will be loaded if the device restarted.
-# 15- write                                                       => to save the running configuration to make it the startup configuration, only from the privilege execution mode.
-# 16- write memory                                                => same as write.
-# 17- copy running-config startup-config                          => to copy the running-config file to the startup-config file, same as write and write memory.
-# 18- erase startup-config                                        => to delete all the configurations from the startup-config file, use reload command after using it.
-# 19- service password-encryption                                 => will encrypt all passwords in a set of numbers and letters so they can not easily hacked, not secure enough it can be cracked easily.
-# 20- enable secret your_password                                 => more secured method to create passwords with more tough encryption alghorithm.
-# 21- do                                                          => to run commands works in the privilege exec mode while you are in the global configuration mode, example => do show running-config.
-# 22- run                                                         => executes a privileged exec level command from global configuration mode, example => run privileged-exec-level-command.
-# 23- no                                                          => used to remove a command which you previously configured.
-# 24- hostname name                                               => to change the hostname to the name you want.
-# 25- reload                                                      => to reload the OS of the device.
-# 26- show arp                                                    => to show the arp table in the privilege exec mode.
-# 27- show mac address-table                                      => to show the mac address table on a switch.
-# 28- clear mac address-table dynamic                             => to remove all the dynamic MAC addresess.
-# 29- clear mac address-table dynmaic address the_mac_address     => to remove a specific MAC address.
-# 30- clear mac address-table dynamic interface the_interface     => to remove all MAC address table entries for a specific interface.
-# 31- show ip interface brief                                     => to confirm the status of each interface on the device as well as their ip addressess.
-# 32- interface name_of_interface                                 => to configure the interface on the device, example => interface gigabitethernet 0/0 or in g0/0, shortcut is in.
-# 33- ip address the_assigned_ip subnetmask                       => to assign ip address to specific interface, example ip address 10.255.255.254 255.0.0.0.
-# 34- no shutdown                                                 => to enable the interface we currently at, we write it because cisco router interfaces have the shutdown command by default.
-# 35- show interfaces                                             => display alot of inforamtion about the interfaces on the device, also the errors.
-# 36- show interface name_of_interface                            => display alot of information only about the specified interface, example show interface g0/0.
-# 37- show interfaces description                                 => give you a status of the interfaces.
-# 38- description description_you_want                            => to configure an interface description
-# 39- show inerfaces status                                       => display information on switch interfaces.
-# 40- speed speed_you_want                                        => to specify the speed you want on a specific interface.
-# 41- duplex auto/full/half                                       => to make the interface send and receive data in the same time.
-# 42- interface range f0/5 - 12                                   => this is an interfaces range from interafce f0/5 to f0/12
-# 43- interface range f0/5 - 6, f0/9 -12                          => this is an interface range from interface 5 to 6 and from 9 to 12, means that interface 7,8 not in the range.
-# 44- shutdown                                                    => to shutdown the interfaces.
-# 45- show clock                                                  => to show the clock of the Device OS.
-# 46- clock set hh:mm:ss day month                                => to set clock and date, example => clock set 13:5:20 9 august 2023.
-# 47- clock timezone zone                                         => to set the time and the zone, example => clock timezone cairo 2.
-# 48- show ip route                                               => to show the router routing table.
-# 49- ip route destination_network_ip_address net_mask next_hop   => to configure the static route for the router.
-# 50- ip route destination_network_ip_address net_mask exit_int   => to configure the static route for the router, exit_interface option to specify which interface of the router should send the packet out of.
-# 51- ip route dest_net_ip_add net_mask exit_interface next_hop   => to configure the static route for the router, with both exit_interface and next_hop options.
-# 52- ip route 0.0.0.0 0.0.0.0 next_hop                           => to configure the default route ( the gateway route )
-# 53- show running-config | include ip route                      => this command will work the same as piping in linux ( will take the output of the first command and put it as an input to the second command )
-# 54- security password min-length specified_length               => to set a minimum acceptable password length, example => security password min-length 8.
-# 55- login block-for attempts within                             => to stop brute force attacks or dictionary attacks, example => login block-for 120 attempts 3 within 60.
-# 56- exec-timeout number_of_session time_specified               => to set the time you want for these sessions.
-# 57- dir nvram:                                                  => verify the location of the saved configuration file, dir for directory.
-# 58- dir flash:                                                  => verify the location of the OS device.
-# 59- ip default-gateway gateway_address                          => to assign manually the default gateway.
-# 60- transport input telnet                                      => to enable the telnet connection.
-# 61- show vlan brief                                             => displays the vlans that exist on the switch and which interfaces are in each vlan, vlan 1 is the vlan that all interfaces are assigned to by default.
-# 62- switchport mode access                                      => to set the interface as an access port.
-# 63- switchport access vlan number_of_vlan                       => this is the command that actually assigns the vlan to the port, if the vlan does not exist it will create it automatically.
-# 64- vlan number_of_vlan                                         => to create a vlan manually, if the vlan exists it will enter the vlan.
-# 65- name vlan_name                                              => to create name for the vlan.
-# 66- switchport trunk encapsulation dot1q                        => on switches that supports .1Q and ISL you must configure the encapsulation as .1Q or ISL (depreecated)
-# 67- switchport mode trunk                                       => to configure the interface as a trunk.
-# 68- show interfaces trunk                                       => to see the status of the turnk interfaces.
-# 68- switchport trunk allowed vlan word                          => to configure the vlans allowed on a trunk port, example => swithcport trunk allowed vlan 10,30.
-# 70- switchport trunk allowed vlan add 20                        => to configure the vlans allowed on a trunk port, will add the vlan 20 to the vlans allowed on the trunk port.
-# 71- switchport trunk allowed vlan remove 20                     => to remove a specific vlan from the trunk port, will remove vlan 20.
-# 72- switchport trunk allowed vlan all                           => will allow all the vlans on a trunk port, this is the same as the default state.
-# 73- switchport trunk allowed vlan except 1-5,10                 => this allows all vlans on a trunk port except the vlans you specified.
-# 74- switchport trunk allowed vlan none                          => this will not allow any vlans on the trunk, this command allows no traffic on the trunk port.
-# 75- switchport trunk native vlan 1001                           => to set the native vlan to the number of vlan you want, here we set the vlan to 1001, for security purposes you should set the native vlan to unused vlan.
-# 76- interface g0/0.10                                           => to enter a subinterface on a router on a stick (ROAS).
-# 77- encapsulation dot1q vlan_id                                 => this tells the router to treat any arrived frames tagged with this specific vlan number as if they arrived on the subinterface.
-# 78- encapsulation dot1q vlan_id native                          => this tells the router that this subinterface belongs to a native vlan.
-# 79- default interface interface_id                              => to return the interface to it's default state.
-# 80- ip routing                                                  => this command enables layer 3 routing on the multilayer switch.
-# 81- no switchport                                               => this configured the interface as a routed port so you can assign an ip address to it, changes the interface port from layer 2 switch port to layer 3 routing port.
-# 82- show spanning-tree                                          => to show information about the spanning tree protocol on the switch.
-# 83- show spanning-tree detail                                   => like show spanning-tree protocol but with more details.
-# 84- show spanning-tree summary                                  => this list each vlan and show how many interfaces are in STP state.
-# 85- show spanning-tree vlan vlan_number                         => this list the status of STP in the vlan.
-# 86- show etherchannel load-balance                              => to see the current load balancing method.
-# 87- port-channel load-balance method                            => to change the load balance method.
-# 88- channel-protocol lacp                                       => to enable the lacp protocol for etherchannel
-# 89- channel-group 1 mode active                                 => to enable the LACP EtherChannel protocol.
-# 90- interface port-channel 1                                    => to enter the group interface of etherchannel, shortcut interface po1.
-# 91- show etherchannel summary                                   => to show a summary of the etherchannel interfaces.
-# 92- show etherchannel port-channel                              => to show information about the etherchannel and the protocol being used, number of ports in the etherchannel gorup.
-# 93- no switchport                                               => to make the interfaces act as layer three routed interfaces.
-# 94- ip routing                                                  => to enable the routing table on the multilayer switch.
-# 95- standby 1 ip ip_address                                     => to configure the virtual ip address.
-# 96- standby 1 priority 200                                      => to configure the priority for the active router, highest priority router will be the active router.
-# 97- standby 1 preempt                                           => causes the router to take the role of active router even if another router already has the role of active.
-# 98- show standby                                                => to show the settings of HSRP.
-# 99- standby version 2                                           => to configure the router to use HSRP v2.
+# 001- enable                                                      => to enter the privileges exeuction mode, en is the shortcut, disable to exit the privileged EXEC mode.
+# 002- ?                                                           => to view the commands available in the mode you are currently at.
+# 003- e?                                                          => will show the commands enable that starting with letter e.
+# 004- configure terminal                                          => to enter the global configuration mode, conf t is the shortcut.
+# 005- line                                                        => to enter the line configuration mode followed by the management line type, example => line console 0
+# 006- line console 0                                              => to enter the line console configuration mode.
+# 007- password your_password                                      => to create a password for the user EXEC mode.
+# 008- login                                                       => to enable the password.
+# 009- line vty 0 15                                               => is used to configure the Virtual Terminal (VTY) lines for remote access to the device, such as through Telnet or SSH.
+# 010- banner motd #the message you want#                          => to display the message you want while accessing the device, motd stands for message of the day.
+# 011- enable password your_password                               => to create password for the global configuration mode.
+# 012- exit                                                        => to return to the back mode, will log out the device when you are in the privileges exec mode.
+# 013- show running-config                                         => to view the running configuration file on the privilege exec mode.
+# 014- show startup-config                                         => to view the startup configuration file on the privilege exec mode, which will be loaded if the device restarted.
+# 015- write                                                       => to save the running configuration to make it the startup configuration, only from the privilege execution mode.
+# 016- write memory                                                => same as write.
+# 017- copy running-config startup-config                          => to copy the running-config file to the startup-config file, same as write and write memory.
+# 018- erase startup-config                                        => to delete all the configurations from the startup-config file, use reload command after using it.
+# 019- service password-encryption                                 => will encrypt all passwords in a set of numbers and letters so they can not easily hacked, not secure enough it can be cracked easily.
+# 020- enable secret your_password                                 => more secured method to create passwords with more tough encryption alghorithm.
+# 021- do                                                          => to run commands works in the privilege exec mode while you are in the global configuration mode, example => do show running-config.
+# 022- run                                                         => executes a privileged exec level command from global configuration mode, example => run privileged-exec-level-command.
+# 023- no                                                          => used to remove a command which you previously configured.
+# 024- hostname name                                               => to change the hostname to the name you want.
+# 025- reload                                                      => to reload the OS of the device.
+# 026- show arp                                                    => to show the arp table in the privilege exec mode.
+# 027- show mac address-table                                      => to show the mac address table on a switch.
+# 028- clear mac address-table dynamic                             => to remove all the dynamic MAC addresess.
+# 029- clear mac address-table dynmaic address the_mac_address     => to remove a specific MAC address.
+# 030- clear mac address-table dynamic interface the_interface     => to remove all MAC address table entries for a specific interface.
+# 031- show ip interface brief                                     => to confirm the status of each interface on the device as well as their ip addressess.
+# 032- interface name_of_interface                                 => to configure the interface on the device, example => interface gigabitethernet 0/0 or in g0/0, shortcut is in.
+# 033- ip address the_assigned_ip subnetmask                       => to assign ip address to specific interface, example ip address 10.255.255.254 255.0.0.0.
+# 034- no shutdown                                                 => to enable the interface we currently at, we write it because cisco router interfaces have the shutdown command by default.
+# 035- show interfaces                                             => display alot of inforamtion about the interfaces on the device, also the errors.
+# 036- show interface name_of_interface                            => display alot of information only about the specified interface, example show interface g0/0.
+# 037- show interfaces description                                 => give you a status of the interfaces.
+# 038- description description_you_want                            => to configure an interface description
+# 039- show inerfaces status                                       => display information on switch interfaces.
+# 040- speed speed_you_want                                        => to specify the speed you want on a specific interface.
+# 041- duplex auto/full/half                                       => to make the interface send and receive data in the same time.
+# 042- interface range f0/5 - 12                                   => this is an interfaces range from interafce f0/5 to f0/12
+# 043- interface range f0/5 - 6, f0/9 -12                          => this is an interface range from interface 5 to 6 and from 9 to 12, means that interface 7,8 not in the range.
+# 044- shutdown                                                    => to shutdown the interfaces.
+# 045- show clock                                                  => to show the clock of the Device OS.
+# 046- clock set hh:mm:ss day month                                => to set clock and date, example => clock set 13:5:20 9 august 2023.
+# 047- clock timezone zone                                         => to set the time and the zone, example => clock timezone cairo 2.
+# 048- show ip route                                               => to show the router routing table.
+# 049- ip route destination_network_ip_address net_mask next_hop   => to configure the static route for the router.
+# 050- ip route destination_network_ip_address net_mask exit_int   => to configure the static route for the router, exit_interface option to specify which interface of the router should send the packet out of.
+# 051- ip route dest_net_ip_add net_mask exit_interface next_hop   => to configure the static route for the router, with both exit_interface and next_hop options.
+# 052- ip route 0.0.0.0 0.0.0.0 next_hop                           => to configure the default route ( the gateway route )
+# 053- show running-config | include ip route                      => this command will work the same as piping in linux ( will take the output of the first command and put it as an input to the second command )
+# 054- security password min-length specified_length               => to set a minimum acceptable password length, example => security password min-length 8.
+# 055- login block-for attempts within                             => to stop brute force attacks or dictionary attacks, example => login block-for 120 attempts 3 within 60.
+# 056- exec-timeout number_of_session time_specified               => to set the time you want for these sessions.
+# 057- dir nvram:                                                  => verify the location of the saved configuration file, dir for directory.
+# 058- dir flash:                                                  => verify the location of the OS device.
+# 059- ip default-gateway gateway_address                          => to assign manually the default gateway.
+# 060- transport input telnet                                      => to enable the telnet connection.
+# 061- show vlan brief                                             => displays the vlans that exist on the switch and which interfaces are in each vlan, vlan 1 is the vlan that all interfaces are assigned to by default.
+# 062- switchport mode access                                      => to set the interface as an access port.
+# 063- switchport access vlan number_of_vlan                       => this is the command that actually assigns the vlan to the port, if the vlan does not exist it will create it automatically.
+# 064- vlan number_of_vlan                                         => to create a vlan manually, if the vlan exists it will enter the vlan.
+# 065- name vlan_name                                              => to create name for the vlan.
+# 066- switchport trunk encapsulation dot1q                        => on switches that supports .1Q and ISL you must configure the encapsulation as .1Q or ISL (depreecated)
+# 067- switchport mode trunk                                       => to configure the interface as a trunk.
+# 068- show interfaces trunk                                       => to see the status of the turnk interfaces.
+# 068- switchport trunk allowed vlan word                          => to configure the vlans allowed on a trunk port, example => swithcport trunk allowed vlan 10,30.
+# 070- switchport trunk allowed vlan add 20                        => to configure the vlans allowed on a trunk port, will add the vlan 20 to the vlans allowed on the trunk port.
+# 071- switchport trunk allowed vlan remove 20                     => to remove a specific vlan from the trunk port, will remove vlan 20.
+# 072- switchport trunk allowed vlan all                           => will allow all the vlans on a trunk port, this is the same as the default state.
+# 073- switchport trunk allowed vlan except 1-5,10                 => this allows all vlans on a trunk port except the vlans you specified.
+# 074- switchport trunk allowed vlan none                          => this will not allow any vlans on the trunk, this command allows no traffic on the trunk port.
+# 075- switchport trunk native vlan 1001                           => to set the native vlan to the number of vlan you want, here we set the vlan to 1001, for security purposes you should set the native vlan to unused vlan.
+# 076- interface g0/0.10                                           => to enter a subinterface on a router on a stick (ROAS).
+# 077- encapsulation dot1q vlan_id                                 => this tells the router to treat any arrived frames tagged with this specific vlan number as if they arrived on the subinterface.
+# 078- encapsulation dot1q vlan_id native                          => this tells the router that this subinterface belongs to a native vlan, to configure the native vlan on a router.
+# 079- default interface interface_id                              => to return the interface to it's default state.
+# 080- ip routing                                                  => this command enables layer 3 routing on the multilayer switch.
+# 081- no switchport                                               => this configured the interface as a routed port so you can assign an ip address to it, changes the interface port from layer 2 switch port to layer 3 routing port.
+# 082- show spanning-tree                                          => to show information about the spanning tree protocol on the switch.
+# 083- show spanning-tree detail                                   => like show spanning-tree protocol but with more details.
+# 084- show spanning-tree summary                                  => this list each vlan and show how many interfaces are in STP state.
+# 085- show spanning-tree vlan vlan_number                         => this list the status of STP in the vlan.
+# 086- show etherchannel load-balance                              => to see the current load balancing method.
+# 087- port-channel load-balance method                            => to change the load balance method.
+# 088- channel-protocol lacp                                       => to enable the lacp protocol for etherchannel
+# 089- channel-group 1 mode active                                 => to enable the LACP EtherChannel protocol.
+# 090- interface port-channel 1                                    => to enter the group interface of etherchannel, shortcut interface po1.
+# 091- show etherchannel summary                                   => to show a summary of the etherchannel interfaces.
+# 092- show etherchannel port-channel                              => to show information about the etherchannel and the protocol being used, number of ports in the etherchannel gorup.
+# 093- no switchport                                               => to make the interfaces act as layer three routed interfaces.
+# 094- ip routing                                                  => to enable the routing table on the multilayer switch.
+# 095- standby 1 ip ip_address                                     => to configure the virtual ip address.
+# 096- standby 1 priority 200                                      => to configure the priority for the active router, highest priority router will be the active router.
+# 097- standby 1 preempt                                           => causes the router to take the role of active router even if another router already has the role of active.
+# 098- show standby                                                => to show the settings of HSRP.
+# 099- standby version 2                                           => to configure the router to use HSRP v2.
 # 100- ip dhcp excluded-address first_address second_address      => to specify a range of addresses that won't be given to DHCP clients.
 # 101- ip dhcp pool pool_name                                     => to create a DHCP pool, pool is subnet of addresses that can be assigned to DHCP clients.
 # 102- network network_address /prefix length                     => to configure the range of addresses to be assigned to the clients, ex => network 192.168.1.0 /24.
@@ -130,6 +130,7 @@
 # 116- show port-security interface interface_id                  => to show the default settings of the port security.
 # 117- show interface interface_id switchport                     => to show the administrative mode and to see if the switchport is enabled on ther interface.
 # 118- switchort port-security mac-adddress sticky                => basically a way of configuring static secure mac addresses without actually having to manually configure them.
+
 
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
