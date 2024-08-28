@@ -98,6 +98,8 @@
 # 083- show spanning-tree detail                                   => like show spanning-tree protocol but with more details.
 # 084- show spanning-tree summary                                  => this list each vlan and show how many interfaces are in STP state.
 # 085- show spanning-tree vlan vlan_number                         => this list the status of STP in the vlan.
+# 086- spanning-tree vlan 1 root primary                           => to configure this switch as the root bridge.
+# 087- spanning-tree vlan 1 root secondary                         => to configure this switch as the secondary bridge.
 # 086- show etherchannel load-balance                              => to see the current load balancing method.
 # 087- port-channel load-balance method                            => to change the load balance method.
 # 088- channel-protocol lacp                                       => to enable the lacp protocol for etherchannel
@@ -112,24 +114,24 @@
 # 097- standby 1 preempt                                           => causes the router to take the role of active router even if another router already has the role of active.
 # 098- show standby                                                => to show the settings of HSRP.
 # 099- standby version 2                                           => to configure the router to use HSRP v2.
-# 100- ip dhcp excluded-address first_address second_address      => to specify a range of addresses that won't be given to DHCP clients.
-# 101- ip dhcp pool pool_name                                     => to create a DHCP pool, pool is subnet of addresses that can be assigned to DHCP clients.
-# 102- network network_address /prefix length                     => to configure the range of addresses to be assigned to the clients, ex => network 192.168.1.0 /24.
-# 103- dns-server 8.8.8.8                                         => specify the DNS server the clients should be used.
-# 104- default-router ip_address                                  => specify the default gateway
-# 105- lease days hours minutes or lease infinite                 => to specify the lease time ( when to expired ).
-# 106- show ip dhcp binding                                       => shows all of the dhcp clients that currently assigned.
-# 107- ip helper-address ip_address_of_DHCP_server                => to configure the router as a dhcp relay agent, make sure the agent router has a route to the dhcp server.
-# 108- ip address dhcp                                            => to tell the router to use the dhcp server to learn ip addresses for the router interfaces.
-# 109- switchport port-security                                   => to enable the port security on the interface, interface must be in access or trunk mode.
-# 110- switchport port-security mac-address mac_address           => to manually configure the allowed mac address on the interface.
-# 111- switchport port-security violation restrict                => to enable the restrict mode.
-# 113- switchport port-security violation protect                 => to enable the protect mode.
-# 114- switchport port-security aging time minutes                => to enable the aging time for an secure mac address.
-# 115- show port-security                                         => display which interfaces have port security enabled, the mac and current number of secure addresses on those interfaces.
-# 116- show port-security interface interface_id                  => to show the default settings of the port security.
-# 117- show interface interface_id switchport                     => to show the administrative mode and to see if the switchport is enabled on ther interface.
-# 118- switchort port-security mac-adddress sticky                => basically a way of configuring static secure mac addresses without actually having to manually configure them.
+# 100- ip dhcp excluded-address first_address second_address       => to specify a range of addresses that won't be given to DHCP clients.
+# 101- ip dhcp pool pool_name                                      => to create a DHCP pool, pool is subnet of addresses that can be assigned to DHCP clients.
+# 102- network network_address /prefix length                      => to configure the range of addresses to be assigned to the clients, ex => network 192.168.1.0 /24.
+# 103- dns-server 8.8.8.8                                          => specify the DNS server the clients should be used.
+# 104- default-router ip_address                                   => specify the default gateway
+# 105- lease days hours minutes or lease infinite                  => to specify the lease time ( when to expired ).
+# 106- show ip dhcp binding                                        => shows all of the dhcp clients that currently assigned.
+# 107- ip helper-address ip_address_of_DHCP_server                 => to configure the router as a dhcp relay agent, make sure the agent router has a route to the dhcp server.
+# 108- ip address dhcp                                             => to tell the router to use the dhcp server to learn ip addresses for the router interfaces.
+# 109- switchport port-security                                    => to enable the port security on the interface, interface must be in access or trunk mode.
+# 110- switchport port-security mac-address mac_address            => to manually configure the allowed mac address on the interface.
+# 111- switchport port-security violation restrict                 => to enable the restrict mode.
+# 113- switchport port-security violation protect                  => to enable the protect mode.
+# 114- switchport port-security aging time minutes                 => to enable the aging time for an secure mac address.
+# 115- show port-security                                          => display which interfaces have port security enabled, the mac and current number of secure addresses on those interfaces.
+# 116- show port-security interface interface_id                   => to show the default settings of the port security.
+# 117- show interface interface_id switchport                      => to show the administrative mode and to see if the switchport is enabled on ther interface.
+# 118- switchort port-security mac-adddress sticky                 => basically a way of configuring static secure mac addresses without actually having to manually configure them.
 
 
 # NOTE:-
@@ -170,6 +172,7 @@
 # ASwitch => is an access layer switch, a switch that end hosts connect to
 # DSwitch => is a distribution layer switch, a switch that access layer switches connect to.
 # some other names of etherchannel is port channel, LAG ( Link Aggregation Group ).
+# Classic spanning tree is very slow, takes about 50 seconds for the network to converge after a change in the topolgy
 
 
 # the three methods we use in wireless security
@@ -354,12 +357,14 @@
 
 
 ######################### Standard numbers in network #########################
-# 1- IEEE 802.3         => is the standard number for ethernet.
-# 2- IEEE 802.11        => is the standard number for WI-FI.
-# 3- H.323              => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
-# 4- IEEE 802.1D        => is the standard for the classic spanning tree protocol.
-# 5- IEEE 802.1x        => User Authentication.
-# 6- IEEE 802.3ad       => is the standard number for LACP (Link Aggregation Control Protocol).
+# 01- IEEE 802.3         => is the standard number for ethernet.
+# 02- IEEE 802.11        => is the standard number for WI-FI.
+# 03- H.323              => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
+# 04- IEEE 802.1D        => is the standard for the classic spanning tree protocol, PVST+.
+# 05- IEEE 802.1x        => User Authentication.
+# 06- IEEE 802.3ad       => is the standard number for LACP (Link Aggregation Control Protocol).
+# 07- IEEE 802.1w        => is the standard number for rapid spanning tree protocol, Rapid PVST+.
+# 08- IEEE 802.1s        => is the standard number for multiple spanning tree protocol.
 
 
 ############################ Networking Commands For Troubleshooting ############################
