@@ -132,6 +132,8 @@
 # 116- show port-security interface interface_id                   => to show the default settings of the port security.
 # 117- show interface interface_id switchport                      => to show the administrative mode and to see if the switchport is enabled on ther interface.
 # 118- switchort port-security mac-adddress sticky                 => basically a way of configuring static secure mac addresses without actually having to manually configure them.
+# 119- ipv6 unicast-routing                                        => allows the router to perform ipv6 routing.
+# 120- ipv6 enable                                                 => to enable ipv6 of the interface.
 
 
 # NOTE:-
