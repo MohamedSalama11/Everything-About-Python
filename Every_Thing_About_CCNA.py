@@ -135,7 +135,8 @@
 # 119- ipv6 unicast-routing                                        => allows the router to perform ipv6 routing.
 # 120- ipv6 enable                                                 => to enable ipv6 of the interface.
 # 121- show ip interface interface_id                              => to show the interenet address on this interface and if the address determinted by DHCP or not.
-
+# 122- show mac address-table secure                               => to show only the secure or sticy mac addresses on the mac address table.
+# 123= switchport port-security maximum number                     => to configure the maximum number of mac addresses allowed on this interface.
 
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
