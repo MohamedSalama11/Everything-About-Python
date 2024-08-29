@@ -114,9 +114,9 @@
 # 097- standby 1 preempt                                           => causes the router to take the role of active router even if another router already has the role of active.
 # 098- show standby                                                => to show the settings of HSRP.
 # 099- standby version 2                                           => to configure the router to use HSRP v2.
-# 100- ip dhcp excluded-address first_address second_address       => to specify a range of addresses that won't be given to DHCP clients.
+# 100- ip dhcp excluded-address first_address second_address       => to specify a range of addresses that won't be given to DHCP clients, these are addresses you want to reserve.
 # 101- ip dhcp pool pool_name                                      => to create a DHCP pool, pool is subnet of addresses that can be assigned to DHCP clients.
-# 102- network network_address /prefix length                      => to configure the range of addresses to be assigned to the clients, ex => network 192.168.1.0 /24.
+# 102- network network_address [/prefix length, subnet_mask]       => to configure the range of addresses to be assigned to the clients, ex => network 192.168.1.0 /24.
 # 103- dns-server 8.8.8.8                                          => specify the DNS server the clients should be used.
 # 104- default-router ip_address                                   => specify the default gateway
 # 105- lease days hours minutes or lease infinite                  => to specify the lease time ( when to expired ).
@@ -134,6 +134,7 @@
 # 118- switchort port-security mac-adddress sticky                 => basically a way of configuring static secure mac addresses without actually having to manually configure them.
 # 119- ipv6 unicast-routing                                        => allows the router to perform ipv6 routing.
 # 120- ipv6 enable                                                 => to enable ipv6 of the interface.
+# 121- show ip interface interface_id                              => to show the interenet address on this interface and if the address determinted by DHCP or not.
 
 
 # NOTE:-
