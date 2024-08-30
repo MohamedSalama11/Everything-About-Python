@@ -138,6 +138,7 @@
 # 122- show mac address-table secure                               => to show only the secure or sticy mac addresses on the mac address table.
 # 123= switchport port-security maximum number                     => to configure the maximum number of mac addresses allowed on this interface.
 
+
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
 # MAC addresess may also called (BIA) => Burned_In Address this is because the address is burned into the device as it's made.
