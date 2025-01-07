@@ -1,0 +1,58 @@
+[
+  {
+    "type": "income",
+    "description": "work",
+    "amount": 500.0,
+    "date": "2024-12-22",
+    "category": "Income"
+  },
+  {
+    "type": "expense",
+    "description": "food",
+    "amount": 100.0,
+    "date": "2024-12-22",
+    "category": "Food"
+  },
+  {
+    "type": "income",
+    "description": "work",
+    "amount": 500.0,
+    "date": "2024-12-22",
+    "category": "Income"
+  },
+  {
+    "type": "expense",
+    "description": "food",
+    "amount": 100.0,
+    "date": "2024-12-22",
+    "category": "Food"
+  },
+  {
+    "type": "income",
+    "description": "money from freelance job",
+    "amount": 1000.0,
+    "date": "2024-12-22",
+    "category": "Income"
+  },
+  {
+    "type": "income",
+    "description": "xss vulnerability in a website",
+    "amount": 250.0,
+    "date": "2024-12-22",
+    "category": "Income"
+  },
+  {
+    "type": "income",
+    "description": "100 dollars from freelance work",
+    "amount": 100.0,
+    "date": "2024-12-22",
+    "category": "Income"
+  },
+  {
+    "type": "expense",
+    "description": "50 for food",
+    "amount": 50.0,
+    "date": "2024-12-22",
+    "category": "Food"
+  }
+]

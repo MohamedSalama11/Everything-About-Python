@@ -229,3 +229,38 @@
 # * stands fon "Any"
 # */15 means run every 15 (minutes,day)
 # to schedule the scripts you need to write in the command section the following ( bash the path to your script )  => bash ~/bin/script.sh
+
+
+########## updating, downloading, removing packages ##########
+# what is apt-get?
+# apt-get is a command line program that is used to install, remove, and manage packages on a Debian or Ubuntu system.
+
+# how to use it?
+# 1- apt-get update                     => to update the repository of the apt.
+# 2- apt-get upgrade                     => to apply the changes happend by updating the apt repository.
+# 3- apt-get install package            => to install a package.
+# 4- apt-cache search package           => to search for a package.
+# 5- apt-get remove package             => to remove a package.
+# 6- apt-get autoremove                 => to remove all the packages that are not needed anymore.
+# 7- apt-get clean                      => to remove all the packages that are not needed anymore.
+# 8- apt-get purge package              => to remove a package and all the files that are related to it.
+
+# curl in linux is a command line tool that is used to transfer data from or to a server.
+
+# how to use it?
+# 1- curl -O https://example.com/file.txt => to download a file from a website.
+# how to send a payload to a website using curl?
+# 1- curl -X POST -d "username=admin&password=admin" https://example.com/login => to send a payload to a website.
+# 2- curl -X POST -d "username=admin&password=admin" https://example.com/login -H "Content-Type: application/json" => to send a payload to a website.
+
+# what does this symbol ; means in linux?
+# it means that the commands will be executed one after the other.
+# what does this symbol && means in linux?
+# it means that the commands will be executed one after the other if the previous command was successful.
+# what does this symbol || means in linux?
+# it means that the commands will be executed one after the other if the previous command was not successful.
+# what is the difference between && and || in linux?
+# && means that the commands will be executed one after the other if the previous command was successful.
+# || means that the commands will be executed one after the other if the previous command was not successful.
+
+
