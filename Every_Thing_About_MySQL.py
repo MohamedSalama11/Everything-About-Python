@@ -29,8 +29,8 @@
 
 ############# Data Types #############
 # 01- CHAR(length)                                                   => To store strings, it has a fixed length, we use char when our data is similar in size, EX CHAR(3) => this means that this column
-#                                                                      should always be three characters, but if it's smaller than 3 characters MySQL will exapnd it using whitespace characters to fit
-#                                                                      three characters, and will take 3 bytes of memory.
+#                                                                       should always be three characters, but if it's smaller than 3 characters MySQL will exapnd it using whitespace characters to fit
+#                                                                       three characters, and will take 3 bytes of memory.
 # 02- VARCHAR(length)                                                => To store strings, we use it when we don't know the length of the string or when we insert long strings, it's more efficient.
 # 03- INT or INTEGER                                                 => To store large numbers.
 # 04- TINYINT                                                        => To store small numbers (up to 127).
@@ -38,11 +38,11 @@
 # 06- SMALLINT
 # 07- MEDIUMINT
 # 08- DECIMAL(total number of digits, digits after decimal)
-# 09- FLOAT                                                         => it takes 4 bytes in the memory.
-# 10- DOUBLE                                                        => DOUBLE is more precsion than float, it takes 8 bytes in the memory.
-# 11- DATE                                                          => It stores a date with no time involved with format YYYY-MM-DD.
-# 12- TIME                                                          => It represents the time with no date with format HH:MM:SS.
-# 13- DATETIME                                                      => It store values with date and time with format YYYY-MM-DD HH:MM:SS.
+# 09- FLOAT                                                          => it takes 4 bytes in the memory.
+# 10- DOUBLE                                                         => DOUBLE is more precsion than float, it takes 8 bytes in the memory.
+# 11- DATE                                                           => It stores a date with no time involved with format YYYY-MM-DD.
+# 12- TIME                                                           => It represents the time with no date with format HH:MM:SS.
+# 13- DATETIME                                                       => It store values with date and time with format YYYY-MM-DD HH:MM:SS.
 
 
 ############# Commands #############
@@ -232,7 +232,7 @@
 
 
 ############# Stored Procedures #############
-# Let's say you are building an application that has database you shouldn't write you sql code in side your application code because it will make the code messy and hard to read
+# Let's say you are building an application that has database you shouldn't write your sql code inside your application code because it will make the code messy and hard to read
 # also some programmig languages need to compile again and again so every time you change your query you will need to recompile the app again
 # for this reason you should take your sql code out of your application code and store it in a database.
 
@@ -276,79 +276,3 @@
 # 12- SHOW GRANTS                                                        => To show the privileges for the current user.
 # 13- SHOW GRANTS FOR username                                           => To show the privileges for a specific user.
 # 14- REVOKE privilege ON database.table FROM username                   => To drop privilege for a specific user.
-
-import json
-import os
-
-class BudgetTracker:
-    def __init__(self):
-        self.transactions = []
-        self.load_data()
-
-    def add_income(self, amount, source):
-        self.transactions.append({"type": "Income", "amount": amount, "source": source})
-        print(f"Income of {amount} added from {source}.")
-
-    def add_expense(self, amount, category):
-        self.transactions.append({"type": "Expense", "amount": -amount, "category": category})
-        print(f"Expense of {amount} added for {category}.")
-
-    def view_balance(self):
-        balance = sum(t["amount"] for t in self.transactions)
-        print(f"Your current balance is: {balance}")
-        return balance
-
-    def view_transactions(self):
-        if not self.transactions:
-            print("No transactions recorded.")
-            return
-
-        for i, transaction in enumerate(self.transactions, 1):
-            t_type = transaction["type"]
-            details = f"{transaction.get('source', transaction.get('category', 'Unknown'))}"
-            print(f"{i}. {t_type} - {details}: {transaction['amount']}")
-
-    def save_data(self):
-        with open("budget_data.json", "w") as f:
-            json.dump(self.transactions, f)
-        print("Data saved successfully.")
-
-    def load_data(self):
-        if os.path.exists("budget_data.json"):
-            with open("budget_data.json", "r") as f:
-                self.transactions = json.load(f)
-            print("Data loaded successfully.")
-
-def main():
-    tracker = BudgetTracker()
-
-    while True:
-        print("\nPersonal Budget Tracker")
-        print("1. Add Income")
-        print("2. Add Expense")
-        print("3. View Balance")
-        print("4. View Transactions")
-        print("5. Save and Exit")
-        choice = input("Choose an option: ")
-
-        if choice == "1":
-            amount = float(input("Enter income amount: "))
-            source = input("Enter income source: ")
-            tracker.add_income(amount, source)
-        elif choice == "2":
-            amount = float(input("Enter expense amount: "))
-            category = input("Enter expense category: ")
-            tracker.add_expense(amount, category)
-        elif choice == "3":
-            tracker.view_balance()
-        elif choice == "4":
-            tracker.view_transactions()
-        elif choice == "5":
-            tracker.save_data()
-            print("Exiting... Goodbye!")
-            break
-        else:
-            print("Invalid option. Please try again.")
-
-if __name__ == "__main__":
-    main()

@@ -699,7 +699,7 @@
 -- SELECT genre, ROUND(AVG(rating), 2) AS avg_rating FROM series
 -- JOIN reviews ON series.id = reviews.series_id
 -- GROUP BY genre;
-
+-- USE tv_shows;
 -- SELECT first_name,
 -- 	   last_name, 
 --        COUNT(rating) AS COUNT, 
@@ -1010,7 +1010,18 @@ GRANT ALL # all here means all privileges
 ON *.* # this means all tables in all databases
 TO Abo_Salama;
 
+# viewing privileges
+SHOW GRANTS; # to show the privileges for the current user.
+SHOW GRANTS FOR Abo_Salama; # To show the privileges for a specific user.
 
+# dropping (revoke) privileges
+GRANT CREATE VIEW 
+ON book_shop.*
+TO moon_app;
+
+REVOKE CREATE VIEW 
+ON book_shop.*
+FROM moon_app;
 
 
 

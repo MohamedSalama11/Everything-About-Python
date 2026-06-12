@@ -237,7 +237,7 @@
 
 # how to use it?
 # 1- apt-get update                     => to update the repository of the apt.
-# 2- apt-get upgrade                     => to apply the changes happend by updating the apt repository.
+# 2- apt-get upgrade                    => to apply the changes happend by updating the apt repository.
 # 3- apt-get install package            => to install a package.
 # 4- apt-cache search package           => to search for a package.
 # 5- apt-get remove package             => to remove a package.
@@ -264,3 +264,16 @@
 # || means that the commands will be executed one after the other if the previous command was not successful.
 
 
+###################################### Commands To Remember ######################################
+# 01- echo $SHELL => to show the current shell of the user. 
+# 02- echo $PATH => to show the current path of the user.
+# 03- 
+# 04- 
+# 05- 
+# 06- 
+# 07- 
+# 08- 
+# 09- 
+# 10- 
+# 11- 
+# 12- 

@@ -1,16 +1,16 @@
 ####################### CISCO OS Commands #######################
 # NOTE:-
-# 01- >                                                           => means that you are in user Execution mode also called user mode this mode can not change the configuration.
-# 02- #                                                           => means that you are in privileges Execution mode this mode can not change the configuration.
-# 03- (config)#                                                   => means that you are in global configuration mode.
-# 04- <cr>                                                        => means that there's no other options.
-# 05- 7                                                           => number seven indicates the type of ecnryption used to encrypt the password, means it's using cisco proprietary encryption alghorithm.
-# 06- 5                                                           => number five indicates MD5 Encryption.
-# 07- (config-if)#                                                => means that you are in the interface configuration mode.
-# 08- (config-if-range)                                           => means that you are in the range of interfaces
-# 09- (config-line)                                               => means that you are in the line configuration mode, used to configure console, SSH, Telnet, AUX access.
-# 10- VTY lines                                                   => enable remote access using SSH, Telnet to the device, many cisco switches support up to 16 VTY lines ( from 0 to 15 ).
-# 11- CTRL + A                                                    => to go to the beggining of the line in the CLI.
+# 01- >                                                            => means that you are in user Execution mode also called user mode this mode can not change the configuration.
+# 02- #                                                            => means that you are in privileges Execution mode this mode can not change the configuration.
+# 03- (config)#                                                    => means that you are in global configuration mode.
+# 04- <cr>                                                         => means that there's no other options.
+# 05- 7                                                            => number seven indicates the type of ecnryption used to encrypt the password, means it's using cisco proprietary encryption alghorithm.
+# 06- 5                                                            => number five indicates MD5 Encryption.
+# 07- (config-if)#                                                 => means that you are in the interface configuration mode.
+# 08- (config-if-range)                                            => means that you are in the range of interfaces
+# 09- (config-line)                                                => means that you are in the line configuration mode, used to configure console, SSH, Telnet, AUX access.
+# 10- VTY lines                                                    => enable remote access using SSH, Telnet to the device, many cisco switches support up to 16 VTY lines ( from 0 to 15 ).
+# 11- CTRL + A                                                     => to go to the beggining of the line in the CLI.
 
 
 # 001- enable                                                      => to enter the privileges exeuction mode, en is the shortcut, disable to exit the privileged EXEC mode.
@@ -136,8 +136,16 @@
 # 120- ipv6 enable                                                 => to enable ipv6 of the interface.
 # 121- show ip interface interface_id                              => to show the interenet address on this interface and if the address determinted by DHCP or not.
 # 122- show mac address-table secure                               => to show only the secure or sticy mac addresses on the mac address table.
-# 123= switchport port-security maximum number                     => to configure the maximum number of mac addresses allowed on this interface.
-
+# 123- switchport port-security maximum number                     => to configure the maximum number of mac addresses allowed on this interface.
+# 124- mac-address mac_address                                     => to asign a MAC address to an interface
+# 125-
+# 126-
+# 127-
+# 128-
+# 129-
+# 130-
+# 131-
+# 132-
 
 # NOTE:-
 # servers or clients also called endhosts or endpoints.
@@ -361,7 +369,7 @@
 # 57- FCS ( Frame Check Sequence )
 
 
-######################### Standard numbers in network #########################
+######################### Standard numbers in networking #########################
 # 01- IEEE 802.3         => is the standard number for ethernet.
 # 02- IEEE 802.11        => is the standard number for WI-FI.
 # 03- H.323              => used to setup, maintain, teardown voice and video connections, operates over RTP (real time protocol) protocol.
